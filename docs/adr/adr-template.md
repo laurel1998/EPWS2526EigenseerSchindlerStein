@@ -1,0 +1,4 @@
+-> Was war der Kontext (Ziele, Randbedingungen, Zwänge)?
+-> Welche Optionen standen zur Wahl?
+-> Wofür haben wir uns entschieden – und warum (Abwägungen, Trade-offs)?
+-> Welche Folgen und To-dos ergeben sich daraus?
