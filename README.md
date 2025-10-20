@@ -31,6 +31,7 @@ Alle Änderungen und Architekturentscheidungen werden nachvollziehbar dokumentie
 |---------------|--------------|
 | **`/docs/`** | Enthält alle Projektdokumente |
 | **`/docs/adr/`** | *Architecture Decision Records (ADRs)* dokumentieren alle wichtigen Architekturentscheidungen mit Begründung |
+| **`/docs/research-notes/`** | Verzeichnis zur Dokumentation von Forschungsergebnissen |
 | **`CHANGELOG.md`** | Verzeichnis aller Änderungen am Projektverlauf |
 | **`README.md`** | Diese Datei für Überblick und Orientierung |
 | *(weitere Ordner folgen)* | ggf. Code, Artefakte, Daten oder Präsentationen |
