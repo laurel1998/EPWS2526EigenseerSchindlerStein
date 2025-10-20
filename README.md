@@ -30,11 +30,11 @@ Alle Änderungen und Architekturentscheidungen werden nachvollziehbar dokumentie
 | Pfad / Datei | Beschreibung |
 |---------------|--------------|
 | **`/docs/`** | Enthält alle Projektdokumente |
-| **`/docs/adr/`** | *Architecture Decision Records (ADRs)* – dokumentieren alle wichtigen Architekturentscheidungen mit Begründung |
+| **`/docs/adr/`** | *Architecture Decision Records (ADRs)* dokumentieren alle wichtigen Architekturentscheidungen mit Begründung |
 | **`CHANGELOG.md`** | Verzeichnis aller Änderungen am Projektverlauf |
-| **`README.md`** | Diese Datei – Überblick und Orientierung |
+| **`README.md`** | Diese Datei für Überblick und Orientierung |
 | *(weitere Ordner folgen)* | ggf. Code, Artefakte, Daten oder Präsentationen |
 
 Zusätzlich in GitHub:
-- **Project Board (GitHub Projects)** – Überblick über aktuelle Aufgaben, Status und Fortschritt  
-- **Issues & Pull Requests** – Austausch zu offenen Themen, Fehlern und neuen Features
+- **Project Board (GitHub Projects)** - Überblick über aktuelle Aufgaben, Status und Fortschritt  
+- **Issues & Pull Requests** - Austausch zu offenen Themen, Fehlern und neuen Features
