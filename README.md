@@ -1,4 +1,4 @@
-# Entwicklungsprojekt WS25/26 Eigenseer | Schindler | Stein
+# Entwicklungsprojekt WS25/26 Eigenseer|Schindler|Stein
 
 Willkommen im Repository **EPWS2526EigenseerSchindlerStein**.  
 Dieses Repository dient der Dokumentation, Planung und Nachverfolgung unseres Projekts im Rahmen des Moduls *Entwicklungsprojekt*.
