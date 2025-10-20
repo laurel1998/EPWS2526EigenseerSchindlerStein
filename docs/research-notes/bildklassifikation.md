@@ -5,14 +5,16 @@ Wie lassen sich die Millionen Bilder aus dem KDTS-Archiv effizient nach Jahresze
 
 ---
 
-## Ansatz 1: Heuristische Klassifikation (Metadaten / Zeitstempel)
+## Ansatz 1: Heuristische Klassifikation (Metadaten / Zeitstempel) + Wetterdaten Klassifikation (API-basiert)
 **Beschreibung:**  
-Bilder werden anhand ihrer vorhandenen Metadaten (z. B. Datum, Uhrzeit, Kameraposition) grob in Kategorien wie Jahreszeit oder Tageszeit eingeordnet.  
+Bilder werden anhand ihrer vorhandenen Metadaten (z. B. Datum, Uhrzeit) grob in Kategorien wie Jahreszeit oder Tageszeit eingeordnet.
+Sie können dann um historische Wetterdaten ergänzt werden.
 Beispiel: Aufnahmen im Dezember–Februar → „Winter“, Juni–August → „Sommer“.
 
 **Vorteile**
 - Sehr schnell umsetzbar und leicht skalierbar
-- Keine Bildanalyse notwendig 
+- Keine Bildanalyse notwendig
+- Unterscheidung spezieller Wetterphänomene
 - Geringe Rechenlast, daher geeignet als erster Verarbeitungsschritt
 
 **Nachteile**
@@ -20,7 +22,7 @@ Beispiel: Aufnahmen im Dezember–Februar → „Winter“, Juni–August → �
 - Empfindlich gegenüber Ausreißern oder Fehlbelichtungen
 
 **Einschätzung**  
-Geeignet zur groben Vor­klassifikation (z. B. Jahreszeiten, Tag/Nacht). Sollte durch visuelle Merkmale ergänzt werden, um atmosphärische Unterschiede herauszuarbeiten.
+Geeignet zur groben Vor­klassifikation. Sollte durch visuelle Merkmale ergänzt werden.
 
 **Quellen**
 - [Mike Carruego: *Choosing the Right Algorithm: Machine Learning vs. Heuristics* (Medium, 2021)](https://mikecarruego.medium.com/choosing-the-right-algorithm-machine-learning-vs-heuristics-dc0b65e97d98)
@@ -60,7 +62,7 @@ Ziel ist eine Kombination aus Farbanalyse und einfachen Regeln, um atmosphärisc
 **Beschreibung:**  
 Kombination beider Verfahren, um Genauigkeit und Performance auszugleichen.  
 Ablauf:
-1. Grobe Einteilung per Zeitstempel (Jahreszeiten, Tageszeiten)  
+1. Grobe Einteilung per Zeitstempel (Jahreszeiten, Tageszeiten) und Wetterdaten (Nebel, Regen, Sonnenschein, etc.)  
 2. Feinanalyse über visuelle Merkmale (Helligkeit, Farbe, Kontrast)  
 3. Speicherung der Ergebnisse
 
@@ -82,7 +84,27 @@ Empfohlener Ansatz
 
 ---
 
+## Geeignete Tools
+
+### OpenCV
+- **Funktion:** Analyse von Farbwerten, Helligkeit und Kontrast; Erkennung visueller Muster
+- **Vorteile:** Leistungsfähig, plattformübergreifend (C++, Java, Kotlin)
+- **Relevanz:** Hauptwerkzeug für visuelle Analyse
+
+### Wetter-API (z. B. Open-Meteo, OpenWeatherMap)
+- **Funktion:** Liefert historische Wetterdaten (Temperatur, Niederschlag, Schneefall, Sichtweite, Bewölkung)
+- **Vorteile:** Keine Bildanalyse notwendig, leicht automatisierbar über REST-Aufrufe
+- **Relevanz:** Grundlage für realistische Wetterlabels auf Basis der Aufnahmezeitpunkte
+
+### BoofCV
+- **Funktion:** Java-basierte Bibliothek zur Bildverarbeitung (Segmentierung, Farbanalyse)
+- **Vorteile:** Reines Java, leicht in Kotlin nutzbar
+- **Relevanz:** Alternative oder Ergänzung zu OpenCV
+
+---
+
 ## Zusammenfassung
-Ein **zweistufiges Hybridverfahren** (Heuristik → visuelle Analyse) bietet die beste Balance zwischen Umsetzbarkeit, Rechenaufwand und visueller Qualität.  
-Die reine Heuristik reicht für eine Grundstruktur, während die Feature-Analyse die für *Season Shift* entscheidenden atmosphärischen Übergänge ermöglicht.
+Ein **Hybridverfahren** (Heuristik → visuelle Analyse) scheint die effizienteste Lösung zu sein.  
+Die reine Heuristik reicht für eine Grundstruktur, während die Feature-Analyse atmosphärische Übergänge ermöglicht und das Ergebnis präzisiert.
+Eventuell ist es nötig, eine Stichprobe der Bilder zu erstellen und den gesamten Satz auf ein paar Jahre zu reduzieren.
 
