@@ -8,4 +8,7 @@ Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 - Projektinitialisierung  
   - Entscheidung für Projektthema und Fokus  
   - Einrichtung der Dokumentationsgrundlagen (README, CHANGELOG, ADR-Verzeichnis)
+- Bildklassifizierung
+  - Forschung über Realisierungsmöglichkeiten
+  - ADR Dokument diesbezüglich erstellt
 
