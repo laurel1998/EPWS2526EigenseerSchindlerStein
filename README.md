@@ -1,8 +1,8 @@
-# Entwicklungsprojekt WS25/26 Eigenseer|Schindler|Stein
+# Entwicklungsprojekt WS25/26 EigenseerSchindlerStein
 
 Willkommen im Repository **EPWS2526EigenseerSchindlerStein**.  
-Dieses Repository dient der Dokumentation, Planung und Nachverfolgung unseres Projekts im Rahmen des Moduls *Entwicklungsprojekt*.
-Hier werden alle wichtigen Entscheidungen, Fortschritte und Artefakte zentral dokumentiert, damit sich auch neue Mitwirkende und Außenstehende schnell zurechtfinden können.
+Dieses Repository bildet die technische und organisatorische Basis unseres Projekts im Rahmen des Moduls *Entwicklungsprojekt*. Es dient der Dokumentation, Planung und Nachverfolgung.
+Hier werden alle wichtigen Entscheidungen, Fortschritte und Artefakte zentral dokumentiert, damit sich Außenstehende schnell zurechtfinden können.
 
 ---
 
@@ -13,7 +13,6 @@ Hier werden alle wichtigen Entscheidungen, Fortschritte und Artefakte zentral do
 ---
 
 ## Über das Projekt
-Dieses Repository bildet die technische und organisatorische Basis für das Entwicklungprojekt.
 
 Ziele:
 - Entwicklung eines interaktiven Systems, das Bewegungen über Bodenmarkierungen erkennt und entsprechende Bildabfolgen oder Animationen startet
