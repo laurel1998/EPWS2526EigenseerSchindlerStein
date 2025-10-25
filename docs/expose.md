@@ -2,9 +2,9 @@
 
 ## Identifikation und Beschreibung des Problemraums
 Das Projekt bewegt sich im Spannungsfeld von **Kunst, Technik und Interaktion**.  
-Es adressiert die Herausforderung, ein riesiges digitales Bildarchiv - unzugänglich und abstrakt - **in erlebbare, sinnliche Formate** zu übersetzen.  
+Es adressiert die Herausforderung, ein riesiges digitales Bildarchiv - unzugänglich und abstrakt - **in ein erlebbares, interaktives Format** zu übersetzen.  
 
-Das KDTS-Labor verfügt über mehr als **10 Millionen Zeitraffer-Fotografien**, die Veränderungen von Landschaft, Licht und Atmosphäre dokumentieren.  
+Das KTDS-Labor verfügt über mehr als **10 Millionen Zeitraffer-Fotografien**, die Veränderungen von Landschaft, Licht und Atmosphäre dokumentieren.  
 Ziel ist es, aus diesem Datenmaterial ein interaktives, öffentlich zugängliches System zu entwickeln, das **Neugier, Staunen und Beteiligung** auslöst.  
 
 **Kernfrage:**  
