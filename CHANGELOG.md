@@ -12,3 +12,8 @@ Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
   - Forschung über Realisierungsmöglichkeiten
   - ADR Dokument diesbezüglich erstellt
 
+
+
+## [0.2.0] - 26.10.2025
+### Bearbeitung
+- Expose Besprechung 
