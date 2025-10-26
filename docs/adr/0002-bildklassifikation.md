@@ -1,6 +1,6 @@
 # ADR-0002: Bildklassifikation nach Jahreszeiten, Wetter und Visueller Analyse
 
-**Status:** vorgeschlagen
+**Status:** entschieden
 **Datum:** 2025-10-21 
 
 ---
@@ -32,7 +32,7 @@ Nachforschungen haben dafür Ergebnisse geliefert, die sich für das Projekt als
 ---
 
 ## Entscheidung
-TODO
+Die effizienteste Lösung bietet eine Kombination aus heuristischer Klasifikation in Verbindung mit Wetterdaten und einer folgenden visuellen Analyse der Bilder (Option 4). Außerdem wird die Anzahl an Bildern verringert, um den Rechenaufwand zu reduzieren und das System zu entlasten. 
 
 ---
 
