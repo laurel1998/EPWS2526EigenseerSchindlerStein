@@ -42,8 +42,7 @@ Geplant sind mehrere Proof-of-Concepts, die schrittweise zu einem funktionalen P
 1. **Interaktionssteuerung** – z. B. Bewegungssensor oder Drucksensor
 2. **Bildklassifikation** – Ordnen der Bilder mit einer Kombination aus heuristischen Verfahren und visueller Bildanalyse [Bildklassifikation](../docs/adr/0002-bildklassifikation.md)
 3. **Raumwirkung** – Projektion, Licht- und Tonsteuerung im Zusammenspiel  
-4. **Systemintegration** – stabile, webbasierte Architektur (z. B. Node.js, WebGL, OpenCV)  
-5. (..weitere?)
+4. **Systemintegration** – stabile, webbasierte Architektur (z. B. Node.js, WebGL, OpenCV)
 
 ---
 
