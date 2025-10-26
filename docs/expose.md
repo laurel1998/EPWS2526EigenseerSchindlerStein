@@ -39,8 +39,8 @@ Die Interaktion soll kollektiv, immersiv und ästhetisch ansprechend gestaltet s
 ## Proof of Concepts und technische Umsetzung
 Geplant sind mehrere Proof-of-Concepts, die schrittweise zu einem funktionalen Prototypen zusammengeführt werden:
 
-1. **Interaktionssteuerung** – z. B. Bewegungssensor oder Drucksensor  
-2. **Bildsequenzsteuerung** – visuelle Reaktion auf Benutzerinteraktion  
+1. **Interaktionssteuerung** – z. B. Bewegungssensor oder Drucksensor
+2. **Bildklassifikation** – Ordnen der Bilder mit einer Kombination aus heuristischen Verfahren und visueller Bildanalyse [docs/adr/bildklassifikation.md](../adr/bildklassifikation.md)
 3. **Raumwirkung** – Projektion, Licht- und Tonsteuerung im Zusammenspiel  
 4. **Systemintegration** – stabile, webbasierte Architektur (z. B. Node.js, WebGL, OpenCV)  
 5. (..weitere?)
