@@ -40,7 +40,7 @@ Die Interaktion soll kollektiv, immersiv und ästhetisch ansprechend gestaltet s
 Geplant sind mehrere Proof-of-Concepts, die schrittweise zu einem funktionalen Prototypen zusammengeführt werden:
 
 1. **Interaktionssteuerung** – z. B. Bewegungssensor oder Drucksensor
-2. **Bildklassifikation** – Ordnen der Bilder mit einer Kombination aus heuristischen Verfahren und visueller Bildanalyse [docs/adr/bildklassifikation.md](../adr/bildklassifikation.md)
+2. **Bildklassifikation** – Ordnen der Bilder mit einer Kombination aus heuristischen Verfahren und visueller Bildanalyse [Bildklassifikation](../adr/0002-bildklassifikation.md)
 3. **Raumwirkung** – Projektion, Licht- und Tonsteuerung im Zusammenspiel  
 4. **Systemintegration** – stabile, webbasierte Architektur (z. B. Node.js, WebGL, OpenCV)  
 5. (..weitere?)
