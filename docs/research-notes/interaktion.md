@@ -51,10 +51,11 @@ Eine analoge und kostengünstige Möglichkeit für Zonenerkennung. Gut geeignet 
 
 ## Zusammenfassung
 Für *Season Shift* eignen sich generell alle Optionen für die Erfassung von Positionen im Raum. Da die Hochschule das Antilatency System bereits zur Verfügung stellt, bietet dies eine gute Grundlage. Ansatz 2 bietet gute Lösungen für die Verwendung von Python als Programmiersprache, lässt sich aber auch mit C oder Java realisieren.
+
 ---
 
 ## Quellen
 - [Antilatency Official Website – Tracking System Overview](https://antilatency.com)
-- [OpenCV Documentation – Motion Detection & Tracking]([https://docs.opencv.org](https://medium.com/@chen-yu/real-time-object-tracking-and-classification-with-opencv-and-densenet-43d39f875096))
-- [MediaPipe Pose Tracking by Google Research]([https://developers.google.com/mediapipe/solutions/vision/pose](https://medium.com/@nsidana123/real-time-pose-tracking-with-mediapipe-a-comprehensive-guide-for-fitness-applications-series-2-731b1b0b8f4d))
+- [OpenCV Documentation – Motion Detection & Tracking](https://docs.opencv.org](https://medium.com/@chen-yu/real-time-object-tracking-and-classification-with-opencv-and-densenet-43d39f875096))
+- [MediaPipe Pose Tracking by Google Research](https://developers.google.com/mediapipe/solutions/vision/pose](https://medium.com/@nsidana123/real-time-pose-tracking-with-mediapipe-a-comprehensive-guide-for-fitness-applications-series-2-731b1b0b8f4d))
 - [Arduino Project Hub – Pressure and Proximity Sensors](https://projecthub.arduino.cc/)
