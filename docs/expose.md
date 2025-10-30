@@ -46,7 +46,7 @@ Die Anwendungsdomäne liegt zwischen **Medienkunst, Interaktionsdesign und Daten
 - **Datengeber:innen / KDTS-Labor** – stellen das Bildmaterial und Kontextinformationen bereit (U31, U32, U34)
 
 Die Interaktion soll kollektiv, immersiv und ästhetisch ansprechend gestaltet sein.
-Eine ausführliche Beschreibung der User Stories ist [hier](..docs/user-stories.md) zu finden. 
+Eine ausführliche Beschreibung der User Stories ist [hier](user-stories.md) zu finden. 
 
 ---
 
