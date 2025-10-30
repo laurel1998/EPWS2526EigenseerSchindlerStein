@@ -34,3 +34,25 @@ Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
     - Fragen zur Synchronisierung von Medien (Bild, Licht, Ton)
     - Fragen zur Datenbereitstellung
     - Fragen zur Softwareumsetzung
+   
+
+   
+## [0.4.0] – 30.10.2025
+### Bearbeitet
+- Problem- & Risikoanalyse
+  - Mögliche Lösungsstrategien und Ansätze ergänzt
+- Exposé
+  - Referenz auf User-stories hinzugefügt
+  - Projekt konkretisiert und einen theoretischen Ablauf der Interaktion dargestellt
+ 
+### Hinzugefügt
+- User-stories
+  - Anforderungen an das System
+  - Bezug auf Nutzer:innen, Veranstalter:innen, Datengeber:innen
+- ADR für Interaktionsmöglichkeiten
+- Marktrecherche
+  - Informationen über ähnliche Systeme und Bildausstellungen und deren Umsetzung
+- Domänenmodell
+  - Ausarbeitung des Problemraums
+
+
