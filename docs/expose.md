@@ -41,11 +41,11 @@ Technische Risiken und Probleme können im Verlauf dieses Projekts auftreten und
 Die Anwendungsdomäne liegt zwischen **Medienkunst, Interaktionsdesign und Datenvisualisierung**.  
 
 **Zentrale Stakeholder:**
-- **Besucher:innen** – erleben und steuern das Archiv intuitiv  
-- **Veranstalter:innen / Betreiber:innen** – präsentieren, warten und konfigurieren das System  
-- **Datengeber:innen / KDTS-Labor** – stellen das Bildmaterial und Kontextinformationen bereit  
+- **Besucher:innen** – erleben und steuern das Archiv intuitiv alleine oder gemeinsam (U1, U2, U3, U5, U7)
+- **Veranstalter:innen / Betreiber:innen** – präsentieren, warten und konfigurieren das System (U11, U13, U15)
+- **Datengeber:innen / KDTS-Labor** – stellen das Bildmaterial und Kontextinformationen bereit (U31, U32, U34)
 
-Die Interaktion soll kollektiv, immersiv und ästhetisch ansprechend gestaltet sein.  
+Die Interaktion soll kollektiv, immersiv und ästhetisch ansprechend gestaltet sein.
 
 ---
 
