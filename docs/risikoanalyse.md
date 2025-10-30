@@ -18,13 +18,13 @@ Ziel ist es, aus diesem Datenmaterial ein interaktives, öffentlich zugängliche
   - Wie genau muss die Kameraposition ausgerichtet sein, sodass die Positionseerkennung funktionieren kann?
 
 **2. Synchronisierung von Medien (Bild, Licht, Ton)**
-  - Wie sollen die Übergänge zwischen den anzuzeigenden Bildern geschehen?
+  - Wie sollen die Übergänge zwischen den anzuzeigenden Bildern geschehen? -> Eventuell können die Bilder pro Jahr in einer geordneten Reihenfolge angezeigt werden
   - Was passiert zwischen den Positionserkennungen zweier Jahreszeiten?
   - Was wird angezeigt, wenn die Besucher:innen sich auf zwei Feldern gleichzeit befinden?
   - Wie bekommen wir es hin, dass alle Medien synchron abgespielt/angezeigt werden?
 
 **3. Datenbereitstellung**
-  - Wie können wir die große Anzahl an Bildern reduzieren/ordnen?/ Mit welcher Technologie ist dies Möglich?
+  - Wie können wir die große Anzahl an Bildern reduzieren/ordnen?/ Mit welcher Technologie ist dies möglich? -> [**Bildklassifikation**](../docs/adr/0002-bildklassifikation.md) nach Jahreszeiten und Wetter
   - Welche Bilder sind für unseren Kontext relevant?
   - Wie viele Bilder werden min/max benötigt, um das System verwenden zu können?
   - Wo werden die Bilder gespeichert, sodass das System sie verwenden kann?
