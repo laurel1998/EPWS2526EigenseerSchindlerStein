@@ -32,6 +32,7 @@ Alle Änderungen und Architekturentscheidungen werden nachvollziehbar dokumentie
 | [**`/docs/expose.md`**](./docs/expose.md) | Exposé |
 | [**`/docs/adr/`**](./docs/adr/) | *Architecture Decision Records (ADRs)* dokumentieren alle wichtigen Architekturentscheidungen mit Begründung |
 | [**`/docs/research-notes/`**](./docs/research-notes/) | Verzeichnis zur Dokumentation von Forschungsergebnissen |
+| [**`/Audits/Audit1/`**](./Audits/Audit1/audit1.md) | Roter Faden für Audit 1 |
 | [**`CHANGELOG.md`**](./CHANGELOG.md) | Verzeichnis aller Änderungen im Projektverlauf |
 | [**`README.md`**](./README.md) | Diese Datei - für Überblick und Orientierung |
 | *(weitere Ordner folgen)* | ggf. Code, Artefakte, Daten oder Präsentationen |
