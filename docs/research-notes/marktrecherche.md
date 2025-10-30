@@ -66,3 +66,17 @@ Ein narrativer Erlebnisraum, in dem Besucher:innen durch interaktive Elemente ei
 - Kombination analoger und digitaler Interfaces  
 - Vermittlung von Komplexität durch räumliche Dramaturgie
 
+---
+
+## 5. Cloud Pink – Everyware (2011) [https://www.creativeapplications.net/project/cloud-pink-by-everyware-another-world-above/]
+ 
+**Technik:**
+- Drucksensoren unter einer Decke aus weichem Stoff  
+- Reaktive LED-Beleuchtung in Echtzeit  
+
+**Beschreibung:**  
+Eine „Wolke“ reagiert auf Druck und Bewegung – Licht bewegt sich dort, wo Menschen interagieren.
+
+**Relevanz:**  
+- Haptische, körperliche Interaktion  
+- Unmittelbare Reaktion zwischen Mensch und digitaler Oberfläche  
