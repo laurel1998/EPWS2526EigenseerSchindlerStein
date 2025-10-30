@@ -10,6 +10,8 @@ Für die interaktive Installation *Season Shift* muss erkannt werden, wo sich Be
 Ziel ist es, eine präzise und stabile Erfassung der Position und Bewegung zu ermöglichen, die in Echtzeit an das System übermittelt werden kann.  
 Die Lösung soll dabei möglichst robust, wartungsarm und für öffentliche Präsentationen geeignet sein.
 
+[Research: Interaktionsmöglichkeiten](../research-notes/interaktion.md)
+
 ---
 
 ## Optionen
@@ -80,7 +82,3 @@ Alternative Verfahren wie Kameratracking oder Drucksensoren werden als ergänzen
 - Einrichtung und Kalibrierung der Tracking-Fläche
 - Tests mit mehreren Personen zur Erfassung von Robustheit und Genauigkeit
 
----
-
-## Verwandte Research-Dokumente
-- [Research: Interaktion und Nutzererkennung im Raum](../docs/research-notes/interaktion.md)
