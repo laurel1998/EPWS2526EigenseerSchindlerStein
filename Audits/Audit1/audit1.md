@@ -6,7 +6,7 @@ Das Dokument enthält Angaben zur Struktur unserer Vorbereitung für das erste A
 - Erklärung von der Aufgabe dieses Projektes
 - Erklärung der Projektstruktur und des Dateiverzeichnisses
 
-## [Expose](../docs/expose.md)
+## [Expose](./docs/expose.md)
 - abstrakte Beschreibung des Problemraums
 - [**Domänenmodell**](../Audits/Audit1/Domaenenmodell.Version1.pdf) für die Konkretisierung des Problemraums und wichtigen Entitäten für die Umsetzung des Projekts
 - Detailliertere Beschreibung der Projektidee mithilfe eines Ablaufplans
@@ -18,6 +18,7 @@ Das Dokument enthält Angaben zur Struktur unserer Vorbereitung für das erste A
 - [**Risiko und Problemanalyse**](../docs/risikoanalyse.md) mit Lösungsansätzen
 
 ## [Changelog](CHANGELOG.md)
+
 
 
 
