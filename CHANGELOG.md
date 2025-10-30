@@ -54,5 +54,6 @@ Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
   - Informationen über ähnliche Systeme und Bildausstellungen und deren Umsetzung
 - Domänenmodell
   - Ausarbeitung des Problemraums
+- Zusammenfassung der Inhaltspunkte für Audit 1
 
 
