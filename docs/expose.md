@@ -10,6 +10,8 @@ Ziel ist es, aus diesem Datenmaterial ein interaktives, öffentlich zugängliche
 **Kernfrage:**  
 Wie kann eine technische Infrastruktur und gestalterische Interaktion entstehen, die ein digitales Archiv **räumlich, intuitiv und emotional erfahrbar** macht?
 
+Um den konkreten Problemraum besser erfassen zu können, wurde ein [Domänenmodell](../Audits/Audit1/Domaenenmodell.Version1.pdf) erstellt.
+
 ---
 
 ## Zielsetzung und Leitidee
