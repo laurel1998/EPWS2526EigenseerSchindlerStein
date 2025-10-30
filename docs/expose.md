@@ -53,7 +53,7 @@ Eine ausführliche Beschreibung der User Stories ist [hier](user-stories.md) zu 
 ## Proof of Concepts und technische Umsetzung
 Geplant sind mehrere Proof-of-Concepts, die schrittweise zu einem funktionalen Prototypen zusammengeführt werden:
 
-1. **Interaktionssteuerung** – Interaktion mithilfe einer Kamera erfassen oder ein System des moxdlab nutzen, welches mit Infrarot arbeitet
+1. [**Interaktionsmöglichkeiten**](../docs/adr/0003-interaktion.md) – Interaktion mithilfe einer Kamera erfassen oder ein System des moxdlab nutzen, welches mit Infrarot arbeitet
 2. [**Bildklassifikation**](../docs/adr/0002-bildklassifikation.md) – Ordnen der Bilder mit einer Kombination aus heuristischen Verfahren und visueller Bildanalyse 
 3. **Raumwirkung** – Projektion, Licht- und Tonsteuerung im Zusammenspiel  
 4. **Systemintegration** – stabile, webbasierte Architektur (z. B. Node.js, WebGL, OpenCV)
@@ -65,7 +65,10 @@ Geplant sind mehrere Proof-of-Concepts, die schrittweise zu einem funktionalen P
 - **Zuverlässigkeit der Erfassungssysteme** – stabile Reaktion auf Interaktionen unabhängig von Licht, Raum oder Publikumsdichte 
 - **Räumliche Integration der Hardware** – z. B. Positionierung und Montage von Kameras oder Sensoren 
 - **Rechtliche und ethische Fragen** (Urheberrecht, Datenschutz, Darstellung sensibler Inhalte)  
-- **Gleichgewicht zwischen Kunst und Technik** – ästhetische Wirkung vs. technische Machbarkeit  
+- **Gleichgewicht zwischen Kunst und Technik** – ästhetische Wirkung vs. technische Machbarkeit
+
+Eine konkrete Auflistung von Problemen und Lösungsstrategien sind hier zu finden:
+[Risiko- und Problemanalyse](../docs/risikoanalyse.md)
 
 ---
 
