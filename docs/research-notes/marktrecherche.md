@@ -4,7 +4,7 @@ Diese folgenden Beispiele zeigen bestehende künstlerisch-technische Installatio
 
 ---
 
-## 1. Rain Room – Random International (2012) [https://www.random-international.com/rain-room]
+## 1. Rain Room - Random International (2012) [https://www.random-international.com/rain-room]
 
 **Technik:**
 - Infrarotsensoren und 3D-Kameras zur Bewegungserkennung
@@ -12,8 +12,8 @@ Diese folgenden Beispiele zeigen bestehende künstlerisch-technische Installatio
 - Sensoren, die das Verhalten der Besucher:innen analysieren und Regenfluss lokal stoppen
 
 **Beschreibung:**  
-Ein Raum, in dem es regnet – doch Besucher:innen bleiben trocken. Die Bewegung der Menschen steuert den Regen: Wo sie stehen, hört er auf.  
-Das System reagiert unmittelbar und schafft eine immersive, poetische Verbindung von Körper, Raum und Technologie.
+Ein Raum, in dem es regnet, doch Besucher:innen bleiben trocken. Die Bewegung der Menschen steuert den Regen. 
+Das System reagiert unmittelbar und schafft eine immersive Verbindung von Körper, Raum und Technologie.
 
 **Relevanz für das Projekt:**  
 - Sensorbasierte Rauminteraktion  
@@ -22,7 +22,7 @@ Das System reagiert unmittelbar und schafft eine immersive, poetische Verbindung
 
 ---
 
-## 2. WDCH Dreams – Refik Anadol (2018) [https://refikanadol.com/works/wdch-dreams/]
+## 2. WDCH Dreams - Refik Anadol (2018) [https://refikanadol.com/works/wdch-dreams/]
   
 **Technik:**
 - Verarbeitung von 45 TB audiovisueller Daten (Archiv der LA Philharmonic)
@@ -51,7 +51,7 @@ Ein begehbares digitales Kunstuniversum. Grenzen zwischen Besucher:innen, Raum u
 
 ---
 
-## 4. Meow Wolf – Convergence Station (2021) [https://meowwolf.com/visit/denver]
+## 4. Meow Wolf - Convergence Station (2021) [https://meowwolf.com/visit/denver]
 
 **Technik:**
 - Kombination aus physischen Requisiten, Sensoren, Lichtszenarien und Projektionen  
@@ -68,14 +68,14 @@ Ein narrativer Erlebnisraum, in dem Besucher:innen durch interaktive Elemente ei
 
 ---
 
-## 5. Cloud Pink – Everyware (2011) [https://www.creativeapplications.net/project/cloud-pink-by-everyware-another-world-above/]
+## 5. Cloud Pink - Everyware (2011) [https://www.creativeapplications.net/project/cloud-pink-by-everyware-another-world-above/]
  
 **Technik:**
 - Drucksensoren unter einer Decke aus weichem Stoff  
 - Reaktive LED-Beleuchtung in Echtzeit  
 
 **Beschreibung:**  
-Eine „Wolke“ reagiert auf Druck und Bewegung – Licht bewegt sich dort, wo Menschen interagieren.
+Eine „Wolke“ reagiert auf Druck und Bewegung. Licht bewegt sich dort, wo Menschen interagieren.
 
 **Relevanz:**  
 - Haptische, körperliche Interaktion  
