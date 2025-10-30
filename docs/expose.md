@@ -51,6 +51,8 @@ Eine ausführliche Beschreibung der User Stories ist [hier](user-stories.md) zu 
 ---
 
 ## Proof of Concepts und technische Umsetzung
+Eine Auswahl bereits existierender Konzepte ist in der [Marktrecherche](../docs/research-notes/marktrecherche.md) zu finden. Diese wird als Ideensammlung für das Finden von Lösungsansätzen genutzt.
+
 Geplant sind mehrere Proof-of-Concepts, die schrittweise zu einem funktionalen Prototypen zusammengeführt werden:
 
 1. [**Interaktion**](../docs/adr/0003-interaktion.md) – Interaktion mithilfe einer Kamera erfassen oder ein System des moxdlab nutzen, welches mit Infrarot arbeitet
