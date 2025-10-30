@@ -15,7 +15,7 @@ Eine Kamera, die sie tragen, erkennt ihre Position. Je nach Position wird ein pa
 
 ## Technische Herausforderungen
 
-**1. Positions- und Bewegungserkennung** -> [**Interaktion und Nutzererkennung im Raum**](../docs/research-notes/interaktion.md)
+**1. Positions- und Bewegungserkennung** -> [**Interaktion und Nutzererkennung im Raum**](../docs/adr/0003-interaktion.md)
   - Wie robust funktioniert das Tracking, wenn sich mehrere Personen gleichzeitig im Raum bzw. auf der Bodenplatte bewegen?
   - Wie müssen die Lichtverhältnisse im Raum sein, sodass die Positionserkennung robust funktioneren kann?
   - Wie genau muss die Kameraposition ausgerichtet sein, sodass die Positionseerkennung funktionieren kann? 
