@@ -2,7 +2,7 @@
 
 Das Dokument enthält Angaben zur Struktur unserer Vorbereitung für das erste Audit. Sie beinhaltet alle angesprochenen Themen und stellt den roten Faden unserer Präsentation dar. Alle Dateien werden verlinkt.
 
-## [Readme](README.md)
+## [Readme](../../README.md)
 - Erklärung von der Aufgabe dieses Projektes
 - Erklärung der Projektstruktur und des Dateiverzeichnisses
 
@@ -18,6 +18,7 @@ Das Dokument enthält Angaben zur Struktur unserer Vorbereitung für das erste A
 - [**Risiko und Problemanalyse**](../docs/risikoanalyse.md) mit Lösungsansätzen
 
 ## [Changelog](CHANGELOG.md)
+
 
 
 
