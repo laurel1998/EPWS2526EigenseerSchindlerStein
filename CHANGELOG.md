@@ -23,3 +23,14 @@ Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
   - Diskussion potenzieller Risiken (z. B. technische Machbarkeit, Installationsaufwand)  
   - Erste Anforderungsanalyse und Konkretisierung der Stakeholder auf Grundlage der bestehenden User Stories
 
+
+
+## [0.3.0] – 29.10.2025
+### Hinzugefügt 
+- Problem- & Risikoanalyse
+  - Identifikation von Problemen, die während der Entwicklung auftreten könnten  
+  - Auflistung von technischen Herausforderungen in Form von Fragen, die für die Durchführung noch beantwortet werden müssen
+    - Fragen zur Positions- und Bewegungserkennung
+    - Fragen zur Synchronisierung von Medien (Bild, Licht, Ton)
+    - Fragen zur Datenbereitstellung
+    - Fragen zur Softwareumsetzung
