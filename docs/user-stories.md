@@ -6,7 +6,6 @@ Folgende User Stories definieren Anforderungen an unser Projekt, gemessen an Nut
 **Publikum und Nutzer:innen**  
 - U1: Als Besucher:in will ich ohne Vorwissen und lange Erklärungen starten können, damit ich sofort ins Erlebnis eintauche.
 - U2: Als Besucher:in möchte ich mein Handeln unmittelbar im System gespiegelt sehen, damit ich Kontrolle und Wirksamkeit spüre.
-- U3: Als Besucher:in möchte ich zwischen mehreren leicht verständlichen Steuerungsarten wählen, damit ich mich wohl und sicher fühle.
 - U5: Als Besucher:in will ich durch visuelle und/oder auditive Highlights überrascht werden, damit das Erlebnis in Erinnerung bleibt.
 - U7: Als Besucher:in möchte ich interessante Informationen zu Bildarchiv und dem Steinmüller-Gelände erhalten, damit ich neben dem Spaß auch etwas lerne.
 
