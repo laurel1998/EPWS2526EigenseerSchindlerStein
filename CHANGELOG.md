@@ -57,3 +57,14 @@ Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 - Zusammenfassung der Inhaltspunkte für Audit 1
 
 
+   
+## [0.5.0] – 09.11.2025
+### Überarbeitet
+- User-Stories
+  - Trennung von Veranstalter und Betreiber des Systems
+ 
+### Hinzugefügt
+- User-Stories für das Erlebnis des Systems
+- User-Stories zum Veranstalter und Betreiber
+
+
