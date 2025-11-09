@@ -33,6 +33,8 @@ Die Installation des Systems kann flexibel sein, solange eine ausreichende Boden
 3. Nutzer:in bewegt sich auf dem Boden in ein Feld. Das System reagiert, indem es ein Bild der passenden Jahreszeit anzeigt. Befinden sich Personen außerdem auf anderen Feldern, verändert sich die Anzeige. Das ist realisierbar, indem sich die Anzeige auf dem Bildschirm in Bereiche aufteilt, jenachdem auf welchen Feldern die Nutzer:innen stehen (Winter und Sommer -> Splitscreen), oder die Bilder sich überlagern (Winter und Sommer gleichzeitig).
 4. Nutzer:in verlässt die Installation und übergibt den Controller.
 
+Zur Veranschaulichung ist ein [Storyboard](../docs/Storyboard.pdf) erstellt worden.
+
 
 Technische Risiken und Probleme können im Verlauf dieses Projekts auftreten und zu Änderungen im Ablauf und den Entscheidungen führen. Sie sind in dieser Datei dokumentiert: 
 [Risiko- und Problemanalyse](../docs/risikoanalyse.md)
