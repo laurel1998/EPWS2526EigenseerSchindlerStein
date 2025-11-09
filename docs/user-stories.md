@@ -50,8 +50,10 @@ Folgende User Stories definieren Anforderungen an unser Projekt, gemessen an Nut
 - U32 Als Daten-/Servicegeber:in möchte ich sensible oder rechtlich kritische Inhalte ausschließen können.
 - U34 Als Daten-/Servicegeber:in möchte ich, dass potenziell problematische Darstellungen (z.B. Persönlichkeitsrechte) verantwortungsvoll behandelt werden.
 
----
-
-**Abkürzungen:
+**Abkürzungen:**
 U -> User-Storie (aus der Projektaufgabe gegeben)
 EU -> Eigene User-Storie
+
+---
+
+
