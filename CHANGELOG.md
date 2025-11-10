@@ -63,8 +63,12 @@ Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 - User-Stories
   - Trennung von Veranstalter und Betreiber des Systems
  
+- Domänenmodell nach Iterationen unterteilt
+ 
 ### Hinzugefügt
 - User-Stories für das Erlebnis des Systems
 - User-Stories zum Veranstalter und Betreiber
+
+- V1 des Storyboards erstellt
 
 
