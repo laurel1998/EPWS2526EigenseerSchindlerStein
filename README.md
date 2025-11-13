@@ -31,6 +31,7 @@ Alle Änderungen und Architekturentscheidungen werden nachvollziehbar dokumentie
 | [**`/docs/`**](./docs/) | Enthält alle Projektdokumente |
 | [**`/docs/expose.md`**](./docs/expose.md) | Exposé |
 | [**`/docs/adr/`**](./docs/adr/) | *Architecture Decision Records (ADRs)* dokumentieren alle wichtigen Architekturentscheidungen mit Begründung |
+| [**`/docs/mvp.md`**](./docs/mvp.md) | Minimal Viable Product (MVP) - Definition der Kernfunktionen |
 | [**`/docs/research-notes/`**](./docs/research-notes/) | Verzeichnis zur Dokumentation von Forschungsergebnissen |
 | [**`/Audits/Audit1/`**](./Audits/Audit1/audit1.md) | Roter Faden für Audit 1 |
 | [**`CHANGELOG.md`**](./CHANGELOG.md) | Verzeichnis aller Änderungen im Projektverlauf |
