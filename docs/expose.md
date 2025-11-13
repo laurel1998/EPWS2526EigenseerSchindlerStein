@@ -61,9 +61,10 @@ Eine Auswahl bereits existierender Konzepte ist in der [Marktrecherche](../docs/
 Geplant sind mehrere Proof-of-Concepts, die schrittweise zu einem funktionalen Prototypen zusammengeführt werden:
 
 1. [**Interaktion**](../docs/adr/0003-interaktion.md) – Interaktion mithilfe einer Kamera erfassen oder ein System des moxdlab nutzen, welches mit Infrarot arbeitet
-2. [**Bildklassifikation**](../docs/adr/0002-bildklassifikation.md) – Ordnen der Bilder mit einer Kombination aus heuristischen Verfahren und visueller Bildanalyse 
-3. **Raumwirkung** – Projektion, Licht- und Tonsteuerung im Zusammenspiel  
-4. **Systemintegration** – stabile, webbasierte Architektur (z. B. Node.js, WebGL, OpenCV)
+2. [**Bildklassifikation**](../docs/adr/0002-bildklassifikation.md) – Ordnen der Bilder mit einer Kombination aus heuristischen Verfahren und visueller Bildanalyse
+3. **Datenschutz** - Überprüfung der Einhaltung der DSGVO
+4. **Raumwirkung** – Projektion, Licht- und Tonsteuerung im Zusammenspiel  
+5. **Systemintegration** – stabile, webbasierte Architektur (z. B. Node.js, WebGL, OpenCV)
 
 ---
 
