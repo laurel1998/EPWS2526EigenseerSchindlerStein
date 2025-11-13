@@ -12,7 +12,7 @@ Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 
 ### Hinzugefügt 
 - [MVP](./docs/mvp.md) - Defintion der Kernfunktionen ergänzt
-- Bildklassifikation nach Meta-Daten
+- Erster [Code](./tools/image-selection/..) für die Bildklassifikation nach Meta-Daten
 - [User Journeys](./Artefakte/UserJourneys/..) erstellt
 
 
