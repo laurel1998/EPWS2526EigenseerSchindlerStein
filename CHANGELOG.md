@@ -6,11 +6,11 @@ Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 
 
 ## [0.6.0] - 13.11.2025
-## Überarbeitet 
+### Überarbeitet 
 - neue Version [Domänenmodell](./Artefakte/Domainmodel/Domaenenmodell.Version3.pdf)
 - Priorisierung der [User Stories](./docs/user-stories.md)
 
-## Hinzugefügt 
+### Hinzugefügt 
 - [MVP](./docs/mvp.md) - Defintion der Kernfunktionen ergänzt
 - Bildklassifikation nach Meta-Daten
 - [User Journeys](./Artefakte/UserJourneys/..) erstellt
