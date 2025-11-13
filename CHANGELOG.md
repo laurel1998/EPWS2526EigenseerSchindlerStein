@@ -62,13 +62,23 @@ Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 ### Überarbeitet
 - User-Stories
   - Trennung von Veranstalter und Betreiber des Systems
- 
 - Domänenmodell nach Iterationen unterteilt
  
 ### Hinzugefügt
 - User-Stories für das Erlebnis des Systems
 - User-Stories zum Veranstalter und Betreiber
-
 - V1 des Storyboards erstellt
+
+
+
+## [0.6.0] - 13.11.2025
+## Überarbeitet 
+- neue Version [Domänenmodell](./Artefakte/Domaenenmodell.Version3.pdf)
+- Priorisierung der [User Stories](./docs/user-stories.md)
+
+## Hinzugefügt 
+- [MVP](./docs/mvp.md) - Defintion der Kernfunktionen ergänzt
+- Bildklassifikation nach Meta-Daten 
+  
 
 
