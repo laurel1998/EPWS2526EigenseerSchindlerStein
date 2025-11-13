@@ -4,19 +4,20 @@ import java.io.File
 import java.nio.file.Files
 import java.nio.file.Path
 import java.nio.file.StandardCopyOption
+import java.time.LocalDate
 import java.time.ZoneId
 
 fun main() {
-    // Wo kommen die Bilder her und wo werden sie gespeichert
-    val sourceRoot = Path.of("Beispiel:    E:/KDTS_Archive")              // Ordner auf der Festplatte
-    val targetRoot = Path.of("Beispiel:    E:/SeasonShift/selection_2021") // Zielordner für ausgewählte Bilder
+    // Wo kommen die Bilder her und wo werden sie gespeichert?
+    val sourceRoot = Path.of("TODO")    // Ordner mit Tagesordnern (z.B. 2009-12-01)
+    val targetRoot = Path.of("TODO")    // Zielordner für ausgewählte Bilder
 
-    // Welche Jahre und Monate interessieren uns für den PoC
+    // Welche Jahre und Monate interessieren uns für den PoC?
     val allowedYears = setOf(2021) // Jahr
-    val winterMonths = setOf(1)   // Januar
-    val springMonths = setOf(4)   // April
-    val summerMonths = setOf(7)   // Juli
-    val autumnMonths = setOf(10)  // Oktober
+    val winterMonths = setOf(1) // Januar
+    val springMonths = setOf(4) // April
+    val summerMonths = setOf(7) // Juli
+    val autumnMonths = setOf(10) // Oktober
 
     // Zeitkonfiguration
     val timezone = ZoneId.of("Europe/Berlin")
@@ -29,44 +30,59 @@ fun main() {
 
     Files.createDirectories(targetRoot)
 
-    // Durchlaufen von: Jahr → Monat → Tag
-    Files.list(sourceRoot).use { years ->
-        years.filter { Files.isDirectory(it) && it.fileName.toString().toIntOrNull() in allowedYears }
-            .forEach { yearPath ->
-                val year = yearPath.fileName.toString().toInt()
+    // Direkt über alle Tagesordner iterieren (z.B. 2009-12-01)
+    Files.list(sourceRoot).use { dayFolders ->
+        dayFolders
+            .filter { Files.isDirectory(it) }
+            .forEach { dayPath ->
+                val dayName = dayPath.fileName.toString()   // z.B. "2009-12-01"
 
-                Files.list(yearPath).use { months ->
-                    months.filter { Files.isDirectory(it) }
-                        .forEach { monthPath ->
-                            val month = monthPath.fileName.toString().toIntOrNull() ?: return@forEach
-                            val season = seasonFromMonth(month, winterMonths, springMonths, summerMonths, autumnMonths)
-                                ?: return@forEach
-
-                            println("➜ Verarbeite $year/$month ($season)")
-
-                            Files.list(monthPath).use { days ->
-                                days.filter { Files.isDirectory(it) }
-                                    .forEach { dayPath ->
-                                        // pro Tag genau EIN Bild auswählen
-                                        selectMiddayImageFromDay(
-                                            dayPath = dayPath,
-                                            season = season,
-                                            year = year,
-                                            month = month,
-                                            targetRoot = targetRoot,
-                                            timezone = timezone,
-                                            targetHour = targetHour,
-                                            targetMinute = targetMinute
-                                        )
-                                    }
-                            }
-                        }
+                // Versuchen, aus dem Ordnernamen ein Datum zu machen
+                val date = try {
+                    LocalDate.parse(dayName) // erwartet Format YYYY-MM-DD
+                } catch (e: Exception) {
+                    println("⚠️  Überspringe Ordner (kein Datum): $dayName")
+                    return@forEach
                 }
+
+                val year = date.year
+                val month = date.monthValue
+
+                if (year !in allowedYears) {
+                    // Jahr unwichtig
+                    return@forEach
+                }
+
+                val season = seasonFromMonth(
+                    month = month,
+                    winter = winterMonths,
+                    spring = springMonths,
+                    summer = summerMonths,
+                    autumn = autumnMonths
+                ) ?: run {
+                    // Monat gehört zu keiner der definierten Saisons
+                    return@forEach
+                }
+
+                println("➜ Verarbeite $dayName ($season)")
+
+                // pro Tag genau EIN Bild auswählen
+                selectMiddayImageFromDay(
+                    dayPath = dayPath,
+                    season = season,
+                    year = year,
+                    month = month,
+                    targetRoot = targetRoot,
+                    timezone = timezone,
+                    targetHour = targetHour,
+                    targetMinute = targetMinute
+                )
             }
     }
 
     println("Fertig")
 }
+
 
 // Ordnet Monate Jahreszeiten zu.
 fun seasonFromMonth(
