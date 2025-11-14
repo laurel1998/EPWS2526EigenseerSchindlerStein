@@ -1,5 +1,3 @@
-import com.drew.imaging.ImageMetadataReader
-import com.drew.metadata.exif.ExifSubIFDDirectory
 import java.io.File
 import java.nio.file.Files
 import java.nio.file.Path
@@ -9,8 +7,8 @@ import java.time.ZoneId
 
 fun main() {
     // Wo kommen die Bilder her und wo werden sie gespeichert?
-    val sourceRoot = Path.of("TODO")    // Ordner mit Tagesordnern (z.B. 2009-12-01)
-    val targetRoot = Path.of("TODO")    // Zielordner für ausgewählte Bilder
+    val sourceRoot = Path.of("F:\\source")    // Ordner mit Tagesordnern (z.B. 2009-12-01)
+    val targetRoot = Path.of("F:\\SeasonShift")    // Zielordner für ausgewählte Bilder
 
     // Welche Jahre und Monate interessieren uns für den PoC?
     val allowedYears = setOf(2021) // Jahr
@@ -41,7 +39,7 @@ fun main() {
                 val date = try {
                     LocalDate.parse(dayName) // erwartet Format YYYY-MM-DD
                 } catch (e: Exception) {
-                    println("⚠️  Überspringe Ordner (kein Datum): $dayName")
+                    println("Überspringe Ordner (kein Datum): $dayName")
                     return@forEach
                 }
 
@@ -110,7 +108,6 @@ fun selectMiddayImageFromDay(
     targetHour: Int,
     targetMinute: Int
 ) {
-    // Alle Bilddateien des Tages sammeln
     val images = Files.list(dayPath)
         .filter { Files.isRegularFile(it) && isImageFile(it.toFile()) }
         .toList()
@@ -119,16 +116,13 @@ fun selectMiddayImageFromDay(
 
     data class Candidate(
         val file: Path,
-        val score: Int // je kleiner, desto näher an 12:00
+        val score: Int
     )
 
     val candidates = images.mapNotNull { path ->
-        val date = readExifDate(path.toFile()) ?: return@mapNotNull null
-        val localDateTime = date.toInstant().atZone(timezone).toLocalDateTime()
-        val hour = localDateTime.hour
-        val minute = localDateTime.minute
+        val (hour, minute) = readTimeFromFilename(path.toFile())
+            ?: return@mapNotNull null
 
-        // berechnen, wie nah die Zeit an 12:00 ist
         val diffMinutes = kotlin.math.abs((hour - targetHour) * 60 + (minute - targetMinute))
 
         Candidate(path, diffMinutes)
@@ -136,7 +130,6 @@ fun selectMiddayImageFromDay(
 
     if (candidates.isEmpty()) return
 
-    // Kandidat mit der geringsten Abweichung von 12:00
     val best = candidates.minByOrNull { it.score } ?: return
 
     val dayName = dayPath.fileName.toString()
@@ -152,18 +145,24 @@ fun selectMiddayImageFromDay(
 
     Files.copy(best.file, targetFile, StandardCopyOption.REPLACE_EXISTING)
 
-    println("  📸 $season: Tag $dayName -> ${targetFile.fileName}")
+    println("$season: Tag $dayName -> ${targetFile.fileName}")
 }
 
-// EXIF-Aufnahmedatum lesen (DateTimeOriginal)
-fun readExifDate(file: File): java.util.Date? {
-    return try {
-        val metadata = ImageMetadataReader.readMetadata(file)
-        val directory = metadata.getFirstDirectoryOfType(ExifSubIFDDirectory::class.java)
-        directory?.dateOriginal
-    } catch (e: Exception) {
-        null
-    }
+// Extrahiert die Uhrzeit aus dem Dateinamen
+fun readTimeFromFilename(file: File): Pair<Int, Int>? {
+    val name = file.nameWithoutExtension
+
+    val underlineIndex = name.lastIndexOf("_")
+    if (underlineIndex == -1) return null
+
+    val timePart = name.substring(underlineIndex + 1)   // z.B. "04-28-13-70"
+    val parts = timePart.split("-")
+    if (parts.size < 2) return null
+
+    val hour = parts[0].toIntOrNull() ?: return null
+    val minute = parts[1].toIntOrNull() ?: return null
+
+    return hour to minute
 }
 
 // Prüft, ob die Datei ein Bild ist
