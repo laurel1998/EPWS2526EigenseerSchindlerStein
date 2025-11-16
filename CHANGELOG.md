@@ -9,6 +9,7 @@ Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 ### Überarbeitet 
 - neue Version [Domänenmodell](./Artefakte/Domainmodel/Domaenenmodell.Version3.pdf)
 - Priorisierung der [User Stories](./docs/user-stories.md)
+- [ADR zur Bildklassifikation](./docs/adr/0002-bildklassifikation.md) an unseren MVP angepasst 
 
 ### Hinzugefügt 
 - [MVP](./docs/mvp.md) - Defintion der Kernfunktionen ergänzt
