@@ -1,7 +1,7 @@
 # ADR-0002: Bildklassifikation nach Jahreszeiten, Wetter und Visueller Analyse
 
 **Status:** entschieden
-**Datum:** 2025-10-21 
+**Datum:** 2025-11-13 
 
 ---
 
@@ -32,13 +32,12 @@ Nachforschungen haben dafür Ergebnisse geliefert, die sich für das Projekt als
 ---
 
 ## Entscheidung
-Die effizienteste Lösung bietet eine Kombination aus heuristischer Klasifikation in Verbindung mit Wetterdaten und einer folgenden visuellen Analyse der Bilder (Option 4). Außerdem wird die Anzahl an Bildern verringert, um den Rechenaufwand zu reduzieren und das System zu entlasten. 
+Für die erste Instanz eines funktionsfähigen PoC's zur Bildklassifikation eignet sich das Zuordnen nach Metadaten. Eine Auswahl an passenden Bildern wird nach Zeitkriterien wie Datum und Uhrzeit gefiltert und in Folge als Basis des Systems genutzt. Eine detailliertere Analyse passender Bilder kann im nachhinein dennoch erfolgen, ist vorerst aber nicht vorgesehen.
 
 ---
 
 ## Folgen und To-dos
-- Auswahl und Integration einer geeigneten **Wetter-API**
-- Implementierung der **Analyse** mit OpenCV für Farb- und Helligkeitsauswertung 
+- Auswahl passender Monate und Jahre für den Bilddatensatz
+- Implementierung der **Analyse**, Code schreiben der nach Datum und Uhrzeit filtert
 - Erstellung eines **Testdatensatzes** mit manuell überprüften Bildern um die Klassifikation zu Validieren
-- System zur Kombination von Metadaten, Wetterdaten und visuellen Analysen erstellen
 - Ergebnisse so speichern, dass sie für das Projekt nutzbar sind
