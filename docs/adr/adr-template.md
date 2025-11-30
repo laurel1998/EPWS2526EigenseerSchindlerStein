@@ -16,3 +16,5 @@ Wofür haben wir uns entschieden – und warum (Abwägungen, Trade-offs)?
 
 ## Folgen und To-dos
 Welche Folgen und To-dos ergeben sich daraus?
+
+## Probleme
