@@ -41,3 +41,9 @@ Für die erste Instanz eines funktionsfähigen PoC's zur Bildklassifikation eign
 - Implementierung der **Analyse**, Code schreiben der nach Datum und Uhrzeit filtert
 - Erstellung eines **Testdatensatzes** mit manuell überprüften Bildern um die Klassifikation zu Validieren
 - Ergebnisse so speichern, dass sie für das Projekt nutzbar sind
+
+---
+
+## Probleme 
+- Auswahl von Bildern nur über Dateinamen möglich weil Metadaten nicht korrekt sind (Aufnahmezeitpunkt)
+- Auswahl von Jahreszeiten nach Monaten schwierig -> es schneit im April, wie geht man damit um?
