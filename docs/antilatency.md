@@ -29,6 +29,8 @@ Die Tracking-Qualität hängt davon ab, wie viele Kabel mit Sensoren verwendet w
 In diesem Schritt nutzt man die erstellte Vorlage des Environments, um die Tracking-Fläche exakt nach diesem Schema aufzubauen.  
 Es stehen Kabel in verschiedenen Längen zur Verfügung, um das Layout zu realisieren.
 
+![Kabel](../docs/bilder/Kabel-min.png)
+
 Idealerweise beginnt man damit, den **Stromanschluss** mit den ersten Kabeln zu verbinden und folgt dann dem Schema Schritt für Schritt.  
 Für das Verbinden der Kabel gibt es **Konnektoren** in verschiedenen Ausrichtungen (*I*, *L*, *X*).
 
