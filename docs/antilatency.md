@@ -31,8 +31,13 @@ Es stehen Kabel in verschiedenen Längen zur Verfügung, um das Layout zu realis
 
 ![Kabel](../docs/bilder/Kabel-min.png)
 
-Idealerweise beginnt man damit, den **Stromanschluss** mit den ersten Kabeln zu verbinden und folgt dann dem Schema Schritt für Schritt.  
 Für das Verbinden der Kabel gibt es **Konnektoren** in verschiedenen Ausrichtungen (*I*, *L*, *X*).
+
+![](../docs/bilder/Konnektoren-min.png) ![](../docs/bilder/Kabelenden-min.png)
+
+Idealerweise beginnt man damit, den **Stromanschluss** mit den ersten Kabeln zu verbinden und folgt dann dem Schema Schritt für Schritt.  
+
+![](../docs/bilder/Kabelsetup-min.png)
 
 Sind die Kabel korrekt miteinander verbunden, können die **Bodenplatten** entsprechend dem Schema aufgelegt werden.  
 Diese enthalten Öffnungen für die Infrarot-Sensoren der Kabel.
@@ -46,6 +51,8 @@ Folgende Komponenten sind relevant:
 1. **Host** – Der PC mit der Software  
 2. **Radio Socket** – Access Point, der Signale der Tracker empfängt und an den Host sendet  
 3. **Tracker** – 1 bis n, kommunizieren mit dem Radio Socket
+
+![](../docs/bilder/Host-min.png) ![](../docs/bilder/Tracker-min.png)
 
 Das System kommuniziert über **Radio-Channels** mit verschiedenen Frequenzen.  
 Es existieren insgesamt **141 Channels**.
