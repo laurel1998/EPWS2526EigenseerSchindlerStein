@@ -4,6 +4,11 @@ Alle nennenswerten Änderungen an diesem Projekt werden in dieser Datei dokument
 Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 
 
+## [0.7.0] - 30.11.2025
+### Hinzugefügt 
+- [Antilatency Setup](./docs/antilatency.md) - Alle Infos zur Installation + Bilder 
+
+
 
 ## [0.6.0] - 13.11.2025
 ### Überarbeitet 
