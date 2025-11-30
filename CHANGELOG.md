@@ -5,6 +5,10 @@ Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 
 
 ## [0.7.0] - 30.11.2025
+### Überarbeitet 
+- [ADR zur Bildklassifikation](./docs/adr/0002-bildklassifikation.md) - Abschnitt für Probleme hinzugefügt
+- [ADR zur Interaktion](./docs/adr/0003-interaktion.md) - Abschnitt für Probleme hinzugefügt
+
 ### Hinzugefügt 
 - [Antilatency Setup](./docs/antilatency.md) - Alle Infos zur Installation + Bilder 
 
