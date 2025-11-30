@@ -42,7 +42,8 @@ Idealerweise beginnt man damit, den **Stromanschluss** mit den ersten Kabeln zu 
 Sind die Kabel korrekt miteinander verbunden, können die **Bodenplatten** entsprechend dem Schema aufgelegt werden.  
 Diese enthalten Öffnungen für die Infrarot-Sensoren der Kabel.
 
-![](../docs/bilder/Setup_hell-min.png) ![](../docs/bilder/Setup_dunkel-min.png)
+![Setup mit Licht](../docs/bilder/Setup_hell-min.png)
+![Setup im Dunkeln](../docs/bilder/Setup_dunkel-min.png)
 
 ---
 
