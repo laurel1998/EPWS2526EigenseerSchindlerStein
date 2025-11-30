@@ -18,3 +18,4 @@ Wofür haben wir uns entschieden – und warum (Abwägungen, Trade-offs)?
 Welche Folgen und To-dos ergeben sich daraus?
 
 ## Probleme
+Welche Probleme sind uns begegnet? Wie werden diese gelöst?
