@@ -82,3 +82,9 @@ Alternative Verfahren wie Kameratracking oder Drucksensoren werden als ergänzen
 - Einrichtung und Kalibrierung der Tracking-Fläche
 - Tests mit mehreren Personen zur Erfassung von Robustheit und Genauigkeit
 
+---
+
+## Probleme
+- Ausrichtung der Kabel ist wichtig!! -> Aufbau der Bodenfläche muss sehr exakt sein
+- Version Probleme mit Software und Demo App
+
