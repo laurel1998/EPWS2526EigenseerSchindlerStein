@@ -29,11 +29,19 @@ Alle Änderungen und Architekturentscheidungen werden nachvollziehbar dokumentie
 | Pfad / Datei | Beschreibung |
 |---------------|--------------|
 | [**`/docs/`**](./docs/) | Enthält alle Projektdokumente |
-| [**`/docs/expose.md`**](./docs/expose.md) | Exposé |
+| [**`/docs/Modelle/`**](./docs/Modelle/) | Enthält alle entworfenen Modelle (Architektur-/Domänenmodell) |
+| [**`/docs/User-Journeys/`**](./docs/User-Journeys/) | User-Journeys |
 | [**`/docs/adr/`**](./docs/adr/) | *Architecture Decision Records (ADRs)* dokumentieren alle wichtigen Architekturentscheidungen mit Begründung |
-| [**`/docs/mvp.md`**](./docs/mvp.md) | Minimal Viable Product (MVP) - Definition der Kernfunktionen |
+| [**`/docs/bilder/`**](./docs/bilder/) | Bilder |
 | [**`/docs/research-notes/`**](./docs/research-notes/) | Verzeichnis zur Dokumentation von Forschungsergebnissen |
-| [**`/Audits/Audit1/`**](./Audits/Audit1/audit1.md) | Roter Faden für Audit 1 |
+| [**`/docs/Storyboard.pdf`**](./docs/Storyboard.pdf) | Storyboard - Visuelle Darstelleung der Interaktion |
+| [**`/docs/antilatency.md`**](./docs/antilatency.md) | Beschreibung des Aufbaus des Antilatency Systems |
+| [**`/docs/expose.md`**](./docs/expose.md) | Exposé |
+| [**`/docs/mvp.md`**](./docs/mvp.md) | Minimal Viable Product (MVP) - Definition der Kernfunktionen |
+| [**`/docs/risikoanalyse.md`**](./docs/risikoanalyse.md) | Auflistung der möglichen Risiken im Projekt |
+| [**`/docs/user-stories.md`**](./docs/user-stories.md) | Auflistung aller User-Stories bit Kategorisierung |
+| [**`/Audits/`**](./Audits/) | Roter Faden für die Audits |
+| [**`/tools/`**](./tools/) | Code zur Bildklassifikation |
 | [**`CHANGELOG.md`**](./CHANGELOG.md) | Verzeichnis aller Änderungen im Projektverlauf |
 | [**`README.md`**](./README.md) | Diese Datei - für Überblick und Orientierung |
 | *(weitere Ordner folgen)* | ggf. Code, Artefakte, Daten oder Präsentationen |
