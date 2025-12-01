@@ -6,7 +6,7 @@ Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 
 ## [0.8.0] - 01.12.2025
 ### Hinzugefügt 
-- [ADR zu Datenschutz](./docs/adr/datenschutz.md) - Festhalten unserer Entscheidung zum Umgang mit Datenschutz
+- [ADR zu Datenschutz](./docs/adr/0004-datenschutz.md) - Festhalten unserer Entscheidung zum Umgang mit Datenschutz
  
 
 
