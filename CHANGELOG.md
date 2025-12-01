@@ -5,8 +5,12 @@ Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 
 
 ## [0.8.0] - 01.12.2025
+### Überarbeitet 
+- [Antilatency Setup](./docs/antilatency.md) - weitere Bilder und Screenshots hinzugefügt
+
 ### Hinzugefügt 
 - [ADR zu Datenschutz](./docs/adr/0004-datenschutz.md) - Festhalten unserer Entscheidung zum Umgang mit Datenschutz
+- [Architekturdiagramm](./docs/Architekturmodelle/Architekturmodell.Version1.pdf) - Erste Version der Systemarchitektur
  
 
 

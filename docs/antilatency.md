@@ -22,6 +22,8 @@ Dabei wählt man zunächst aus, ob die Fläche **am Boden** oder **an der Decke*
 Es stehen bereits **Default-Setups** für Standardbodenflächen (in unserem Fall **3×3 m**) zur Verfügung.  
 Die Tracking-Qualität hängt davon ab, wie viele Kabel mit Sensoren verwendet werden.
 
+![Bodenfläche Setup](../docs/bilder/RoutingAntilatency.png)
+
 ---
 
 ## Schritt 3 – Aufbau der Tracking-Fläche
@@ -33,11 +35,11 @@ Es stehen Kabel in verschiedenen Längen zur Verfügung, um das Layout zu realis
 
 Für das Verbinden der Kabel gibt es **Konnektoren** in verschiedenen Ausrichtungen (*I*, *L*, *X*).
 
-![](../docs/bilder/Konnektoren-min.png) ![](../docs/bilder/Kabelenden-min.png)
+![Konnektoren](../docs/bilder/Konnektoren-min.png) ![Kabelenden](../docs/bilder/Kabelenden-min.png)
 
 Idealerweise beginnt man damit, den **Stromanschluss** mit den ersten Kabeln zu verbinden und folgt dann dem Schema Schritt für Schritt.  
 
-![](../docs/bilder/Kabelsetup-min.png)
+![Kabelsetup](../docs/bilder/Kabelsetup-min.png)
 
 Sind die Kabel korrekt miteinander verbunden, können die **Bodenplatten** entsprechend dem Schema aufgelegt werden.  
 Diese enthalten Öffnungen für die Infrarot-Sensoren der Kabel.
@@ -55,12 +57,14 @@ Folgende Komponenten sind relevant:
 2. **Radio Socket** – Access Point, der Signale der Tracker empfängt und an den Host sendet  
 3. **Tracker** – 1 bis n, kommunizieren mit dem Radio Socket
 
-![](../docs/bilder/Host-min.png) ![](../docs/bilder/Tracker-min.png)
+![Host und Radio Socket](../docs/bilder/Host-min.png) ![alle Tracker und Alts](../docs/bilder/Tracker-min.png)
 
 Das System kommuniziert über **Radio-Channels** mit verschiedenen Frequenzen.  
 Es existieren insgesamt **141 Channels**.
 
 Um den Channel mit der besten Übertragungseffizienz zu finden, scannt man die Umgebung mithilfe des **Antilatency Radio Protocols** im jeweiligen Raum der Installation.
+
+![Scan zum Herausfinden der Frequenz](../docs/bilder/RadioScanner(screenshot).png)
 
 ### Wichtige Hinweise
 
@@ -74,6 +78,8 @@ Um den Channel mit der besten Übertragungseffizienz zu finden, scannt man die U
 
 Die Funktionalität kann mithilfe der **Demo App** getestet werden.  
 Es wird empfohlen, die Version der Demo App zu verwenden, die zur installierten Antilatency Software passt.
+
+![Demo](../docs/bilder/TrackingDemo.png)
 
 Leider existiert die Demo App nur bis Version **4.1.0**, was zu fehlerhaften Ergebnissen führen kann.
 
