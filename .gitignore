@@ -47,3 +47,26 @@ config/data-paths.local.json
 # ============================================================
 SeasonShift/
 selection_*/
+
+# Unity generierte Ordner
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+
+# Unity Crashlogs
+*.stacktrace
+
+# Rider/JetBrains
+.idea/
+*.sln
+*.csproj
+*.unityproj
+
+# User-spezifische Einstellungen
+*.user
+*.userprefs
+
