@@ -38,7 +38,7 @@ Für die erste Instanz eines funktionsfähigen PoC's zur Bildklassifikation eign
 
 ## Folgen und To-dos
 - Auswahl passender Monate und Jahre für den Bilddatensatz
-- Implementierung der **Analyse**, [Code](../tools/image-selection/..) schreiben der nach Datum und Uhrzeit filtert
+- Implementierung der **Analyse**, [Code](../../tools/image-selection) schreiben der nach Datum und Uhrzeit filtert
 - Erstellung eines **Testdatensatzes** mit manuell überprüften Bildern um die Klassifikation zu Validieren
 - Ergebnisse so speichern, dass sie für das Projekt nutzbar sind
 
