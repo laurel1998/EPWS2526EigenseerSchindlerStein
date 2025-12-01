@@ -10,7 +10,7 @@ Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 
 ### Hinzugefügt 
 - [ADR zu Datenschutz](./docs/adr/0004-datenschutz.md) - Festhalten unserer Entscheidung zum Umgang mit Datenschutz
-- [Architekturdiagramm](./docs/Modelle/Architekturmodell/Architekturmodell.Version1.pdf) - Erste Version der Systemarchitektur
+- [Architekturmodell](./docs/Modelle/Architekturmodell/Architekturmodell.Version1.pdf) - Erste Version der Systemarchitektur
  
 
 
