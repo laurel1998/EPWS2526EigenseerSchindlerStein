@@ -32,7 +32,7 @@ Nachforschungen haben dafür Ergebnisse geliefert, die sich für das Projekt als
 ---
 
 ## Entscheidung
-Für die erste Instanz eines funktionsfähigen PoC's zur Bildklassifikation eignet sich das Zuordnen nach Metadaten. Eine Auswahl an passenden Bildern wird nach Zeitkriterien wie Datum und Uhrzeit gefiltert und in Folge als Basis des Systems genutzt. Eine detailliertere Analyse passender Bilder kann im nachhinein dennoch erfolgen, ist vorerst aber nicht vorgesehen.
+Für die erste Instanz eines funktionsfähigen PoC's zur Bildklassifikation eignet sich das Zuordnen nach Dateinamen. Eine Auswahl an passenden Bildern wird nach Zeitkriterien wie Datum und Uhrzeit gefiltert und in Folge als Basis des Systems genutzt. Eine detailliertere Analyse passender Bilder kann im nachhinein dennoch erfolgen, ist vorerst aber nicht vorgesehen.
 
 ---
 
