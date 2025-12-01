@@ -2,7 +2,7 @@
 
 Das Dokument enthält Angaben zur Struktur unserer Vorbereitung für das zweite Audit. Sie beinhaltet alle angesprochenen Themen und stellt den roten Faden unserer Präsentation dar. Alle Dateien werden verlinkt.
 
-## [Bildklassifikation](../../docs/adr/bildklassifikation.md)
+## [Bildklassifikation](../docs/adr/bildklassifikation.md)
 - Erklärung des [Codes](../../tools/image-selection)
 - Erklärung der daraus entstanden [Probleme](../../docs/adr/0002-bildklassifikation.md#probleme)
 
