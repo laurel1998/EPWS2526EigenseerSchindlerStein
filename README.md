@@ -30,9 +30,9 @@ Alle Änderungen und Architekturentscheidungen werden nachvollziehbar dokumentie
 |---------------|--------------|
 | [**`/docs/`**](./docs/) | Enthält alle Projektdokumente |
 | [**`/docs/Modelle/`**](./docs/Modelle/) | Enthält alle entworfenen Modelle (Architektur-/Domänenmodell) |
-| [**`/docs/User-Journeys/`**](./docs/User-Journeys/) | User-Journeys |
+| [**`/docs/User-Journeys/`**](./docs/User-Journeys/) | Enthält 3 User-Journeys |
 | [**`/docs/adr/`**](./docs/adr/) | *Architecture Decision Records (ADRs)* dokumentieren alle wichtigen Architekturentscheidungen mit Begründung |
-| [**`/docs/bilder/`**](./docs/bilder/) | Bilder |
+| [**`/docs/bilder/`**](./docs/bilder/) | Enthält verwendete Bilder für das Antilatency System |
 | [**`/docs/research-notes/`**](./docs/research-notes/) | Verzeichnis zur Dokumentation von Forschungsergebnissen |
 | [**`/docs/Storyboard.pdf`**](./docs/Storyboard.pdf) | Storyboard - Visuelle Darstelleung der Interaktion |
 | [**`/docs/antilatency.md`**](./docs/antilatency.md) | Beschreibung des Aufbaus des Antilatency Systems |
