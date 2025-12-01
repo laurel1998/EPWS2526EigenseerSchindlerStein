@@ -10,7 +10,7 @@ Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 
 ### Hinzugefügt 
 - [ADR zu Datenschutz](./docs/adr/0004-datenschutz.md) - Festhalten unserer Entscheidung zum Umgang mit Datenschutz
-- [Architekturdiagramm](./docs/Architekturmodelle/Architekturmodell.Version1.pdf) - Erste Version der Systemarchitektur
+- [Architekturdiagramm](./docs/Modelle/Architekturmodell/Architekturmodell.Version1.pdf) - Erste Version der Systemarchitektur
  
 
 
@@ -28,7 +28,7 @@ Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 
 ## [0.6.0] - 13.11.2025
 ### Überarbeitet 
-- neue Version [Domänenmodell](./Artefakte/Domainmodel/Domaenenmodell.Version3.pdf)
+- neue Version [Domänenmodell](./docs/Modelle/Domainmodell/Domaenenmodell.Version3.pdf)
 - Priorisierung der [User Stories](./docs/user-stories.md)
 - [ADR zur Bildklassifikation](./docs/adr/0002-bildklassifikation.md) an unseren MVP angepasst 
 
