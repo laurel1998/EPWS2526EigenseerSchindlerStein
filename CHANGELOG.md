@@ -4,6 +4,12 @@ Alle nennenswerten Änderungen an diesem Projekt werden in dieser Datei dokument
 Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 
 
+## [0.8.0] - 01.12.2025
+### Hinzugefügt 
+- [ADR zu Datenschutz](./docs/adr/datenschutz.md) - Festhalten unserer Entscheidung zum Umgang mit Datenschutz
+ 
+
+
 ## [0.7.0] - 30.11.2025
 ### Überarbeitet 
 - [ADR zur Bildklassifikation](./docs/adr/0002-bildklassifikation.md) - Abschnitt für Probleme hinzugefügt
@@ -13,7 +19,6 @@ Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 - [Antilatency Setup](./docs/antilatency.md) - Alle Infos zur Installation + Bilder 
 - [User Journeys](./docs/User-Journeys) - 3 User-Journeys mit verschiedenen Personas
     - In den Möglichkeiten finden sich Lösungsansätze zur Verbesserung des System. Allerdings sind diese für die weitere Iterationen nützlich, nachdem alle User-Stories, die mit MUST   gekennzeichnet wurden, erfüllt sind. 
-
 
 
 
