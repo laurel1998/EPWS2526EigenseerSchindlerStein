@@ -12,6 +12,11 @@ Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 ### Hinzugefügt 
 - [Antilatency Setup](./docs/antilatency.md) - Alle Infos zur Installation + Bilder 
 
+### Hinzugefügt 
+- [User Journeys](./docs/User-Journeys) - 3 User-Journeys mit verschiedenen Personas 
+- In den Möglichkeiten finden sich Lösungsansätze zur Verbesserung des System. Allerdings sind diese für die weitere Iterationen nützlich, nachdem alle User-Stories, die mit MUST gekennzeichnet wurden, erfüllt sind. 
+
+
 
 
 ## [0.6.0] - 13.11.2025
