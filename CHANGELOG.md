@@ -7,7 +7,7 @@ Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 
 ## [0.9.0] - 01.12.2025
 ### Hinzugefügt 
-- [Audit 2](../Audits/audit2.md) - 
+- [Audit 2](./Audits/audit2.md) - 
 
 
 ## [0.8.0] - 01.12.2025
