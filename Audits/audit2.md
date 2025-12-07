@@ -3,8 +3,8 @@
 Das Dokument enthält Angaben zur Struktur unserer Vorbereitung für das zweite Audit. Sie beinhaltet alle angesprochenen Themen und stellt den roten Faden unserer Präsentation dar. Alle Dateien werden verlinkt.
 
 ## [Bildklassifikation](../docs/adr/0002-bildklassifikation.md)
-- Erklärung des [Codes](../tools/image-selection)
-- Erklärung der daraus entstanden [Probleme](../docs/adr/0002-bildklassifikation.md#probleme)
+- Erklärung des [Codes](../tools/image-selection/src/main/kotlin/ImageSelectionMain.kt)
+- Erklärung der daraus entstanden [Probleme](../docs/adr/0002-bildklassifikation.md#probleme) mit [Beispiel](../docs/bilder/AprilBild.png)
 
 ## [Storyboard](../docs/Storyboard.pdf)
 - Erklärung der Visualsierung der Interaktion
