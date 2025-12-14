@@ -1,6 +1,6 @@
 # POC-0000: Proof of concept-Glossar
 
-**Datum:** 14.12.2025
+**Datum:** 2025-12-14
 
 **Source:** https://miro.com/templates/proof-of-concept/
 

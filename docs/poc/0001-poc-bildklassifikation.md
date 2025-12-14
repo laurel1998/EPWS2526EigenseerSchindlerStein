@@ -1,8 +1,11 @@
 # POC-0001: Bildklassifikation
 
 **Status:** Approved
+
 **Priority:** Medium
-**Datum:** 14.11.2025
+
+**Datum:** 2025-11-14
+
 **Datei:** [Image-Selection](../../tools/image-selection)
 
 ---
