@@ -1,6 +1,7 @@
 # ADR-0002: Bildklassifikation nach Jahreszeiten, Wetter und Visueller Analyse
 
 **Status:** entschieden
+
 **Datum:** 2025-11-13 
 
 ---
