@@ -3,6 +3,9 @@
 Alle nennenswerten Änderungen an diesem Projekt werden in dieser Datei dokumentiert.  
 Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 
+## [0.10.0] - 14.12.2025
+### Hinzugefügt 
+- [POCs](./docs/poc) - 
 
 
 ## [0.9.0] - 01.12.2025
