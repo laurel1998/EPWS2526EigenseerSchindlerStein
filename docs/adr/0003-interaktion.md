@@ -87,4 +87,5 @@ Alternative Verfahren wie Kameratracking oder Drucksensoren werden als ergänzen
 ## Probleme
 - Ausrichtung der Kabel ist wichtig!! -> Aufbau der Bodenfläche muss sehr exakt sein
 - Version Probleme mit Software und Demo App
+- kein Alt Tracker im RadioHost, ist eventuell eine Fehlerquelle
 
