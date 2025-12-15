@@ -5,12 +5,16 @@ Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 
 ## [0.10.0] - 14.12.2025
 ### Hinzugefügt 
-- [POCs](./docs/poc) 
+- [POCs](./docs/poc)
+
+### Überarbeitet 
+- [ADR zur Interaktion](./docs/adr/0003-interaktion.md) - ein weiteres Problem hinzugefügt 
+
 
 
 ## [0.9.0] - 01.12.2025
 ### Hinzugefügt 
-- [Audit 2](./Audits/audit2.md) - Roter Faden fürs Audit 2 
+- [Audit 2](./Audits/audit2.md) - Roter Faden fürs Audit 2
 
 
 
