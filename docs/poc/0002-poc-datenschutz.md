@@ -23,7 +23,7 @@ Durchlaufen der Bilder durch ein KI-Bilderkennungstool, das Gesichter bzw. Perso
 Die KI muss aufzeigen, dass keine Gesichter bzw. Personen zu erkennen sind. 
 
 ## Ressourcen
-- [Bildsammlung](..//docs/bilder/14.06.2015.jpg) 
+- Bildsammlung [1](../docs/bilder/14.06.2015.jpg) [2](../docs/bilder/21.04.2009.jpg) [3](../docs/bilder/27.05.2024.jpg)
 - KI-Tool zur Personenerkennung: [FaceOnLive](https://faceonlive.com/)
 
 ## POC Flow
