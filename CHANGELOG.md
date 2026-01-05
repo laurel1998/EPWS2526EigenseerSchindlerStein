@@ -4,7 +4,7 @@ Alle nennenswerten Änderungen an diesem Projekt werden in dieser Datei dokument
 Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 
 ## [0.11.0] - 05.01.2026
-## Überarbeitet
+### Überarbeitet
 - [Tracking-Fläche](./docs/antilatency.md) - Neu generierte Tracking-Fläche, um Hashwert-Problem zu beheben
 - [Datenschutz-POC](./docs/0002-poc-datenschutz.md) - Bestätigung des Datenschutz POCs
   
