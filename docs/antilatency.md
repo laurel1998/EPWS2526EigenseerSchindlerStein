@@ -22,7 +22,7 @@ Dabei wählt man zunächst aus, ob die Fläche **am Boden** oder **an der Decke*
 Es stehen bereits **Default-Setups** für Standardbodenflächen (in unserem Fall **3×3 m**) zur Verfügung.  
 Die Tracking-Qualität hängt davon ab, wie viele Kabel mit Sensoren verwendet werden.
 
-![Bodenfläche Setup](../docs/bilder/TrackingFloor.png)
+![Bodenfläche Setup](../docs/bilder/TrackingFloorNEU.png)
 
 ---
 
