@@ -6,7 +6,7 @@ Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 ## [0.11.0] - 05.01.2026
 ### Überarbeitet
 - [Tracking-Fläche](./docs/antilatency.md) - Neu generiertes Environment, um Hashwert-Problem zu beheben
-- [Datenschutz-POC](./docs/0002-poc-datenschutz.md) - Bestätigung des Datenschutz POCs
+- [Datenschutz](./docs/poc/0002-poc-datenschutz.md) - Bestätigung des Datenschutz POCs
   
 ## [0.10.0] - 14.12.2025
 ### Hinzugefügt 
