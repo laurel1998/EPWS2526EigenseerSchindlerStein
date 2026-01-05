@@ -14,7 +14,7 @@ Die zu verwendeten Bilder müssen den DSGVO Bestimmungen entsprechen, wenn diese
 
 
 ## Scope
-Es dürfen keine Gesichter von Personen erkennbar sein, da das fertige Produkt an öffentlichen Veranstalungen, wie ,,Tage der offenen Tür" ausgestellt werden soll. Der Datenschutz muss also gewährleitet sein. 
+Es dürfen keine Gesichter von Personen erkennbar sein, da das fertige Produkt an öffentlichen Veranstalungen, wie ,,Tage der offenen Tür", ausgestellt werden soll. Der Datenschutz muss also gewährleitet sein. 
 
 ## Methodik
 Durchlaufen der Bilder durch eine KI, die Gesichter bzw. Personen erkennen kann. Als KI Tool wurde [FaceOnLive](https://faceonlive.com/) verwendet. Dieses Toll ermöglicht es nach dem Hochladen von Bildern zu erkennen, ob in dem Bild ein Geischt zu erkennen ist oder nicht.
