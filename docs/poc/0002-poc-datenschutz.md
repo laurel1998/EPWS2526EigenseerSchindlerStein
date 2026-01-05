@@ -23,11 +23,11 @@ Durchlaufen der Bilder durch ein KI-Bilderkennungstool, das Gesichter bzw. Perso
 Die KI muss aufzeigen, dass keine Gesichter bzw. Personen zu erkennen sind. 
 
 ## Ressourcen
-- Bildsammlung: Stichprobe [1](../bilder/14.06.2015.jpg) , [2](../bilder/21.04.2009.jpg) , [3](../bilder/27.05.2024.jpg)
+- Stichprobe [1](../bilder/14.06.2015.jpg) , [2](../bilder/21.04.2009.jpg) , [3](../bilder/27.05.2024.jpg)
 - KI-Tool zur Personenerkennung: [FaceOnLive](https://faceonlive.com/)
 
 ## POC Flow
-Es werden beispielhaft Bilder aus dem Archiv ausgesucht, wo zu erkennen ist, dass sich eine Person auf dem Bild befindet. ??? mit einem Scanvorgang, sowie Ergebnis (***). Anschließend werden die Bilder im Tool hochgeladen und das Tool analysiert, ob ein Gesicht zu erkennen ist. Wenn kein Gesicht erkennbar ist, kommt eine Fehlermeldung: ,,No results".
+Es werden beispielhaft Bilder aus dem Archiv ausgesucht, wo zu erkennen ist, dass sich eine Person auf dem Bild befindet. Anschließend werden die Bilder im Tool hochgeladen und das Tool [analysiert](../bilder/FaceonliveSCAN.jpg), ob ein Gesicht zu erkennen ist. Wenn kein Gesicht erkennbar ist, kommt eine Fehlermeldung: [,,No results"](../bilder/ResultsSCAN.jpg).
 
 ## Ergebnisse
 Alle ausgesuchten Bilder erhielten das Ergebnis ,,No results". Somit wurde festgestellt, dass die Auflösung der Bilder zu gering ist, um die Gesichter der Personen zu erkennen. Die Bilder dürfen daher im Projekt verwendet werden, ohne dass DSGVO-Bestimmungen verletzt werden und der Datenschutz gewährleistet bleibt. 
