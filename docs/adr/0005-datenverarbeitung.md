@@ -50,4 +50,4 @@ Unity wurde bewusst nicht weiterverfolgt, da es für die geplante Architektur un
 ---
 
 ## Probleme
-
+- Browser kann nicht direkt mit dem MQTT Broker kommunizieren -> Middlewear (Node.js + Websockets) nötig
