@@ -17,8 +17,11 @@ Eine Kamera, die sie tragen, erkennt ihre Position. Je nach Position wird ein pa
 
 **1. Positions- und Bewegungserkennung** -> [**Interaktion und Nutzererkennung im Raum**](../docs/adr/0003-interaktion.md)
   - Wie robust funktioniert das Tracking, wenn sich mehrere Personen gleichzeitig im Raum bzw. auf der Bodenplatte bewegen?
+    - Nur Personen mit einem Alt-Tracker (maximal 5) können erkannt werden
   - Wie müssen die Lichtverhältnisse im Raum sein, sodass die Positionserkennung robust funktioneren kann?
-  - Wie genau muss die Kameraposition ausgerichtet sein, sodass die Positionseerkennung funktionieren kann? 
+    - Das Tracking des Antilatency-Systems funktioniert unabhängig von Lichtverhältnissen, da die Kommunikation auf Infrarot basiert
+  - Wie genau muss die Kameraposition ausgerichtet sein, sodass die Positionseerkennung funktionieren kann?
+    - Bodensicht des Alt-Trackers ist erforderlich, Nutzerfeedback angebracht
   
 **2. Synchronisierung von Medien (Bild, Licht, Ton)**
   - Wie sollen die Übergänge zwischen den anzuzeigenden Bildern geschehen?
@@ -31,14 +34,15 @@ Eine Kamera, die sie tragen, erkennt ihre Position. Je nach Position wird ein pa
     - Eine gemeinsame "Steuerzentrale" -> Alle Medien sollen auf ein gemeinsames Steuersignal hören und entsprechend darauf reagieren
 
 **3. Datenbereitstellung**
-  - Wie können wir die große Anzahl an Bildern reduzieren/ordnen?/ Mit welcher Technologie ist dies möglich? -> [**Bildklassifikation**](../docs/adr/0002-bildklassifikation.md) nach Jahreszeiten und Wetter
+  - Wie können wir die große Anzahl an Bildern reduzieren/ordnen?/ Mit welcher Technologie ist dies möglich? -> [**Bildklassifikation**](../docs/adr/0002-bildklassifikation.md) nach Jahreszeiten und Wetter auf Grundlage des Dateinamens
   - Welche Bilder sind für unseren Kontext relevant?
     - keine Nachtbilder
-    - Von 8Uhr bis 15Uhr
-    - Eventuell Beschränkung auf 5 Jahre
+    - Bild, welches am nächsten an 12 Uhr liegt
+    - Beschränkung auf 1 Jahr (2021)
   - Wie viele Bilder werden min/max benötigt, um das System verwenden zu können?
+    - mindestens vier (pro Jahreszeit eins)
   - Wo werden die Bilder gespeichert, sodass das System sie verwenden kann
-    - KTDS-Server?
+    - im Git Repository
     - Cloud-Server
 
 **4. Softwareumsetzung**
