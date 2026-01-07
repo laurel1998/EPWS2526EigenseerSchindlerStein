@@ -29,7 +29,6 @@ gradle/
 # IMAGE & MEDIA FILES (wichtig!)
 # keine Bilddaten ins Repo (Speicherplatz!)
 # ============================================================
-*.jpg
 *.jpeg
 *.png
 *.gif
