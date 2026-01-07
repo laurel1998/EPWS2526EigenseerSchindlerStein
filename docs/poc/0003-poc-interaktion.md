@@ -1,6 +1,6 @@
 # POC-0003: Interaktion-Tracking Daten
 
-**Status:** To be done
+**Status:** done
 
 **Priority:** High
 
@@ -41,4 +41,4 @@ Im weiteren Schritt wird für das Tracking eine Headless-Lösung versucht, die d
 7. Die Webanwendung visualisiert die Bewegung in Echtzeit
 
 ## Ergebnisse
-Ungenaue Tracking-Position wird in der Demo-App angezeigt. Dies liegt wahrscheinlich daran, dass die Version der Demo-App nicht mit der Version des Antilatency-Service übereinstimmt und/oder, dass bei dem verwendeten Host auch eine Kamera angebracht wurde und diese somit die Positionserkennung des Kamera-Controllers gestört hat. 
+Die Datenübermittlung ist funktionsfähig und eine einfache 3D Visualisierung auf der Webseite ist möglich. Man erkennt den Tracker im Raum und kann die Position der Person (mit x,y,z Koordinaten) nachvollziehen.
