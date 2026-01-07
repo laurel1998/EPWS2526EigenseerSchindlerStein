@@ -1,6 +1,6 @@
 # POC-0001: Bildklassifikation
 
-**Status:** Approved
+**Status:** Done
 
 **Priority:** Medium
 

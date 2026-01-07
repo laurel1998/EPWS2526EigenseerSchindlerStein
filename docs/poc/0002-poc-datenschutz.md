@@ -1,6 +1,6 @@
 # POC-0002: Datenschutz
 
-**Status:** Approved
+**Status:** Done
 
 **Priority:** High
 

@@ -33,17 +33,22 @@ Damit besteht nach aktuellem Stand **kein Personenbezug** im Sinne der DSGVO.
    - entspricht dem Grundsatz der Datenminimierung  
    - ermöglicht effiziente Weiterarbeit
 
+4. **Stichprobenartige, KI-gestützte Geischtserkennung**
+   - einfache KI zur Geischtererkennung
+   - geringer Aufwand
+
 ---
 
 ## Entscheidung
-Wir haben uns für **Option 3** entschieden:  
-**Es wird keine automatische Anonymisierung oder Gesichtserkennung in den Bildklassifikationsprozess integriert**, da nach aktueller Sichtung **keinerlei personenbezogene Daten** im Archiv enthalten sind.
+Wir haben uns für **Option 4** entschieden:  
+Durch die Durchführung des [Datenschutz-POC´s](../poc/0002-poc-datenschutz.md) konntenten stichprobeartig Bilder auf Gesichtserkennung getestet werden, indem diese in ein KI-Tool hochgeladen wurden und bei Nichterkennung eines Gesichts eine Fehlermeldung ausgeworfen wurde.
 
 Die Installation verwendet ausschließlich Bildmaterial ohne erkennbaren Personenbezug und erfüllt damit die Anforderungen der DSGVO an datenarme Verarbeitung.
 
 Begründung:
 - Die Quelle enthält keine identifizierbaren Personen
 - Technische Anonymisierung wäre unnötig komplex und ressourcenintensiv
+- einfache und schnelle KI-Geischtserkennung ressourcenspraender und effizienter
 
 ---
 
