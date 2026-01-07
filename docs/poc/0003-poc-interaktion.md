@@ -32,7 +32,13 @@ Genaue Erkennung der Position in der Demo-App, um dies Positions-Daten weiter ve
 Im weiteren Schritt wird für das Tracking eine Headless-Lösung versucht, die die Arbeit ohne Unity ermöglicht. Und es wird versucht das Tracking einmal ohne die Verwendung der Kamera am Host in der Demo-App darzustellen.
 
 ## POC Flow
-// TO BE DONE
+1. Nutzer:innen bewegen sich im Raum mit einem Antilatency-Tracker
+2. Trackingdaten werden von der Antilatency Hardware erfasst
+3. Ein C++-Programm auf dem Raspberry Pi liest die Daten über die Antilatency SDK
+4. Die Trackingdaten werden per MQTT an einen Broker gesendet
+5. Ein Node.js-Server abonniert diese Daten
+6. Node.js leitet die Daten per WebSocket an den Browser weiter
+7. Die Webanwendung visualisiert die Bewegung in Echtzeit
 
 ## Ergebnisse
 Ungenaue Tracking-Position wird in der Demo-App angezeigt. Dies liegt wahrscheinlich daran, dass die Version der Demo-App nicht mit der Version des Antilatency-Service übereinstimmt und/oder, dass bei dem verwendeten Host auch eine Kamera angebracht wurde und diese somit die Positionserkennung des Kamera-Controllers gestört hat. 
