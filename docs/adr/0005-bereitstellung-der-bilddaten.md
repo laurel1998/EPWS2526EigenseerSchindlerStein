@@ -1,4 +1,4 @@
-# ADR-0005: Bereitstellung der Bilddaten 
+# ADR-0006: Bereitstellung der Bilddaten 
 
 **Status:** entschieden  
 **Datum:** 2026-01-07  
@@ -48,6 +48,7 @@ Sie ermöglicht eine direkte Nutzung der Daten im Frontend, ohne zusätzliche Se
 **To-dos:**
 
 - Hinzufügen weiterer Bilder in die bereits angelegte Ordnerstruktur
+- Entscheidung treffen, ob gitignore Änderung bestehen bleiben kann (.jpg entfernt)
 - Mapping-Datei (mapping.json) im Frontend-Code einbinden und laden
 
 Beispiel: fetch('/assets/mapping.json').then(res => res.json()).then(mapping => { /* Nutzung */ })
