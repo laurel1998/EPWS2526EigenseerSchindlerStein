@@ -29,8 +29,6 @@ Genaue Erkennung der Position, um dies Positions-Daten weiter verarbeiten zu kö
 - Antilatency Service
 - RaspberryPi
 
-## Zeitplan
-Im weiteren Schritt wird für das Tracking eine Headless-Lösung versucht, die die Arbeit ohne Unity ermöglicht und die Positionsdaten im Browser darstellen kann.
 
 ## POC Flow
 1. Nutzer:innen bewegen sich im Raum mit einem Antilatency-Tracker
