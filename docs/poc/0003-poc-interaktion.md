@@ -14,7 +14,7 @@
 Es sollen Tracking-Daten (x,y,(vllt. z)) aus dem Antilatency System erkannt werden, sobald sich eine Person mit der Kamera auf der ausgelegten Bodenfläche befindet bzw. bewegt.
 
 ## Scope
-Für die Psotionserkennung wird ein Host benötigt, welcher die erfassten Positionsdaten weiterleiten kann. Diese müssen so dargestellt werden, dass sie im Brwoser verwendet werden können.
+Für die Positionserkennung wird ein Host benötigt, welcher die erfassten Positionsdaten weiterleiten kann. Diese müssen so dargestellt werden, dass sie im Brwoser verwendet werden können.
 
 ## Methodik
 Positionserkennung anhand eines C++-Programms auf einem RaspberryPi und das Konvertiern der Daten für die Verwendung dieser im Browser.
