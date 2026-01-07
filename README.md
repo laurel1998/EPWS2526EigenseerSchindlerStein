@@ -37,7 +37,7 @@ Alle Änderungen und Architekturentscheidungen werden nachvollziehbar dokumentie
 | [**`/docs/Storyboard.pdf`**](./docs/Storyboard.pdf) | Storyboard - Visuelle Darstelleung der Interaktion |
 | [**`/docs/antilatency.md`**](./docs/antilatency.md) | Beschreibung des Aufbaus des Antilatency Systems |
 | [**`/docs/expose.md`**](./docs/expose.md) | Exposé |
-| [**`/docs/poc/`**](./docs/poc/) | Proof of Concept (PoC) |
+| [**`/docs/poc/`**](./docs/poc/) | Enthält alle Proof of Concept (PoC) |
 | [**`/docs/mvp.md`**](./docs/mvp.md) | Minimal Viable Product (MVP) - Definition der Kernfunktionen |
 | [**`/docs/risikoanalyse.md`**](./docs/risikoanalyse.md) | Auflistung der möglichen Risiken im Projekt |
 | [**`/docs/user-stories.md`**](./docs/user-stories.md) | Auflistung aller User-Stories bit Kategorisierung |
