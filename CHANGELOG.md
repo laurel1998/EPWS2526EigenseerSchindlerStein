@@ -5,11 +5,11 @@ Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 
 ## [0.12.0] - 07.01.2026
 ### Hinzugefügt 
-- [Datenfluss](./docs/datenfluss.md) - Visualisierung von Datenfluss über MQTT und Websockets 
+- [Datenfluss](./docs/datenfluss.md) - Visualisierung von Datenfluss über MQTT und Websockets
 
 ### Überarbeitet
 - [Interaktion POC](./docs/poc/0003-poc-interaktion.md) - Flow und Ergebnis angepasst
-
+- [Architekturmodell](./docs/Modelle/Architekturmodell/Architekturmodell.Version2.pdf) angepasst 
 
 ## [0.11.0] - 05.01.2026
 ### Überarbeitet
