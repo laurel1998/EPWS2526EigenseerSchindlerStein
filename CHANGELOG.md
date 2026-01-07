@@ -4,9 +4,14 @@ Alle nennenswerten Änderungen an diesem Projekt werden in dieser Datei dokument
 Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 
 ## [0.11.0] - 05.01.2026
+### Hinzugefügt 
+- [Datenfluss](./docs/datenfluss.md) - Visualisierung von Datenfluss über MQTT und Websockets 
+
 ### Überarbeitet
 - [Tracking-Fläche](./docs/antilatency.md) - neu generiertes Environment, um Hashwert-Problem zu beheben
-- Bestätigung des [Datenschutz POCs](./docs/poc/0002-poc-datenschutz.md) 
+- Bestätigung des [Datenschutz POCs](./docs/poc/0002-poc-datenschutz.md)
+- [Interaktion POC](./docs/poc/0003-poc-interaktion.md) - Flow und Ergebnis angepasst
+
   
 ## [0.10.0] - 14.12.2025
 ### Hinzugefügt 
