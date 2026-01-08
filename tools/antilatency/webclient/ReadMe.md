@@ -1,17 +1,14 @@
 Überblick:
 
-[ Antilatency / MQTT ]  
-→ MQTT leitet Tracking-Daten weiter  
+[ Antilatency / MQTT ]  → MQTT leitet Tracking-Daten weiter  
 ↓  
 (MQTT)  
 ↓  
-[ Node.js Server ]  
-→ fungiert als Brücke / Übersetzer  
+[ Node.js Server ]  → fungiert als Brücke / Übersetzer  
 ↓  
 (Socket.IO)  
 ↓  
-[ Browser (index.html + Three.js) ]  
-→ Visualisierung der Tracking-Daten
+[ Browser (index.html + Three.js) ]  → Visualisierung der Tracking-Daten
 
 
 **Antilatency / MQTT**  
