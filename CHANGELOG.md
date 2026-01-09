@@ -3,12 +3,16 @@
 Alle nennenswerten Änderungen an diesem Projekt werden in dieser Datei dokumentiert.  
 Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 
+## [0.13.0] - 09.01.2026
+### Überarbeitet 
+- [index.html](./tools/antilatency/webclient/index.html) - Code für die Tracking-Visualisierung überarbeitet, um Bilder darzustellen
+
 ## [0.12.0] - 07.01.2026
 ### Hinzugefügt 
 - [Datenfluss](./docs/datenfluss.md) - Visualisierung von Datenfluss über MQTT und Websockets
 - [ADR zur Datenbereitstellung](./docs/adr/0006-bereitstellung-der-bilddaten.md)
 - [ADR zur Datenverarbeitung](./docs/adr/0005-datenverarbeitung.md)
-- [Antilatency SDK](./tools/antilatency.md) - Code für die Tracking-Visualisierung
+- [Antilatency SDK](./tools/antilatency) - Code für die Tracking-Visualisierung
 
 ### Überarbeitet
 - [Interaktion POC](./docs/poc/0003-poc-interaktion.md) - Scope, Methodik, Erfolgskriterien, Ressourcen, Flow und Ergebnis angepasst
