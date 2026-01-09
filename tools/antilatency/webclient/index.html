@@ -30,6 +30,30 @@
 <script type="module">
     import * as THREE from 'three';
 
+     let mapping = null;
+
+    async function loadMapping() {
+        const res = await fetch('/assets/mapping.json');
+        mapping = await res.json();
+        console.log('✅ Mapping loaded:', mapping);
+    }
+
+    await loadMapping();
+
+     function getSeasonFromPosition(x, y) {
+        if (x >= 0 && y >= 0) return 'summer';
+        if (x < 0 && y < 0) return 'winter';
+        if (x >= 0 && y < 0) return 'spring';
+        if (x < 0 && y >= 0) return 'autumn';
+    }
+
+    function getRandomImageForSeason(season) {
+        if (!mapping?.seasons?.[season]) return null;
+        const images = mapping.seasons[season].images;
+        return images[Math.floor(Math.random() * images.length)];
+    }
+
+    
     const scene = new THREE.Scene();
     scene.background = new THREE.Color(0x202020);
     
