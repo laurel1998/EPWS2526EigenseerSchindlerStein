@@ -27,6 +27,19 @@
     <div id="tracker-list"></div>
 </div>
 
+<img id="season-image"
+    src=""
+    style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        opacity: 0.8;
+        z-index: -1;
+     ">
+
 <script type="module">
     import * as THREE from 'three';
 
@@ -174,6 +187,12 @@
             );
 
             document.getElementById(`ui-${id}`).innerText = `Node ${id}: [${data.pose.position.x.toFixed(2)}, ${data.pose.position.z.toFixed(2)}, ${data.pose.position.y.toFixed(2)}]`;
+        
+            const x = data.pose.position.x;
+            const y = data.pose.position.y; 
+            const season = getSeasonFromPosition(x, y);
+            updateSeasonImage(season);
+        
         } catch (e) {
             console.error("Parse Error", e);
         }
