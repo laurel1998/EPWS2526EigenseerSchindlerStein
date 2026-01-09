@@ -10,9 +10,11 @@ Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 - [ADR zur Datenverarbeitung](./docs/adr/0005-datenverarbeitung.md)
 
 ### Überarbeitet
-- [Interaktion POC](./docs/poc/0003-poc-interaktion.md) - Flow und Ergebnis angepasst
+- [Interaktion POC](./docs/poc/0003-poc-interaktion.md) - Scope, Methodik, Erfolgskriterien, Ressourcen, Flow und Ergebnis angepasst
 - [Architekturmodell](./docs/Modelle/Architekturmodell/Architekturmodell.Version2.pdf) angepasst
 - [Risikoanalyse](./docs/risikoanalyse.md) - neue Erkenntnisse eingearbeitet
+- [Datenschutz ADR](./docs/adr/0004-datenschutz.md) - weitere Option eingefügt und sich für diese entschieden
+
 
 ## [0.11.0] - 05.01.2026
 ### Überarbeitet
