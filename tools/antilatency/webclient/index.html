@@ -189,7 +189,7 @@
             document.getElementById(`ui-${id}`).innerText = `Node ${id}: [${data.pose.position.x.toFixed(2)}, ${data.pose.position.z.toFixed(2)}, ${data.pose.position.y.toFixed(2)}]`;
         
             const x = data.pose.position.x;
-            const y = data.pose.position.y; 
+            const y = data.pose.position.z; 
             const season = getSeasonFromPosition(x, y);
             updateSeasonImage(season);
         
