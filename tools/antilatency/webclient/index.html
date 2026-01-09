@@ -35,7 +35,7 @@
     async function loadMapping() {
         const res = await fetch('/assets/mapping.json');
         mapping = await res.json();
-        console.log('✅ Mapping loaded:', mapping);
+        console.log('Mapping loaded:', mapping);
     }
 
     await loadMapping();
@@ -54,6 +54,21 @@
     }
 
     
+    let currentSeason = null;
+    const seasonImageEl = document.getElementById('season-image');
+
+    function updateSeasonImage(season) {
+        if (season === currentSeason) return;
+
+        currentSeason = season;
+        const img = getRandomImageForSeason(season);
+
+        if (img) {
+            seasonImageEl.src = img;
+            console.log(`Season changed to ${season}`, img);
+        }
+    }
+
     const scene = new THREE.Scene();
     scene.background = new THREE.Color(0x202020);
     
