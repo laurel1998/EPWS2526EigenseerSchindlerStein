@@ -12,6 +12,9 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server);
 
+// Assets aus ROOT bereitstellen
+app.use('/assets', express.static(path.join(__dirname, '../../../assets')));
+
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
