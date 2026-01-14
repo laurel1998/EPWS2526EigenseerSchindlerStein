@@ -3,25 +3,25 @@
     "winter": {
       "label": "Winter",
       "images": [
-        "assets/images/winter/2021_01_2021-01-26_image21-01-26_12-00-51-77.jpg"
+        "https://www.gm.th-koeln.de/~inf3309/season-images/winter/2021_01_2021-01-26_image21-01-26_12-00-51-77.jpg"
       ]
     },
     "spring": {
       "label": "Frühling",
       "images": [
-        "assets/images/spring/2021_04_2021-04-22_image21-04-22_12-00-51-38.jpg"
+        "https://www.gm.th-koeln.de/~inf3309/season-images/spring/2021_04_2021-04-22_image21-04-22_12-00-51-38.jpg"
       ]
     },
     "summer": {
       "label": "Sommer",
       "images": [
-        "assets/images/summer/2021_07_2021-07-18_image21-07-18_12-00-26-88.jpg"
+        "https://www.gm.th-koeln.de/~inf3309/season-images/summer/2021_07_2021-07-18_image21-07-18_12-00-26-88.jpg"
       ]
     },
     "autumn": {
       "label": "Herbst",
       "images": [
-        "assets/images/autumn/2021_10_2021-10-28_image21-10-28_12-00-11-37.jpg"
+        "https://www.gm.th-koeln.de/~inf3309/season-images/autumn/2021_10_2021-10-28_image21-10-28_12-00-11-37.jpg"
       ]
     }
   }
