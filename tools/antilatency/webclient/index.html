@@ -21,24 +21,14 @@
     <script src="/socket.io/socket.io.js"></script>
 </head>
 <body>
+    
+<img id="season-image">
 
 <div id="info">
     <div>Status: <span id="status">Connecting...</span></div>
     <div id="tracker-list"></div>
 </div>
 
-<img id="season-image"
-    src=""
-    style="
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        object-fit: cover;
-        opacity: 0.8;
-        z-index: -1;
-     ">
 
 <script type="module">
     import * as THREE from 'three';
@@ -91,6 +81,9 @@
 
     const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
+
+    // Canvas und Bild aus Galerie laden
+    document.body.prepend(document.getElementById('season-image'));
     document.body.appendChild(renderer.domElement);
 
     const grid = new THREE.GridHelper(10, 10, 0x555555, 0x333333);
