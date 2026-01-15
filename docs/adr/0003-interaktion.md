@@ -1,6 +1,6 @@
 # ADR-0003: Interaktion
 
-**Status:** vorgeschlagen  
+**Status:** entschieden  
 **Datum:** 2025-10-26   
 
 ---
@@ -87,5 +87,5 @@ Alternative Verfahren wie Kameratracking oder Drucksensoren werden als ergänzen
 ## Probleme
 - Ausrichtung der Kabel ist wichtig!! -> Aufbau der Bodenfläche muss sehr exakt sein
 - Version Probleme mit Software und Demo App
-- kein Alt Tracker im RadioHost, ist eventuell eine Fehlerquelle
+- es darf kein Alt Tracker im RadioHost sein, da alle Kameras die Trackingfläche "suchen" und somit Fehler in der Positionsberechnung auftreten können
 
