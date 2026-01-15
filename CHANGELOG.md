@@ -16,7 +16,7 @@ Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 
 ## [0.14.0] - 12.01.2026
 ### Hinzugefügt
-- Interaktionskonzept Version 1 ([Quadrantenlogik](./docs/bilder/InteraktionskonzeptV1.png))
+- Interaktionskonzept Version 1 ([Quadrantenlogik](./docs/bilder/InteraktionskonzeptV1.pdf))
 ### Überarbeitet 
 - [Architekturmodell](./docs/Modelle/Architekturmodell/Architekturmodell.Version3.pdf) 
 
