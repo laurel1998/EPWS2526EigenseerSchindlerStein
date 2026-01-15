@@ -13,8 +13,8 @@ Dabei lag der Fokus zuerst darauf ein funktionierendes Erlebnis zu erstellen und
 ## Optionen
 ### Version 1 – Quadranten-Logik
 - Die Fläche wird in vier Quadranten eingeteilt
-- Jeder Quadrant entspricht einer Jahreszeit (zugehöriger [Code](./Bilder/V1Interaktionslogik(Code).png))
-- Zuordnung auf der Trackingfläche mittels [Vorzeichen](./Bilder/InteraktionskonzeptV1.png) (Ursprung in der Mitte der Trackingfläche)
+- Jeder Quadrant entspricht einer Jahreszeit (zugehöriger [Code](../Bilder/V1Interaktionslogik(Code).png))
+- Zuordnung auf der Trackingfläche mittels [Vorzeichen](../Bilder/InteraktionskonzeptV1.png) (Ursprung in der Mitte der Trackingfläche)
 - Pro Jahreszeit wird ein "zufälliges" Bild gewählt
 
 **Vorteile**
@@ -28,7 +28,7 @@ Dabei lag der Fokus zuerst darauf ein funktionierendes Erlebnis zu erstellen und
 ---
 
 ### Version 2 – Abbildung der Zeit im Raum 
-- [Interaktionsidee](./Bilder/InteraktionskonzeptV2.pdf): Besucher:innen laufen durch Zeit 
+- [Interaktionsidee](../Bilder/InteraktionskonzeptV2.pdf): Besucher:innen laufen durch Zeit 
 - Die Position steuert ein eindeutiges Bild nach folgenden Regeln:
 
 (1) Zentrum (mittleres Tile) -> zeigt den Titel der Ausstellung
