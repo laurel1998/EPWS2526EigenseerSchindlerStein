@@ -21,8 +21,11 @@ Bilder aus dem April können winterlich aussehen, durch Wetterschwankungen.
 ## Methodik
 Filterung der Bilder anhand ihrer Dateinamen. Es wird das Bild rausgefiltert, welches am nächsten zu 12Uhr an einem Tag aufgenommen wurde. Beispielhaft wird das Jahr 2021 ausgwählt, um die Methodik zu prüfen. Ein Parser durchsucht alle Tagesordner und prüft, ob der Monat den vordefinierten Jahreszeiten entspricht und legt diese an einem definierten Zielordner ab. 
 
+-> **Logikänderungen folgend aus neuem Interaktionskonzept**:
+  Die Logik der image-selection ist im groben gleich geblieben. Das Filtern der Bilder erfolgt weiterhin anhand des Dateinnamen. Nun wird jedoch nach Jahren, Monaten und Uhrzeiten, jeweils   des ersten Tags im Monat, gefiltert. Der Paser durchsucht alle Tagesordner und prüft, ob das Jahr, der Monat, der Tag und die Uhrzeit den entsprechenden definierten Variablen entsprechen. Anschließend werden die Bilder in folgende Datenstruktur abgelegt: Jahr -> Monat -> Uhrzeit. Es wird nicht noch extra ein Tagesorner zwischengespeichert, da immer der erste Tag des Monats gefiltert wird. 
+
 ## Erfolgskriterien
-Zielordner erstellt und befüllt mit den richtig gefilterten Bildern in den Jahreszeitenordnern.
+Zielordner erstellt und befüllt mit den richtig gefilterten Bildern in den Jahresordnern.
 
 ## Ressourcen
 - Festplatte mit gesamter Bildsammlung
