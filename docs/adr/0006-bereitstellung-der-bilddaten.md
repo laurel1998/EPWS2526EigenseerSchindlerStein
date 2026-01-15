@@ -13,7 +13,6 @@ Der Fokus liegt auf einer schnellen, nachvollziehbaren Integration der Bilder in
 Bedingungen:
 
 - keine Notwendigkeit für dynamische Datenquellen
-- Einsatz in Ausstellungssituationen (lokal, offline, robust)
 - Vermeidung unnötiger Abstraktions- oder Bereitstellungsschichten
 
 ---
@@ -26,14 +25,17 @@ Bedingungen:
 2. **Externe Datenquelle (API, Datenbank, Backend-Service)**  
    Bilder und Metadaten werden über einen separaten Dienst bereitgestellt.
 
+3. **ADV-Server**
+   Bilder werden auf den ADV-Server der Hochschule geladen und durch einen Pfad in einer mapping.json im Repository bereitgestellt.
+
 ---
 
 ## Entscheidung
 
-Es wurde entschieden, die Bilddaten sowie deren Zuordnung (Mapping) als statische Assets direkt im Repository abzulegen.
+Es wurde entschieden, die Bilder auf dem ADV-Server der Hochschule bereitszustellen und diese in einer mapping.json im Repository zu verlinken.
 
-Diese Lösung ist für die derzeitige Projektphase am einfachsten umzusetzen und reduziert die Anzahl technischer Ebenen im System.  
-Sie ermöglicht eine direkte Nutzung der Daten im Frontend, ohne zusätzliche Services, Build-Schritte oder Konfigurationslogik einführen zu müssen.
+Diese Lösung ist für die weiterführende Projektphase am einfachsten umzusetzen und reduziert die Anzahl technischer Ebenen im System.  
+Sie ermöglicht eine direkte Nutzung der Daten im Frontend während der Laufzeit, ohne zusätzliche Services oder Build-Schritte einführen zu müssen.
 
 ---
 
