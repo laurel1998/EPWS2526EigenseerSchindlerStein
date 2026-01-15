@@ -14,7 +14,7 @@ Dabei lag der Fokus zuerst darauf ein funktionierendes Erlebnis zu erstellen und
 ### Version 1 – Quadranten-Logik
 - Die Fläche wird in vier Quadranten eingeteilt
 - Jeder Quadrant entspricht einer Jahreszeit (zugehöriger [Code](../bilder/V1Interaktionslogik(Code).png))
-- Zuordnung auf der Trackingfläche mittels [Vorzeichen](../bilder/InteraktionskonzeptV1.png) (Ursprung in der Mitte der Trackingfläche)
+- Zuordnung auf der Trackingfläche mittels [Vorzeichen](../bilder/InteraktionskonzeptV1.pdf) (Ursprung in der Mitte der Trackingfläche)
 - Pro Jahreszeit wird ein "zufälliges" Bild gewählt
 
 **Vorteile**
