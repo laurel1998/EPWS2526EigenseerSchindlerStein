@@ -27,7 +27,7 @@ Die Lösung soll dabei möglichst robust, wartungsarm und für öffentliche Prä
   - SDKs für Unity, C++, C#, API für Datenaustausch  
   - Bereits an der Hochschule verfügbar
 - **Nachteile:**  
-  - Hardware muss korrekt kalibriert und gepflegt werden  
+  - Hardware muss korrekt kalibriert und gepflegt werden (einmalig) 
   - Nur innerhalb der Tracking-Fläche nutzbar  
   - Höherer Installationsaufwand im Raum
 - **Bewertung:**  
@@ -84,7 +84,7 @@ Alternative Verfahren wie Kameratracking oder Drucksensoren werden als ergänzen
 
 ---
 
-## Probleme
+## Probleme/Erkenntnisse
 - Ausrichtung der Kabel ist wichtig!! -> Aufbau der Bodenfläche muss sehr exakt sein
 - Version Probleme mit Software und Demo App
 - es darf kein Alt Tracker im RadioHost sein, da alle Kameras die Trackingfläche "suchen" und somit Fehler in der Positionsberechnung auftreten können

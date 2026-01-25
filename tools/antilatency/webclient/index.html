@@ -1,220 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Antilatency tracking</title>
     <style>
-        body { margin: 0; overflow: hidden; background-color: #1a1a1a; font-family: monospace; }
-        #info { 
-            position: absolute; top: 10px; left: 10px; 
-            color: #00ff00; background: rgba(0,0,0,0.8); 
-            padding: 10px; border-radius: 4px; pointer-events: none; 
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #1a1a1a;
+            font-family: monospace;
         }
-        .tracker-row { margin-top: 5px; color: white; border-left: 3px solid; padding-left: 5px; }
+
+        #info {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: #00ff00;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            border-radius: 4px;
+            pointer-events: none;
+        }
+
+        .tracker-row {
+            margin-top: 5px;
+            color: white;
+            border-left: 3px solid;
+            padding-left: 5px;
+        }
     </style>
-    
+
     <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
     <script type="importmap">
       { "imports": { "three": "https://unpkg.com/three@0.154.0/build/three.module.js" } }
     </script>
-    
+
     <script src="/socket.io/socket.io.js"></script>
 </head>
+
 <body>
-    
-<img id="season-image">
 
-<div id="info">
-    <div>Status: <span id="status">Connecting...</span></div>
-    <div id="tracker-list"></div>
-</div>
+    <img id="season-image">
+
+    <div id="info">
+        <div>Status: <span id="status">Connecting...</span></div>
+        <div id="tracker-list"></div>
+    </div>
 
 
-<script type="module">
-    import * as THREE from 'three';
+    <script type="module">
 
-     let mapping = null;
+        import * as THREE from 'three';
 
-    async function loadMapping() {
-        const res = await fetch('/assets/mapping.json');
-        mapping = await res.json();
-        console.log('Mapping loaded:', mapping);
-    }
+        let mapping = null;
 
-    await loadMapping();
-
-     function getSeasonFromPosition(x, y) {
-        if (x >= 0 && y >= 0) return 'summer';
-        if (x < 0 && y < 0) return 'winter';
-        if (x >= 0 && y < 0) return 'spring';
-        if (x < 0 && y >= 0) return 'autumn';
-    }
-
-    function getRandomImageForSeason(season) {
-        if (!mapping?.seasons?.[season]) return null;
-        const images = mapping.seasons[season].images;
-        return images[Math.floor(Math.random() * images.length)];
-    }
-
-    
-    let currentSeason = null;
-    const seasonImageEl = document.getElementById('season-image');
-
-    function updateSeasonImage(season) {
-        if (season === currentSeason) return;
-
-        currentSeason = season;
-        const img = getRandomImageForSeason(season);
-
-        if (img) {
-            seasonImageEl.src = img;
-            console.log(`Season changed to ${season}`, img);
+        async function loadMapping() {
+            //Hier die URL anpassen!!!
+            const res = await fetch('/assets/mapping.json');
+            mapping = await res.json();
+            console.log('Mapping loaded:', mapping);
         }
-    }
 
-    const scene = new THREE.Scene();
-    scene.background = new THREE.Color(0x202020);
-    
-    const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.01, 100);
-    camera.position.set(0, 3, 3);
-    camera.lookAt(0, 0, 0);
+        await loadMapping();
 
-    const renderer = new THREE.WebGLRenderer({ antialias: true });
-    renderer.setSize(window.innerWidth, window.innerHeight);
+        const seasonImageEl = document.getElementById('season-image');
 
-    // Canvas und Bild aus Galerie laden
-    document.body.prepend(document.getElementById('season-image'));
-    document.body.appendChild(renderer.domElement);
+        /**** Logik für Interaktionskonzept (Raum -> Zeit) ****/
 
-    const grid = new THREE.GridHelper(10, 10, 0x555555, 0x333333);
-    scene.add(grid);
-    scene.add(new THREE.AxesHelper(0.5));
-
-    const light = new THREE.DirectionalLight(0xffffff, 1);
-    light.position.set(2, 5, 2);
-    scene.add(light);
-    scene.add(new THREE.AmbientLight(0xffffff, 0.6));
-
-    const trackers = {};
-    const listEl = document.getElementById('tracker-list');
-
-    function stringToColor(str) {
-        let hash = 0;
-        for (let i = 0; i < str.length; i++) {
-            hash = str.charCodeAt(i) + ((hash << 5) - hash);
+        function isInCenter(x, y) {
+            return Math.abs(x) < 0.3 && Math.abs(y) < 0.3;
         }
-        const h = Math.abs((hash * 137.5) % 360) / 360; 
-        return new THREE.Color().setHSL(h, 0.75, 0.5);
-    }
 
-    function createTrackerMesh(idString) {
-        const group = new THREE.Group();
-        const color = stringToColor(idString);
-
-        const box = new THREE.Mesh(
-            new THREE.BoxGeometry(0.06, 0.03, 0.1), 
-            new THREE.MeshStandardMaterial({ color: color })
-        );
-        group.add(box);
-
-        const nose = new THREE.Mesh(
-            new THREE.BoxGeometry(0.02, 0.02, 0.05),
-            new THREE.MeshBasicMaterial({ color: 0xffffff })
-        );
-        nose.position.z = -0.06;
-        group.add(nose);
-
-        scene.add(group);
-        return { mesh: group, color: color.getHexString() };
-    }
-
-    const socket = io(); // connect to localhost:3000
-    const statusEl = document.getElementById('status');
-
-    socket.on('connect', () => {
-        statusEl.innerText = "Connected";
-        statusEl.style.color = "#00ff00";
-    });
-
-    socket.on('disconnect', () => {
-        statusEl.innerText = "Disconnected";
-        statusEl.style.color = "#ff0000";
-    });
-
-    socket.on('tracking_data', (msg) => {
-        try {
-            const data = JSON.parse(msg);
-            const id = data.id;
-
-            if (!trackers[id]) {
-                console.log(`New tracker found: ${id}`);
-                const { mesh, color } = createTrackerMesh(id);
-                trackers[id] = { 
-                    mesh: mesh, 
-                    color: color,
-                    lastSeen: Date.now() 
-                };
-                
-                const div = document.createElement('div');
-                div.id = `ui-${id}`;
-                div.className = 'tracker-row';
-                div.style.borderColor = '#' + color;
-                div.innerText = `Node ${id}`;
-                listEl.appendChild(div);
-            }
-
-            const t = trackers[id];
-            t.lastSeen = Date.now();
-
-            t.mesh.position.set(
-                data.pose.position.x,
-                data.pose.position.y,
-                data.pose.position.z
-            );
-
-            t.mesh.quaternion.set(
-                data.pose.rotation.x,
-                data.pose.rotation.y,
-                data.pose.rotation.z,
-                data.pose.rotation.w
-            );
-
-            document.getElementById(`ui-${id}`).innerText = `Node ${id}: [${data.pose.position.x.toFixed(2)}, ${data.pose.position.z.toFixed(2)}, ${data.pose.position.y.toFixed(2)}]`;
-        
-            const x = data.pose.position.x;
-            const y = data.pose.position.z; 
-            const season = getSeasonFromPosition(x, y);
-            updateSeasonImage(season);
-        
-        } catch (e) {
-            console.error("Parse Error", e);
+        function getMonthFromXY(x, y) {
+            const angle = Math.atan2(y, x);
+            const normalized = (angle + Math.PI * 2) % (Math.PI * 2);
+            return Math.floor(normalized / (Math.PI * 2 / 12)) + 1;
         }
-    });
 
-    setInterval(() => {
-        const now = Date.now();
-        for (const [id, t] of Object.entries(trackers)) {
-            if (now - t.lastSeen > 1500) {
-                scene.remove(t.mesh);
-                const ui = document.getElementById(`ui-${id}`);
-                if (ui) ui.remove();
-                delete trackers[id];
-                console.log(`Removed inactive tracker: ${id}`);
+        const TIME_SLOTS = [
+            { max: 0.6, hour: 8 },
+            { max: 1.2, hour: 12 },
+            { max: 1.8, hour: 16 },
+            { max: 2.4, hour: 20 },
+            { max: Infinity, hour: 23 }
+        ];
+
+        function getHourFromRadius(x, y) {
+            const r = Math.sqrt(x * x + y * y);
+            for (const slot of TIME_SLOTS) {
+                if (r <= slot.max) return slot.hour;
             }
         }
-    }, 1000);
 
-    function animate() {
-        requestAnimationFrame(animate);
-        renderer.render(scene, camera);
-    }
-    animate();
+        const YEAR_LEVELS = [
+            { z: 0.4, year: 2010 },
+            { z: 0.7, year: 2012 },
+            { z: 1.0, year: 2014 },
+            { z: 1.3, year: 2018 },
+            { z: 1.6, year: 2020 },
+            { z: 1.9, year: 2024 }
+        ];
 
-    window.addEventListener('resize', () => {
-        camera.aspect = window.innerWidth / window.innerHeight;
-        camera.updateProjectionMatrix();
+        function getYearFromZ(z) {
+            let closest = YEAR_LEVELS[0];
+            let minDiff = Math.abs(z - closest.z);
+
+            for (const level of YEAR_LEVELS) {
+                const diff = Math.abs(z - level.z);
+                if (diff < minDiff) {
+                    minDiff = diff;
+                    closest = level;
+                }
+            }
+            return closest.year;
+        }
+
+        function getImageForPosition(x, y, z) {
+            if (!mapping) return null;
+
+            if (isInCenter(x, y)) {
+                return mapping.title;
+            }
+
+            const year = getYearFromZ(z);
+            const month = getMonthFromXY(x, y);
+            const hour = getHourFromRadius(x, y);
+
+            const match = mapping.images.find(img =>
+                img.year === year &&
+                img.month === month &&
+                img.hour === hour
+            );
+
+            if (match) {
+                console.log('Image:', year, month, hour, match.src);
+            }
+
+            //return match?.src ?? null;
+            return match ? (mapping.baseUrl + match.src) : null;
+        }
+
+
+        /**** Three.js Setup ****/
+
+
+        const scene = new THREE.Scene();
+        scene.background = new THREE.Color(0x202020);
+
+        const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.01, 100);
+        camera.position.set(0, 3, 3);
+        camera.lookAt(0, 0, 0);
+
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
         renderer.setSize(window.innerWidth, window.innerHeight);
-    });
-</script>
+
+        // Canvas und Bild aus Galerie laden
+        document.body.prepend(document.getElementById('season-image'));
+        document.body.appendChild(renderer.domElement);
+
+        const grid = new THREE.GridHelper(10, 10, 0x555555, 0x333333);
+        scene.add(grid);
+        scene.add(new THREE.AxesHelper(0.5));
+
+        const light = new THREE.DirectionalLight(0xffffff, 1);
+        light.position.set(2, 5, 2);
+        scene.add(light);
+        scene.add(new THREE.AmbientLight(0xffffff, 0.6));
+
+
+        /**** Tracking ****/
+
+
+        const trackers = {};
+        const listEl = document.getElementById('tracker-list');
+
+        function stringToColor(str) {
+            let hash = 0;
+            for (let i = 0; i < str.length; i++) {
+                hash = str.charCodeAt(i) + ((hash << 5) - hash);
+            }
+            const h = Math.abs((hash * 137.5) % 360) / 360;
+            return new THREE.Color().setHSL(h, 0.75, 0.5);
+        }
+
+        function createTrackerMesh(idString) {
+            const group = new THREE.Group();
+            const color = stringToColor(idString);
+            const box = new THREE.Mesh(
+                new THREE.BoxGeometry(0.06, 0.03, 0.1),
+                new THREE.MeshStandardMaterial({ color: color })
+            );
+            group.add(box);
+            const nose = new THREE.Mesh(
+                new THREE.BoxGeometry(0.02, 0.02, 0.05),
+                new THREE.MeshBasicMaterial({ color: 0xffffff })
+            );
+            nose.position.z = -0.06;
+            group.add(nose);
+            scene.add(group);
+            return { mesh: group, color: color.getHexString() };
+        }
+
+        const socket = io(); // connect to localhost:3000
+        const statusEl = document.getElementById('status');
+
+        socket.on('connect', () => {
+            statusEl.innerText = "Connected";
+            statusEl.style.color = "#00ff00";
+        });
+
+        socket.on('disconnect', () => {
+            statusEl.innerText = "Disconnected";
+            statusEl.style.color = "#ff0000";
+        });
+
+        let lastImage = null;
+
+        socket.on('tracking_data', (msg) => {
+            try {
+                const data = JSON.parse(msg);
+                const id = data.id;
+
+                if (!trackers[id]) {
+                    console.log(`New tracker found: ${id}`);
+                    const { mesh, color } = createTrackerMesh(id);
+                    trackers[id] = {
+                        mesh: mesh,
+                        color: color,
+                        lastSeen: Date.now()
+                    };
+
+                    const div = document.createElement('div');
+                    div.id = `ui-${id}`;
+                    div.className = 'tracker-row';
+                    div.style.borderColor = '#' + color;
+                    div.innerText = `Node ${id}`;
+                    listEl.appendChild(div);
+                }
+
+                const t = trackers[id];
+                t.lastSeen = Date.now();
+
+                t.mesh.position.set(
+                    data.pose.position.x,
+                    data.pose.position.y,
+                    data.pose.position.z
+                );
+
+                t.mesh.quaternion.set(
+                    data.pose.rotation.x,
+                    data.pose.rotation.y,
+                    data.pose.rotation.z,
+                    data.pose.rotation.w
+                );
+
+                document.getElementById(`ui-${id}`).innerText = `Node ${id}: [${data.pose.position.x.toFixed(2)}, ${data.pose.position.z.toFixed(2)}, ${data.pose.position.y.toFixed(2)}]`;
+
+                const x = data.pose.position.x;
+                const y = data.pose.position.z;
+                const z = data.pose.position.y;
+                const img = getImageForPosition(x, y, z);
+                if (img && img !== lastImage) {
+                    seasonImageEl.src = img;
+                    lastImage = img;
+                }
+
+            } catch (e) {
+                console.error("Parse Error", e);
+            }
+        });
+
+        setInterval(() => {
+            const now = Date.now();
+            for (const [id, t] of Object.entries(trackers)) {
+                if (now - t.lastSeen > 1500) {
+                    scene.remove(t.mesh);
+                    const ui = document.getElementById(`ui-${id}`);
+                    if (ui) ui.remove();
+                    delete trackers[id];
+                    console.log(`Removed inactive tracker: ${id}`);
+                }
+            }
+        }, 1000);
+
+
+        /**** Loop zum Rendern ****/
+
+        
+        function animate() {
+            requestAnimationFrame(animate);
+            renderer.render(scene, camera);
+        }
+        animate();
+
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+    </script>
 </body>
+
 </html>
