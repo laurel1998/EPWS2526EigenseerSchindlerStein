@@ -1,0 +1,26 @@
+/*nur Styling*/
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: #1a1a1a;
+  font-family: monospace;
+}
+
+#info {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #00ff00;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+.tracker-row {
+  margin-top: 5px;
+  color: white;
+  border-left: 3px solid;
+  padding-left: 5px;
+}
