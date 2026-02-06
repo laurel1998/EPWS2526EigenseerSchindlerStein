@@ -3,9 +3,15 @@
 Alle nennenswerten Änderungen an diesem Projekt werden in dieser Datei dokumentiert.  
 Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 
+## [1.2.1] - 06.02.2026
+### Überarbeitet 
+- [ADR zur Bilddarstellung bei Mehrpersonen-Interaktion](./docs/adr/0008-mehrpersonen-interaktion.md) -> Versionen 3-5 hinzugefügt
+- [ADR für Bildübergänge zwischen zwei Positionen](./docs/adr/0009-bilduebergang.md) -> Version 3 hinzugefügt
+
+
 ## [1.2.0] - 25.01.2026
 ### Hinzugefügt 
-- [ADR zur Bilddarstellung bei Mehrpersonen-Interaktion](./docs/adr/0008-bilddarstellung.md)
+- [ADR zur Bilddarstellung bei Mehrpersonen-Interaktion](./docs/adr/0008-mehrpersonen-interaktion.md)
 - [ADR für Bildübergänge zwischen zwei Positionen](./docs/adr/0009-bilduebergang.md)
 
 

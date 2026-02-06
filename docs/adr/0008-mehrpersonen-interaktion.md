@@ -54,6 +54,34 @@ Die Bilddarstellung soll das Erkunden unterstützen, ohne zu verwirren.
 
 ---
 
+### Version 3 – Dynamische Fokussierung (Aufmerksamkeitsbasierte Darstellung)
+- Der Bildschirm zeigt ein zentrales Fokusbild sowie ein oder mehrere Nebenbilder
+- Das Fokusbild wird automatisch der Person zugeordnet, die aktuell die höchste „Aufmerksamkeit“ erzeugt
+- Aufmerksamkeit kann bestimmt werden durch:
+  - Verweildauer an einer Position
+  - Stabilität der Position (wenig Bewegung)
+  - Nähe zum Zentrum der Trackingfläche
+- Weitere anwesende Personen werden als Nebenbilder dargestellt
+  - kleiner skaliert
+  - optional leicht gedimmt
+  - mit eingeblendeten Zeitinformationen (Jahr, Monat, Uhrzeit)
+- Die Darstellung skaliert automatisch:
+  - 2 Personen → 1 Fokusbild + 1 Nebenbild
+  - 3–4 Personen → 1 Fokusbild + bis zu 3 Nebenbilder
+- Der Fokuswechsel erfolgt weich (z. B. zeitverzögert), um visuelle Sprünge zu vermeiden
+
+**Vorteile**
+- Mehrpersonen-Interaktion ohne harte Bildschirmaufteilung
+- Klare visuelle Hierarchie erhöht Verständlichkeit
+- Körperliches Verhalten (Stehenbleiben, Erkunden) wird direkt belohnt
+- Skalierbar von 2 bis 4 Personen mit konsistenter Logik
+
+**Nachteile**
+- Höhere Komplexität in der Darstellungs- und Priorisierungslogik
+- Fokus liegt nicht gleichberechtigt auf allen Personen
+
+---
+
 ## Entscheidung
 Noch offen – Evaluierung nach Tests.
 
@@ -68,6 +96,9 @@ Noch offen – Evaluierung nach Tests.
 - Mehrpersonenfähigkeit muss früh mitgedacht werden
 
 ### To-dos
+- Testen der dynamischen Fokussierung mit 2–4 Personen
+- Definition und Feinjustierung der Aufmerksamkeitskriterien
 - Testen des Split-Screen für Mehrpersonen-Interaktion
 - Testen was der aktuelle Code macht, wenn sich mind. 2 Personen auf der Fläche befinden
 - evtll. weitere Optionen überlegen für Bilddarstellung
+ 
