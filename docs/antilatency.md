@@ -85,7 +85,6 @@ Leider existiert die Demo App nur bis Version **4.1.0**, was zu fehlerhaften Erg
 
 ---
 
-## Schritt 6 – Integration der Antilatency SDK in Unity
+## Schritt 6 – Integration der Antilatency SDK
 
-Ab diesem Punkt ist die Installation bereit für den Betrieb und die SDK kann in ein Unity-Projekt eingebunden werden.  
-Auch hier muss die **Version der SDK** mit der Version der installierten Antilatency Software übereinstimmen.
+Ab diesem Punkt ist die Installation bereit für den Betrieb und die SDK kann in ein Projekt eingebunden werden. Es stehen verschieden SDK's (Unity, C, etc.) zur Verfügung.
