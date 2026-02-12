@@ -3,10 +3,26 @@
 Alle nennenswerten Änderungen an diesem Projekt werden in dieser Datei dokumentiert.  
 Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 
+## [1.2.3] - 12.02.2026
+### Hinzugefügt
+- [Installationsanleitung](./docs/installationsanleitung.md) erstellt
+- [Archiv-Ordner](_Archiv/) für veraltete Modelle/Code
+  
+### Überarbeitet 
+- [Bildklassifikation](./tools/image-selection/ImageSelectionV2.kt) an überarbeitete Interaktion angepasst
+- Code zur [Interaktion](./tools/antilatency/webclient/js/interaction.js) überarbeitet
+- Responsibilties aufgeteilt (JS/CSS/HTML)
+
+
+
 ## [1.2.2] - 11.02.2026
 ### Hinzugefügt 
 - [ADR zum Anzeigesystem und Visualisierung](./docs/adr/0010-anzeigesystem.md) 
 - [ADR zur Nutzerorientierung und Anleitung für das System](./docs/adr/0011-nutzerorientierung.md)
+
+### Überarbeitet 
+- [User Stories](./docs/user-stories.md) neu priorisiert
+
 
 
 ## [1.2.1] - 06.02.2026
@@ -29,7 +45,7 @@ Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 
 ### Überarbeitet 
 - [Datenbereitstellung](./docs/adr/0006-bereitstellung-der-bilddaten.md) angepasst an geforderte Funktionalität
-- [Bildklassifikation](./tools/image-selection/ImageSelectionV2.kt) an neue Logik angepasst
+- Bildklassifikation an neue Logik angepasst
 
 
 
