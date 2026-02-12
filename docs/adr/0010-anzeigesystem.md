@@ -35,6 +35,9 @@ Randbedingungen:
 
 5. **Alternative Anzeigeformen (z. B. LED-Wand, Bodenprojektion)**
    - experimentelle oder installationstypische Sonderformen
+  
+6. **Anzeige auf einem tragbaren Gerät**
+   - z. B. Anzeige auf einem Tablet/Smartphone 
 
 ---
 
