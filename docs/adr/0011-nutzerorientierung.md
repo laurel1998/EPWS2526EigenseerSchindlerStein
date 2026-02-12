@@ -55,20 +55,19 @@ Randbedingungen:
 
 ### Option 3 – Anleitung im Zentrum der Fläche (Boden-Grafik / Symbolik)
 **Beschreibung**
-- Im ungenutzten Zentrum der Fläche befindet sich eine grafische Erklärung
+- Bei Betreten des ungenutzten Zentrums der Fläche erscheint ein Titelbild mit (grafischer) Erklärung
 - Symbole/Icons erklären Winkel (Monate), Radius (Uhrzeit), Höhe (Jahr)
-- Kann z. B. als Bodenfolie oder Projektion umgesetzt werden
+- Pfeile auf der Fläche markieren den "ungenutzten" Bereich 
 
 **Vorteile**
-- Anleitung ist räumlich integriert
+- Anleitung ist teilweise räumlich integriert
 - Keine zusätzliche Hardware notwendig
 - Zentrale Orientierung für neue Besucher:innen
 - Visuell gut mit dem Ausstellungskonzept verbindbar
 
 **Nachteile**
 - Erklärungen müssen sehr reduziert und selbsterklärend sein
-- Bei vielen Personen ggf. verdeckt
-- Weniger Platz für detaillierte Erklärung
+- Anzeige bei Mehrnutzerinteraktion unklar
 
 ---
 
@@ -93,7 +92,7 @@ Randbedingungen:
 Das Projektteam tendiert zu einer **Kombination aus Option 3 (Anleitung im Zentrum der Fläche)** und **Option 4 (explorative Nutzung)**.
 
 Begründung:
-- Die zentrale Boden-Grafik bietet eine **minimale, visuelle Orientierung**, ohne das Erlebnis zu stark zu erklären
+- Die zentrale Titelbild-Grafik bietet eine **minimale, visuelle Orientierung**, ohne das Erlebnis zu stark zu erklären
 - Gleichzeitig bleibt Raum für **exploratives Entdecken**, das zum künstlerischen Anspruch der Installation passt
 - Die Lösung benötigt **keine zusätzliche Hardware** und ist installationstauglich
 - Das Zentrum der Fläche ist technisch unkritisch und eignet sich als Ort für eine reduzierte, ästhetisch integrierte Anleitung
