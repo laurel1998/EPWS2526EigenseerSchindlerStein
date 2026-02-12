@@ -42,6 +42,7 @@ Die Bilddarstellung soll das Erkunden unterstützen, ohne zu verwirren.
 - Jede getrackte Person bekommt einen eigenen Bildbereich
 - Jeder Bereich zeigt das Bild entsprechend der individuellen Position
 - Optionale Farbcodierung (Person -> Screenbereich) -> farbigen Rahmen um den Bildbereich auf dem Screen
+- Markierung des Controllers in der selben Farbe des Rahmens
 
 **Vorteile**
 - Gleichzeitige Mehrpersonen-Interaktion möglich
