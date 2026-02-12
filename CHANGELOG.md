@@ -3,10 +3,17 @@
 Alle nennenswerten Änderungen an diesem Projekt werden in dieser Datei dokumentiert.  
 Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 
+## [1.2.2] - 11.02.2026
+### Hinzugefügt 
+- [ADR zum Anzeigesystem und Visualisierung](./docs/adr/0010-anzeigesystem.md) 
+- [ADR zur Nutzerorientierung und Anleitung für das System](./docs/adr/0011-nutzerorientierung.md)
+
+
 ## [1.2.1] - 06.02.2026
 ### Überarbeitet 
 - [ADR zur Bilddarstellung bei Mehrpersonen-Interaktion](./docs/adr/0008-mehrpersonen-interaktion.md) -> Versionen 3-5 hinzugefügt
 - [ADR für Bildübergänge zwischen zwei Positionen](./docs/adr/0009-bilduebergang.md) -> Version 3 hinzugefügt
+
 
 
 ## [1.2.0] - 25.01.2026
@@ -30,7 +37,7 @@ Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 ### Hinzugefügt
 - Interaktionskonzept Version 1 ([Quadrantenlogik](./docs/bilder/InteraktionskonzeptV1.pdf))
 ### Überarbeitet 
-- [Architekturmodell](./docs/Modelle/Architekturmodell/Architekturmodell.Version3.pdf) 
+- [Architekturmodell](./docs/Modelle/Architekturmodell.Version3.pdf) 
 
 
 
@@ -49,7 +56,7 @@ Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 
 ### Überarbeitet
 - [Interaktion POC](./docs/poc/0003-poc-interaktion.md) - Scope, Methodik, Erfolgskriterien, Ressourcen, Flow und Ergebnis angepasst
-- [Architekturmodell](./docs/Modelle/Architekturmodell/Architekturmodell.Version2.pdf) angepasst
+- [Architekturmodell](./_Archiv/Architekturmodell.Version2.pdf) angepasst
 - [Risikoanalyse](./docs/risikoanalyse.md) - neue Erkenntnisse eingearbeitet
 - [Datenschutz ADR](./docs/adr/0004-datenschutz.md) - weitere Option eingefügt und sich für diese entschieden
 
@@ -83,7 +90,7 @@ Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 
 ### Hinzugefügt 
 - [ADR zu Datenschutz](./docs/adr/0004-datenschutz.md) - Festhalten unserer Entscheidung zum Umgang mit Datenschutz
-- [Architekturmodell](./docs/Modelle/Architekturmodell/Architekturmodell.Version1.pdf) - Erste Version der Systemarchitektur
+- [Architekturmodell](./_Archiv/Architekturmodell.Version1.pdf) - Erste Version der Systemarchitektur
  
 
 
