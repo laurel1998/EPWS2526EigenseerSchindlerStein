@@ -114,7 +114,7 @@ Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 
 ### Hinzugefügt 
 - [MVP](./docs/mvp.md) - Defintion der Kernfunktionen ergänzt
-- Erster [Code](./tools/image-selection/..) für die Bildklassifikation nach Meta-Daten
+- Erster [Code](./_Archiv/ImageSelectionV1) für die Bildklassifikation nach Meta-Daten
 
 
 

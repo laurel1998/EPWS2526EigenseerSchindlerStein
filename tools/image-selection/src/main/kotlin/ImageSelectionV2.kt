@@ -9,16 +9,16 @@ fun main() {
     val sourceRoot = Path.of("F:\\source")
 
     // Zielordner
-    val targetRoot = Path.of("F:\\TimeMapping")
+    val targetRoot = Path.of("F:\\images")
 
     // Jahre
-    val allowedYears = setOf(2010, 2012, 2014, 2018, 2020, 2024)
+    val allowedYears = setOf(2010, 2012, 2014, 2016, 2018, 2020, 2022, 2024)
 
     // Tag des Monats
     val targetDay = 1
 
     // Zeit-Slots
-    val timeSlots = listOf(8, 12, 16, 20, 23)
+    val timeSlots = listOf(8, 12, 16, 20)
 
     println("Starte Bildselektion (neue Zeitlogik)...")
     println("Quelle: $sourceRoot")
@@ -79,7 +79,7 @@ fun selectImageClosestToTime(
     targetRoot: Path
 ) {
     val images = Files.list(dayPath)
-        .filter { Files.isRegularFile(it) && isImageFile(it.toFile()) }
+        .filter { Files.isRegularFile(it) }
         .toList()
 
     if (images.isEmpty()) return
@@ -133,12 +133,6 @@ fun readTimeFromFilename(file: File): Pair<Int, Int>? {
     val minute = parts[1].toIntOrNull() ?: return null
 
     return hour to minute
-}
-
-/** Prüft, ob Datei Bildformat ist */
-fun isImageFile(file: File): Boolean {
-    val name = file.name.lowercase()
-    return name.endsWith(".jpg") || name.endsWith(".jpeg") || name.endsWith(".png")
 }
 
 /** Stream in Liste umwandeln */
