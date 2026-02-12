@@ -29,7 +29,7 @@ Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 
 ### Überarbeitet 
 - [Datenbereitstellung](./docs/adr/0006-bereitstellung-der-bilddaten.md) angepasst an geforderte Funktionalität
-- [Bildklassifikation](./tools/image-selection/src/main/kotlin/ImageSelectionV2.kt) an neue Logik angepasst
+- [Bildklassifikation](./tools/image-selection/ImageSelectionV2.kt) an neue Logik angepasst
 
 
 
@@ -114,7 +114,7 @@ Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 
 ### Hinzugefügt 
 - [MVP](./docs/mvp.md) - Defintion der Kernfunktionen ergänzt
-- Erster [Code](./_Archiv/ImageSelectionV1) für die Bildklassifikation nach Meta-Daten
+- Erster [Code](./_Archiv/ImageSelectionV1.kt) für die Bildklassifikation nach Meta-Daten
 
 
 
