@@ -3,9 +3,49 @@
 Alle nennenswerten Änderungen an diesem Projekt werden in dieser Datei dokumentiert.  
 Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 
+## [1.2.2] - 11.02.2026
+### Hinzugefügt 
+- [ADR zum Anzeigesystem und Visualisierung](./docs/adr/0010-anzeigesystem.md) 
+- [ADR zur Nutzerorientierung und Anleitung für das System](./docs/adr/0011-nutzerorientierung.md)
+
+
+## [1.2.1] - 06.02.2026
+### Überarbeitet 
+- [ADR zur Bilddarstellung bei Mehrpersonen-Interaktion](./docs/adr/0008-mehrpersonen-interaktion.md) -> Versionen 3-5 hinzugefügt
+- [ADR für Bildübergänge zwischen zwei Positionen](./docs/adr/0009-bilduebergang.md) -> Version 3 hinzugefügt
+
+
+
+## [1.2.0] - 25.01.2026
+### Hinzugefügt 
+- [ADR zur Bilddarstellung bei Mehrpersonen-Interaktion](./docs/adr/0008-mehrpersonen-interaktion.md)
+- [ADR für Bildübergänge zwischen zwei Positionen](./docs/adr/0009-bilduebergang.md)
+
+
+
+## [1.1.0] - 15.01.2026
+### Hinzugefügt 
+- neues [Interaktionskonzept](./docs/bilder/InteraktionskonzeptV2.pdf) entwickelt
+
+### Überarbeitet 
+- [Datenbereitstellung](./docs/adr/0006-bereitstellung-der-bilddaten.md) angepasst an geforderte Funktionalität
+- [Bildklassifikation](./tools/image-selection/src/main/kotlin/ImageSelectionV2.kt) an neue Logik angepasst
+
+
+
+## [0.14.0] - 12.01.2026
+### Hinzugefügt
+- Interaktionskonzept Version 1 ([Quadrantenlogik](./docs/bilder/InteraktionskonzeptV1.pdf))
+### Überarbeitet 
+- [Architekturmodell](./docs/Modelle/Architekturmodell.Version3.pdf) 
+
+
+
 ## [0.13.0] - 09.01.2026
 ### Überarbeitet 
 - [index.html](./tools/antilatency/webclient/index.html) - Code für die Tracking-Visualisierung überarbeitet, um Bilder darzustellen
+
+
 
 ## [0.12.0] - 07.01.2026
 ### Hinzugefügt 
@@ -16,15 +56,17 @@ Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 
 ### Überarbeitet
 - [Interaktion POC](./docs/poc/0003-poc-interaktion.md) - Scope, Methodik, Erfolgskriterien, Ressourcen, Flow und Ergebnis angepasst
-- [Architekturmodell](./docs/Modelle/Architekturmodell/Architekturmodell.Version2.pdf) angepasst
+- [Architekturmodell](./_Archiv/Architekturmodell.Version2.pdf) angepasst
 - [Risikoanalyse](./docs/risikoanalyse.md) - neue Erkenntnisse eingearbeitet
 - [Datenschutz ADR](./docs/adr/0004-datenschutz.md) - weitere Option eingefügt und sich für diese entschieden
+
 
 
 ## [0.11.0] - 05.01.2026
 ### Überarbeitet
 - [Tracking-Fläche](./docs/antilatency.md) - neu generiertes Environment, um Hashwert-Problem zu beheben
 - Bestätigung des [Datenschutz POCs](./docs/poc/0002-poc-datenschutz.md)
+
 
   
 ## [0.10.0] - 14.12.2025
@@ -48,7 +90,7 @@ Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 
 ### Hinzugefügt 
 - [ADR zu Datenschutz](./docs/adr/0004-datenschutz.md) - Festhalten unserer Entscheidung zum Umgang mit Datenschutz
-- [Architekturmodell](./docs/Modelle/Architekturmodell/Architekturmodell.Version1.pdf) - Erste Version der Systemarchitektur
+- [Architekturmodell](./_Archiv/Architekturmodell.Version1.pdf) - Erste Version der Systemarchitektur
  
 
 
