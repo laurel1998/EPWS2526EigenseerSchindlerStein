@@ -1,6 +1,6 @@
 {
-  "baseUrl": "http://www.gm.th-koeln.de/home/inf3318/public_html/TimeMapping/",
-  "title": "title.jpg",
+  "baseUrl": "http://www.gm.th-koeln.de/home/~inf3318/images/",
+  "title": "http://www.gm.th-koeln.de/home/~inf3318/title.jpg",
   "images": [
     { "year": 2010, "month": 1, "hour": 8, "src": "2010/01/08.jpg" },
     { "year": 2010, "month": 1, "hour": 12, "src": "2010/01/12.jpg" },
