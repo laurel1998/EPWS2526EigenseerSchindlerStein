@@ -37,7 +37,7 @@ Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 ### Hinzugefügt
 - Interaktionskonzept Version 1 ([Quadrantenlogik](./docs/bilder/InteraktionskonzeptV1.pdf))
 ### Überarbeitet 
-- [Architekturmodell](./docs/Modelle/Architekturmodell/Architekturmodell.Version3.pdf) 
+- [Architekturmodell](./docs/Modelle/Architekturmodell.Version3.pdf) 
 
 
 
@@ -56,7 +56,7 @@ Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 
 ### Überarbeitet
 - [Interaktion POC](./docs/poc/0003-poc-interaktion.md) - Scope, Methodik, Erfolgskriterien, Ressourcen, Flow und Ergebnis angepasst
-- [Architekturmodell](./docs/Modelle/Architekturmodell/Architekturmodell.Version2.pdf) angepasst
+- [Architekturmodell](./_Archiv/Architekturmodell.Version2.pdf) angepasst
 - [Risikoanalyse](./docs/risikoanalyse.md) - neue Erkenntnisse eingearbeitet
 - [Datenschutz ADR](./docs/adr/0004-datenschutz.md) - weitere Option eingefügt und sich für diese entschieden
 
@@ -90,7 +90,7 @@ Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 
 ### Hinzugefügt 
 - [ADR zu Datenschutz](./docs/adr/0004-datenschutz.md) - Festhalten unserer Entscheidung zum Umgang mit Datenschutz
-- [Architekturmodell](./docs/Modelle/Architekturmodell/Architekturmodell.Version1.pdf) - Erste Version der Systemarchitektur
+- [Architekturmodell](./_Archiv/Architekturmodell.Version1.pdf) - Erste Version der Systemarchitektur
  
 
 
