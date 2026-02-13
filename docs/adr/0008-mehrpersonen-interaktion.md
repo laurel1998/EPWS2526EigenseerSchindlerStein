@@ -1,6 +1,6 @@
 # ADR-0008: Bilddarstellung bei Mehrpersonen-Interaktion
-**Status:** vorgeschlagen  
-**Datum:** 2026-01-25  
+**Status:** entschieden  
+**Datum:** 2026-02-13  
 
 ---
 
@@ -84,7 +84,8 @@ Die Bilddarstellung soll das Erkunden unterstützen, ohne zu verwirren.
 ---
 
 ## Entscheidung
-Noch offen – Evaluierung nach Tests.
+Bisher wurde die Mehrpersoneninteraktion mit einem Split Screen (Option 2) implementiert. Die Fläche bietet ausreichend Platz für 2 Nutzer:innen.
+Sobald ein zweiter Nutzer die Fläche betritt, splittet sich der Screen in zwei Teile, sodass jeder Nutzer sein eigenes Bild mit Angabe zu Uhrzeit und Datum sieht. Diese sind noch nicht farbcodiert.
 
 ---
 
