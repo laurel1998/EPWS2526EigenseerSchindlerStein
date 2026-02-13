@@ -9,7 +9,7 @@ const seasonImageEl = document.getElementById('season-image');
 const listEl = document.getElementById('tracker-list');
 const statusEl = document.getElementById('status');
 
-// Mapping laden (top-level await wie in deinem Original)
+// Mapping laden (top-level await)
 const mapping = await loadMapping();
 
 // Three.js Szene aufsetzen + Renderloop starten

@@ -91,7 +91,7 @@ export function startTracking({ THREE, scene, listEl, statusEl, seasonImageEl, m
         ui.innerText = `Node ${id}: [${data.pose.position.x.toFixed(2)}, ${data.pose.position.z.toFixed(2)}, ${data.pose.position.y.toFixed(2)}]`;
       }
 
-      // Koordinaten-Mapping: x, z -> Fläche; y -> Höhe (wie bei dir vorher)
+      // Koordinaten-Mapping: x, z -> Fläche; y -> Höhe
       const x = data.pose.position.x;
       const y = data.pose.position.z;
       const z = data.pose.position.y;
@@ -107,7 +107,7 @@ export function startTracking({ THREE, scene, listEl, statusEl, seasonImageEl, m
     }
   });
 
-  // Inaktive Tracker entfernen (wie vorher)
+  // Inaktive Tracker entfernen
   setInterval(() => {
     const now = Date.now();
     for (const [id, t] of Object.entries(trackers)) {
