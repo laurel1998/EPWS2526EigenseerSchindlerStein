@@ -2,6 +2,8 @@
 
 export function startTracking({ THREE, scene, listEl, statusEl, seasonImageEl, mapping, getImageForPosition }) {
   const trackers = {};
+  const metaDateEl = document.getElementById('meta-date');
+  const metaTimeEl = document.getElementById('meta-time');
 
   function stringToColor(str) {
     let hash = 0;
@@ -47,6 +49,25 @@ export function startTracking({ THREE, scene, listEl, statusEl, seasonImageEl, m
 
   let lastImage = null;
 
+  function setMetaFromImageUrl(url) {
+
+    const m = url.match(/\/(\d{4})\/(\d{2})\/(\d{2})\.jpg$/);
+
+    if (!m) {
+      metaDateEl.textContent = `--/--/----`;
+      metaTimeEl.textContent = `--:--`;
+      return;
+    }
+
+    const yyyy = m[1];
+    const mm = m[2];
+    const hh = m[3];
+
+    metaDateEl.textContent = `01.${mm}.${yyyy}`;
+    metaTimeEl.textContent = `${hh}:00`;
+  }
+
+
   socket.on('tracking_data', (msg) => {
     try {
       const data = JSON.parse(msg);
@@ -91,7 +112,6 @@ export function startTracking({ THREE, scene, listEl, statusEl, seasonImageEl, m
         ui.innerText = `Node ${id}: [${data.pose.position.x.toFixed(2)}, ${data.pose.position.z.toFixed(2)}, ${data.pose.position.y.toFixed(2)}]`;
       }
 
-      // Koordinaten-Mapping: x, z -> Fläche; y -> Höhe (wie bei dir vorher)
       const x = data.pose.position.x;
       const y = data.pose.position.z;
       const z = data.pose.position.y;
@@ -99,15 +119,18 @@ export function startTracking({ THREE, scene, listEl, statusEl, seasonImageEl, m
       const img = getImageForPosition(mapping, x, y, z);
       if (img && img !== lastImage) {
         seasonImageEl.src = img;
+        setMetaFromImageUrl(img);
         lastImage = img;
       }
+
+
 
     } catch (e) {
       console.error("Parse Error", e);
     }
   });
 
-  // Inaktive Tracker entfernen (wie vorher)
+
   setInterval(() => {
     const now = Date.now();
     for (const [id, t] of Object.entries(trackers)) {
