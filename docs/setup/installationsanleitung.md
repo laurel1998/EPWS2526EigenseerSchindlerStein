@@ -41,7 +41,7 @@ Der Webclient visualisiert und interpretiert die Tracking-Daten.
 ## Schritt-für-Schritt Installation
 
 ### Schritt 1 – Raspberry Pi Setup (Tracking-Gateway)
-[Pi Setup Datei](01_pi_setup.md)
+[Pi Setup](01_pi_setup.md)
 
 Ziel:
 - Antilatency-Tracker laufen stabil  
@@ -53,7 +53,7 @@ Abnahmekriterien:
 ---
 
 ### Schritt 2 – Setup der Tracking-Fläche
-[Tracking Area Setuo](02_tracking_area_setup.md)
+[Tracking Area Setup](02_tracking_area_setup.md)
 
 Ziel:
 - Physische Fläche korrekt eingerichtet  
