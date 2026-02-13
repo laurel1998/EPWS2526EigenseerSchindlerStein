@@ -61,6 +61,8 @@ dass er den MQTT-Broker zuverlässig erreicht.
 4. Script launchen:
    - `sudo ./TrackingMinimalDemo AntilatencyAltEnvironmentHorizontalGrid~GRIDHASH`
 
+![Pi start](PiueberSSHstarten.png)
+
 ---
 
 ## 4. Node.js Server starten (Bridge + Hosting)
