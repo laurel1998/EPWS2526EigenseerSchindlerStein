@@ -61,6 +61,8 @@ dass er den MQTT-Broker zuverlässig erreicht.
 4. Script launchen:
    - `sudo ./TrackingMinimalDemo AntilatencyAltEnvironmentHorizontalGrid~GRIDHASH`
 
+![Pi start](../bilder/PiueberSSHstarten.png)
+
 ---
 
 ## 4. Node.js Server starten (Bridge + Hosting)
@@ -84,6 +86,8 @@ Damit das System funktioniert, muss es im Repo einen `assets` Ordner geben,
 der mindestens enthält:
 - `mapping.json`
 - Bilddaten / Medien, auf die `mapping.json` verweist (über `baseUrl` + `src`)
+
+![Node.js start](../bilder/nodejs_serverstart.png)
 
 ---
 

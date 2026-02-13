@@ -3,6 +3,19 @@
 Alle nennenswerten Änderungen an diesem Projekt werden in dieser Datei dokumentiert.  
 Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 
+## [1.2.4] - 13.02.2026
+### Hinzugefügt
+- [Pi Setup](./docs/01_pi_setup.md) erstellt
+- [Trackingfläche Setup](./docs/02_tracking_area_setup.md) erstellt
+- [Webclient Setup](./docs/03_webclient_setup.md) erstellt
+
+  
+### Überarbeitet 
+- [Installationsanleitung](./docs/installationsanleitung.md) überarbeitet
+
+
+
+
 ## [1.2.3] - 12.02.2026
 ### Hinzugefügt
 - [Installationsanleitung](./docs/installationsanleitung.md) erstellt
