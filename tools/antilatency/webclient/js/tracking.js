@@ -1,9 +1,14 @@
 //nur Socket + Tracker + UI + Bildwechsel
 
-export function startTracking({ THREE, scene, listEl, statusEl, seasonImageEl, mapping, getImageForPosition }) {
+export function startTracking({ THREE, scene, listEl, statusEl,
+  seasonImageLeftEl, seasonImageRightEl,
+  mapping, getImageForPosition }) {
   const trackers = {};
-  const metaDateEl = document.getElementById('meta-date');
-  const metaTimeEl = document.getElementById('meta-time');
+  const metaDateLeftEl = document.getElementById('meta-date-left');
+  const metaTimeLeftEl = document.getElementById('meta-time-left');
+  const metaDateRightEl = document.getElementById('meta-date-right');
+  const metaTimeRightEl = document.getElementById('meta-time-right');
+
 
   function stringToColor(str) {
     let hash = 0;
@@ -47,31 +52,48 @@ export function startTracking({ THREE, scene, listEl, statusEl, seasonImageEl, m
     statusEl.style.color = "#ff0000";
   });
 
-  let lastImage = null;
+  let lastImageLeft = null;
+  let lastImageRight = null;
 
-  function setMetaFromImageUrl(url) {
+  // Zuordnung: welche cam steuert links/rechts
+  let leftCamId = null;
+  let rightCamId = null;
 
+
+  function setMetaFromImageUrl(url, side) {
     const m = url.match(/\/(\d{4})\/(\d{2})\/(\d{2})\.jpg$/);
-
-    if (!m) {
-      metaDateEl.textContent = `--/--/----`;
-      metaTimeEl.textContent = `--:--`;
-      return;
-    }
+    if (!m) return;
 
     const yyyy = m[1];
     const mm = m[2];
     const hh = m[3];
 
-    metaDateEl.textContent = `01.${mm}.${yyyy}`;
-    metaTimeEl.textContent = `${hh}:00`;
+    const dateText = `01.${mm}.${yyyy}`;
+    const timeText = `${hh}:00`;
+
+    if (side === 'left') {
+      metaDateLeftEl.textContent = dateText;
+      metaTimeLeftEl.textContent = timeText;
+    } else {
+      metaDateRightEl.textContent = dateText;
+      metaTimeRightEl.textContent = timeText;
+    }
   }
+
 
 
   socket.on('tracking_data', (msg) => {
     try {
       const data = JSON.parse(msg);
       const id = data.id;
+
+      // Automatische Slot-Zuordnung (erste cam = links, zweite cam = rechts)
+      if (leftCamId === null) leftCamId = id;
+      else if (rightCamId === null && id !== leftCamId) rightCamId = id;
+
+      // Nur zwei Kameras berücksichtigen
+      const side = (id === leftCamId) ? 'left' : (id === rightCamId ? 'right' : null);
+
 
       if (!trackers[id]) {
         console.log(`New tracker found: ${id}`);
@@ -117,11 +139,22 @@ export function startTracking({ THREE, scene, listEl, statusEl, seasonImageEl, m
       const z = data.pose.position.y;
 
       const img = getImageForPosition(mapping, x, y, z);
-      if (img && img !== lastImage) {
-        seasonImageEl.src = img;
-        setMetaFromImageUrl(img);
-        lastImage = img;
+      if (!img || !side) return;
+
+      if (side === 'left') {
+        if (img !== lastImageLeft) {
+          seasonImageLeftEl.src = img;
+          setMetaFromImageUrl(img, 'left');
+          lastImageLeft = img;
+        }
+      } else if (side === 'right') {
+        if (img !== lastImageRight) {
+          seasonImageRightEl.src = img;
+          setMetaFromImageUrl(img, 'right');
+          lastImageRight = img;
+        }
       }
+
 
 
 

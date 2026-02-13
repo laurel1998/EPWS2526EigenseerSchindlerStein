@@ -2,7 +2,7 @@
 
 import * as THREE from 'three';
 
-export function setupScene(seasonImageEl) {
+export function setupScene() {
   const scene = new THREE.Scene();
   scene.background = new THREE.Color(0x202020);
 
@@ -25,13 +25,12 @@ export function setupScene(seasonImageEl) {
 
 
   // Canvas und Bild aus Galerie laden (Reihenfolge beibehalten)
-  document.body.prepend(seasonImageEl);
   document.body.appendChild(renderer.domElement);
-
   renderer.domElement.style.position = "fixed";
   renderer.domElement.style.inset = "0";
-  renderer.domElement.style.zIndex = "-1";   // hinter dem Bild
+  renderer.domElement.style.zIndex = "-1";
   renderer.domElement.style.pointerEvents = "none";
+
 
   scene.background = new THREE.Color(0x202020);
   //const grid = new THREE.GridHelper(10, 10, 0x555555, 0x333333);
