@@ -61,7 +61,7 @@ dass er den MQTT-Broker zuverlässig erreicht.
 4. Script launchen:
    - `sudo ./TrackingMinimalDemo AntilatencyAltEnvironmentHorizontalGrid~GRIDHASH`
 
-![Pi start](../docs/bilder/PiueberSSHstarten.png)
+![Pi start](../bilder/PiueberSSHstarten.png)
 
 ---
 
