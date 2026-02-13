@@ -87,6 +87,8 @@ der mindestens enthält:
 - `mapping.json`
 - Bilddaten / Medien, auf die `mapping.json` verweist (über `baseUrl` + `src`)
 
+![Node.js start](../bilder/nodejs_serverstart.png)
+
 ---
 
 ## 5. Webclient starten (Browser)
