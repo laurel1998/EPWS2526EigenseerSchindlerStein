@@ -1,7 +1,76 @@
 //nur Socket + Tracker + UI + Bildwechsel
 
-export function startTracking({ THREE, scene, listEl, statusEl, seasonImageEl, mapping, getImageForPosition }) {
+export function startTracking({ THREE, scene, listEl, statusEl,
+  seasonImageLeftEl, seasonImageRightEl,
+  mapping, getImageForPosition }) {
   const trackers = {};
+  const splitEl = document.getElementById('split');
+  const metaBarEl = document.getElementById('meta-bar');
+
+  const metaDateLeftEl = document.getElementById('meta-date-left');
+  const metaTimeLeftEl = document.getElementById('meta-time-left');
+  const metaDateRightEl = document.getElementById('meta-date-right');
+  const metaTimeRightEl = document.getElementById('meta-time-right');
+
+  let lastImageLeft = null;
+  let lastImageRight = null;
+
+  let leftCamId = null;
+  let rightCamId = null;
+
+  // wann zuletzt Daten von welcher cam kamen
+  const camLastSeen = {};
+
+  function updateLayout() {
+    const now = Date.now();
+    const activeCams = Object.entries(camLastSeen)
+      .filter(([, t]) => now - t < 1500)
+      .map(([id]) => id);
+
+    const isSplit = activeCams.length >= 2;
+
+    if (!isSplit) {
+      // SINGLE MODE
+      splitEl.classList.add('single');
+      metaBarEl.classList.add('single');
+
+      // wenn nur eine cam aktiv ist, nutze sie als "left"
+      const only = activeCams[0] ?? leftCamId ?? rightCamId;
+      if (only) leftCamId = only;
+      rightCamId = null;
+    } else {
+      // SPLIT MODE
+      splitEl.classList.remove('single');
+      metaBarEl.classList.remove('single');
+
+      // feste Zuordnung herstellen, falls noch nicht gesetzt
+      if (!leftCamId) leftCamId = activeCams[0];
+      if (!rightCamId) rightCamId = activeCams.find(id => id !== leftCamId) ?? activeCams[1];
+    }
+  }
+
+
+
+  function setMetaFromImageUrl(url, side) {
+    const m = url.match(/\/(\d{4})\/(\d{2})\/(\d{2})\.jpg$/);
+    if (!m) return;
+
+    const yyyy = m[1];
+    const mm = m[2];
+    const hh = m[3];
+
+    const dateText = `01.${mm}.${yyyy}`;
+    const timeText = `${hh}:00`;
+
+    if (side === 'left') {
+      metaDateLeftEl.textContent = dateText;
+      metaTimeLeftEl.textContent = timeText;
+    } else {
+      metaDateRightEl.textContent = dateText;
+      metaTimeRightEl.textContent = timeText;
+    }
+  }
+
 
   function stringToColor(str) {
     let hash = 0;
@@ -45,12 +114,44 @@ export function startTracking({ THREE, scene, listEl, statusEl, seasonImageEl, m
     statusEl.style.color = "#ff0000";
   });
 
-  let lastImage = null;
+
+  function setMetaFromImageUrl(url, side) {
+    const m = url.match(/\/(\d{4})\/(\d{2})\/(\d{2})\.jpg$/);
+    if (!m) return;
+
+    const yyyy = m[1];
+    const mm = m[2];
+    const hh = m[3];
+
+    const dateText = `01.${mm}.${yyyy}`;
+    const timeText = `${hh}:00`;
+
+    if (side === 'left') {
+      metaDateLeftEl.textContent = dateText;
+      metaTimeLeftEl.textContent = timeText;
+    } else {
+      metaDateRightEl.textContent = dateText;
+      metaTimeRightEl.textContent = timeText;
+    }
+  }
+
+
 
   socket.on('tracking_data', (msg) => {
     try {
       const data = JSON.parse(msg);
       const id = data.id;
+
+      camLastSeen[id] = Date.now();
+      updateLayout();
+
+      const side = (id === leftCamId) ? 'left' : (id === rightCamId ? 'right' : null);
+
+
+      // Automatische Slot-Zuordnung (erste cam = links, zweite cam = rechts)
+      if (leftCamId === null) leftCamId = id;
+      else if (rightCamId === null && id !== leftCamId) rightCamId = id;
+
 
       if (!trackers[id]) {
         console.log(`New tracker found: ${id}`);
@@ -79,35 +180,44 @@ export function startTracking({ THREE, scene, listEl, statusEl, seasonImageEl, m
         data.pose.position.z
       );
 
-      t.mesh.quaternion.set(
-        data.pose.rotation.x,
-        data.pose.rotation.y,
-        data.pose.rotation.z,
-        data.pose.rotation.w
-      );
-
       const ui = document.getElementById(`ui-${id}`);
       if (ui) {
         ui.innerText = `Node ${id}: [${data.pose.position.x.toFixed(2)}, ${data.pose.position.z.toFixed(2)}, ${data.pose.position.y.toFixed(2)}]`;
       }
 
-      // Koordinaten-Mapping: x, z -> Fläche; y -> Höhe
       const x = data.pose.position.x;
       const y = data.pose.position.z;
       const z = data.pose.position.y;
 
       const img = getImageForPosition(mapping, x, y, z);
-      if (img && img !== lastImage) {
-        seasonImageEl.src = img;
-        lastImage = img;
+      if (!img || !side) return;
+
+      if (side === 'left') {
+        if (img !== lastImageLeft) {
+          seasonImageLeftEl.src = img;
+          setMetaFromImageUrl(img, 'left');
+          lastImageLeft = img;
+
+          // SINGLE: left spiegelt auch rechts NICHT, weil rechts ausgeblendet ist
+        }
+      } else if (side === 'right') {
+        if (img !== lastImageRight) {
+          seasonImageRightEl.src = img;
+          setMetaFromImageUrl(img, 'right');
+          lastImageRight = img;
+        }
       }
+
+
+
+
 
     } catch (e) {
       console.error("Parse Error", e);
     }
   });
 
-  // Inaktive Tracker entfernen
+
   setInterval(() => {
     const now = Date.now();
     for (const [id, t] of Object.entries(trackers)) {
@@ -122,4 +232,7 @@ export function startTracking({ THREE, scene, listEl, statusEl, seasonImageEl, m
   }, 1000);
 
   return { socket, trackers };
+
+  setInterval(updateLayout, 250);
+
 }

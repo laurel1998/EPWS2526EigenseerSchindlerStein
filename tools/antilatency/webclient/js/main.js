@@ -5,7 +5,8 @@ import { getImageForPosition } from './interaction.js';
 import { setupScene } from './threeScene.js';
 import { startTracking } from './tracking.js';
 
-const seasonImageEl = document.getElementById('season-image');
+const seasonImageLeftEl = document.getElementById('season-image-left');
+const seasonImageRightEl = document.getElementById('season-image-right');
 const listEl = document.getElementById('tracker-list');
 const statusEl = document.getElementById('status');
 
@@ -13,7 +14,7 @@ const statusEl = document.getElementById('status');
 const mapping = await loadMapping();
 
 // Three.js Szene aufsetzen + Renderloop starten
-const { THREE, scene, animate } = setupScene(seasonImageEl);
+const { THREE, scene, animate } = setupScene();
 animate();
 
 // Tracking starten
@@ -22,7 +23,9 @@ startTracking({
   scene,
   listEl,
   statusEl,
-  seasonImageEl,
+  seasonImageLeftEl,
+  seasonImageRightEl,
   mapping,
   getImageForPosition
 });
+

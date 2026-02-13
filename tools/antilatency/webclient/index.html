@@ -18,7 +18,27 @@
 </head>
 
 <body>
-  <img id="season-image">
+  <div id="split">
+    <img id="season-image-left" class="season-image">
+    <img id="season-image-right" class="season-image">
+  </div>
+
+  <div id="meta-bar" class="meta-split">
+    <div class="meta-col left">
+      <span id="meta-date-left">--/--/----</span>
+      <span class="meta-divider"></span>
+      <span id="meta-time-left">--:--</span>
+    </div>
+
+    <div class="meta-col right">
+      <span id="meta-date-right">--/--/----</span>
+      <span class="meta-divider"></span>
+      <span id="meta-time-right">--:--</span>
+    </div>
+  </div>
+
+
+
 
   <div id="info">
     <div>Status: <span id="status">Connecting...</span></div>

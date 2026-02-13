@@ -1,11 +1,27 @@
-/*nur Styling*/
-
 body {
   margin: 0;
   overflow: hidden;
   background-color: #1a1a1a;
   font-family: monospace;
 }
+
+.season-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* oder cover, wenn ihr kein Letterboxing wollt */
+  background: #000;
+  /* falls Balken entstehen, wirkt es sauber */
+}
+
+
+canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
 
 #info {
   position: absolute;
@@ -16,6 +32,7 @@ body {
   padding: 10px;
   border-radius: 4px;
   pointer-events: none;
+  z-index: 2;
 }
 
 .tracker-row {
@@ -23,4 +40,78 @@ body {
   color: white;
   border-left: 3px solid;
   padding-left: 5px;
+}
+
+/* Split-Container (Standard: Split) */
+#split {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  z-index: 0;
+}
+
+/* 1 Kamera: Fullscreen */
+#split.single {
+  grid-template-columns: 1fr;
+}
+
+/* Bilder immer cover */
+.season-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* <-- wichtig */
+  background: #000;
+}
+
+/* Rechte Seite ausblenden, wenn single */
+#split.single #season-image-right {
+  display: none;
+}
+
+/* Meta-Bar: Standard Split */
+#meta-bar.meta-split {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 90px;
+  padding: 0 32px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+
+  background: rgba(0, 0, 0, 1);
+  color: #ffffff;
+
+  font-family: monospace;
+  font-size: 28px;
+  z-index: 1;
+}
+
+/* 1 Kamera: Meta-Bar Fullscreen (zentriert, nur links sichtbar) */
+#meta-bar.meta-split.single {
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+/* einzelne Meta-Spalte */
+#meta-bar.meta-split .meta-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+}
+
+#meta-bar.meta-split .meta-divider {
+  width: 1px;
+  height: 26px;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* rechte Meta-Spalte ausblenden, wenn single */
+#meta-bar.meta-split.single .meta-col.right {
+  display: none;
 }
