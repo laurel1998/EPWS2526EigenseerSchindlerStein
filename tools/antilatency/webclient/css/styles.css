@@ -50,12 +50,18 @@ canvas {
   padding-left: 5px;
 }
 
+<<<<<<< HEAD
 #meta-bar.meta-split {
+=======
+/* Bar überdeckt den eingebrannten Timestamp-Bereich (Variante 3) */
+#meta-bar {
+>>>>>>> ac746d8626d4172d125a0210a3c3af7f004d906d
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100vw;
 
+<<<<<<< HEAD
   height: 90px;
   padding: 0 32px;
 
@@ -64,13 +70,23 @@ canvas {
   align-items: center;
 
   background: rgba(0, 0, 0, 1);
+=======
+  height: 100px;
+  padding: 0 40px;
+
+  background: rgba(0, 0, 0, 0.95);
+>>>>>>> ac746d8626d4172d125a0210a3c3af7f004d906d
   color: #ffffff;
 
   font-family: monospace;
-  font-size: 28px;
   z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+<<<<<<< HEAD
 #meta-bar.meta-split .meta-col {
   display: flex;
   justify-content: center;
@@ -83,3 +99,34 @@ canvas {
   height: 26px;
   background: rgba(255, 255, 255, 0.35);
 }
+=======
+/* Zentrierter Block: Datum | Uhrzeit */
+#meta-bar .meta-center {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  gap: 28px;
+
+  font-size: 44px;
+  letter-spacing: 1px;
+}
+
+/* Subtile Trennlinie */
+#meta-bar .meta-divider {
+  width: 1px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* Name unten rechts */
+#meta-bar #name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-size: 16px;
+  opacity: 0.7;
+  letter-spacing: 0.5px;
+}
+>>>>>>> ac746d8626d4172d125a0210a3c3af7f004d906d
