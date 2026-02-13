@@ -1,15 +1,11 @@
-# Installationsanleitung
-
----
-
-## Schritt 1 – Setup des Raspberry Pi (Tracking-Gateway)
+# Schritt 1 – Setup des Raspberry Pi (Tracking-Gateway)
 
 Dieser Abschnitt beschreibt alle notwendigen Schritte, um einen Raspberry Pi als Tracking-Gateway für das Gesamtsystem einzurichten.  
 Der Raspberry Pi dient als Schnittstelle zwischen der physischen Tracking-Hardware (Antilatency) und der restlichen Systemarchitektur (Backend / Webclient über MQTT).
 
 ---
 
-### 1. Ziel dieses Setups
+## 1. Ziel dieses Setups
 
 Der Raspberry Pi soll:
 
@@ -20,7 +16,7 @@ Der Raspberry Pi soll:
 
 ---
 
-### 2. Hardware vorbereiten
+## 2. Hardware vorbereiten
 
 - Geeigneten Raspberry Pi auswählen (Performance & Stabilität beachten)
 - Antilatency-Hardware anschließen (USB-Verbindung)
@@ -29,7 +25,7 @@ Der Raspberry Pi soll:
 
 ---
 
-### 3. Betriebssystem & Grundkonfiguration
+## 3. Betriebssystem & Grundkonfiguration
 
 - Geeignetes Betriebssystem für den Raspberry Pi installieren (empfohlen: 64-bit Linux)
 - Grundlegende Systemkonfiguration durchführen:
@@ -42,7 +38,7 @@ Der Raspberry Pi soll:
 
 ---
 
-### 4. Basis-Software installieren
+## 4. Basis-Software installieren
 
 Auf dem Raspberry Pi muss eine Entwicklungs- und Laufzeitumgebung vorhanden sein, um:
 
@@ -61,7 +57,7 @@ Die genaue Installation erfolgt plattformspezifisch und ist abhängig vom verwen
 
 ---
 
-### 5. Projekt auf dem Raspberry Pi bereitstellen
+## 5. Projekt auf dem Raspberry Pi bereitstellen
 
 - Zugriff auf das Git-Repository sicherstellen  
 - Projekt auf den Raspberry Pi kopieren oder klonen  
@@ -70,7 +66,7 @@ Die genaue Installation erfolgt plattformspezifisch und ist abhängig vom verwen
 
 ---
 
-### 6. Antilatency SDK integrieren
+## 6. Antilatency SDK integrieren
 
 - Antilatency SDK für die Zielplattform (Linux / ARM) beschaffen  
 - Relevante SDK-Bibliotheken identifizieren (Device Network, Tracking, Environment Selector)  
@@ -81,7 +77,7 @@ Ohne korrekt eingebundene SDK-Bibliotheken ist kein Tracking möglich.
 
 ---
 
-### 7. Tracking-Software bauen und ausführen
+## 7. Tracking-Software bauen und ausführen
 
 - Projekt auf dem Raspberry Pi bauen  
 - Sicherstellen, dass:
@@ -94,7 +90,7 @@ Ohne korrekt eingebundene SDK-Bibliotheken ist kein Tracking möglich.
 
 ---
 
-### 8. Netzwerk- und MQTT-Konfiguration
+## 8. Netzwerk- und MQTT-Konfiguration
 
 Die Tracking-Software kommuniziert über MQTT mit dem restlichen System.
 
@@ -109,6 +105,11 @@ Hier sind folgende Entscheidungen zu treffen:
 - Wie ist die Topic-Struktur definiert?
   - Pro Tracker ein Topic  
   - Optional: Sammel-Topic für alle Tracker
+ 
+### Relevante Stellen im Code
+- `server.js`:
+  - `MQTT_HOST` (Broker URL)
+  - `MQTT_TOPIC = 'antilatency/tracker/#'`
 
 Wichtig:
 Der MQTT-Broker ist ein zentraler Bestandteil der Systemarchitektur.  
@@ -116,7 +117,7 @@ Die Wahl des Brokers beeinflusst Latenz, Stabilität, Sicherheit und Skalierbark
 
 ---
 
-### 9. Konfiguration der Tracker-Identitäten
+## 9. Konfiguration der Tracker-Identitäten
 
 - Festlegen, wie Tracker im System identifiziert werden  
 - Verwendung von stabilen IDs (z. B. Antilatency Node Properties wie `altId`)  
@@ -127,13 +128,3 @@ Die Wahl des Brokers beeinflusst Latenz, Stabilität, Sicherheit und Skalierbark
 Diese IDs sind die Verbindung zwischen physischem Tracker und logischer Benutzer-/Objektzuordnung im System.
 
 ---
-
-## Schritt 2 - Setup der Hardware (Antilatency Trackingfläche)
-
-Das Setup der Trackingfläche wird ausführlich in der [Antilatency Datei](../docs/antilatency.md) beschrieben.
-Die Größe und Ausrichtung der Fläche kann variiert werden, korreliert allerdings in diesem Fall mit der Funktionalität des Systems, da die Anwedungslogik mit Längen- und Breitenangaben arbeitet und dementsprechend präzise auf eine 3x3m Fläche ausgerichtet ist. 
-
----
-
-## Schritt 3 - 
-

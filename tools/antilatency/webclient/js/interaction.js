@@ -18,12 +18,7 @@ const TIME_SLOTS = [
 ];
 
 export function getHourFromRadius(x, y) {
-  const HALF = 1.5;
-
-  // Flächenbegrenzung: Außerhalb der Fläche keine Bilder 
-  if (Math.abs(x) > HALF || Math.abs(y) > HALF) {
-    return null;
-  }
+  
   const r = Math.sqrt(x * x + y * y);
 
   if (r <= 0.6) return 8;
@@ -60,6 +55,11 @@ export function getYearFromZ(z) {
 export function getImageForPosition(mapping, x, y, z) {
   if (!mapping) return null;
 
+  const HALF = 1.5;
+  if (Math.abs(x) > HALF || Math.abs(y) > HALF) {
+    return mapping.title;
+  }
+
   if (isInCenter(x, y)) {
     return mapping.title;
   }
@@ -67,7 +67,10 @@ export function getImageForPosition(mapping, x, y, z) {
   const year = getYearFromZ(z);
   const month = getMonthFromXY(x, y);
   const hour = getHourFromRadius(x, y);
-  if (hour === null) return null;
+  
+  if (hour === null) {
+    return mapping.baseUrl + mapping.placeholder;
+  }
 
   const match = mapping.images.find(img =>
     img.year === year &&
