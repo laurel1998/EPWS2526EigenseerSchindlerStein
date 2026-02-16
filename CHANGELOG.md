@@ -3,6 +3,15 @@
 Alle nennenswerten Änderungen an diesem Projekt werden in dieser Datei dokumentiert.  
 Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 
+## [1.2.5] - 16.02.2026
+### Hinzugefügt
+- [Storyboard finale Version](../docs/StoryboardV2.jpg)
+
+### Überarbeitet 
+- offene ADRs als entschieden markiert
+
+
+
 ## [1.2.4] - 13.02.2026
 ### Hinzugefügt
 - [Pi Setup](./docs/01_pi_setup.md) erstellt
