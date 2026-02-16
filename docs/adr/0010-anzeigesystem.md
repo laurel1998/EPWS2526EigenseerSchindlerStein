@@ -1,7 +1,7 @@
 # ADR-0010: Anzeige- und Ausgabesystem (Displays vs. Projektion)
 
-**Status:** vorgeschlagen  
-**Datum:** 2026-01-11  
+**Status:** entschieden  
+**Datum:** 2026-02-11  
 
 ---
 
