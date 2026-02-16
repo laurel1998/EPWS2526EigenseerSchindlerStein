@@ -1,5 +1,5 @@
 # ADR-0009: Bildübergänge zwischen zwei Positionen
-**Status:** vorgeschlagen  
+**Status:** entschieden  
 **Datum:** 2026-01-25  
 
 ---
