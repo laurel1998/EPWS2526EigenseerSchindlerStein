@@ -111,7 +111,8 @@ Ziel dieser ADR ist es, Mechanismen für Bildübergänge festzulegen, die:
 ---
 
 ## Entscheidung
-Noch offen – Evaluierung nach Tests.
+Da der Bildwechsel sehr schnell erfolgt und Nutzer:innen die Möglichkeit gegeben werden soll sich aktiv zu Bewegen, erfolgt der Bildwechsel ohne Übergang.
+Zur besseren Orientierung befindet sich ein overlay über jedem Bild, welches Datum und Uhrzeit erkenntlich macht. (Nah an Version 4)
 
 ---
 
