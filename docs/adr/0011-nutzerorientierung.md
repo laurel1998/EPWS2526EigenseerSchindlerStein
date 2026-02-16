@@ -1,6 +1,6 @@
 # ADR-0011: Nutzerorientierung und Vermittlung der Interaktion
 
-**Status:** vorgeschlagen  
+**Status:** entschieden  
 **Datum:** 2026-02-11  
 
 ---
