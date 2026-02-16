@@ -12,6 +12,7 @@ Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
   
 ### Überarbeitet 
 - [Installationsanleitung](./docs/installationsanleitung.md) überarbeitet
+- Code zur Interaktion überarbeitet für folgende Funktionen: Split-Screen bei zwei Personeninteraktion, Datum- & Uhrzeit-Anzeige
 
 
 
