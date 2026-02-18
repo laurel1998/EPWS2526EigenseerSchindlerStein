@@ -18,7 +18,7 @@ export function startTracking({ THREE, scene, listEl, statusEl,
   let leftCamId = null;
   let rightCamId = null;
 
-  // wann zuletzt Daten von welcher cam kamen
+
   const camLastSeen = {};
 
   function updateLayout() {
@@ -48,6 +48,16 @@ export function startTracking({ THREE, scene, listEl, statusEl,
       if (!rightCamId) rightCamId = activeCams.find(id => id !== leftCamId) ?? activeCams[1];
     }
   }
+
+  function updateMetaVisibility(img) {
+    // Meta-Bar ausblenden, wenn Titelbild
+    if (img === mapping.title) {
+      metaBarEl.style.display = 'none';
+    } else {
+      metaBarEl.style.display = ''; // zurück auf CSS (grid)
+    }
+  }
+
 
 
 
@@ -114,43 +124,21 @@ export function startTracking({ THREE, scene, listEl, statusEl,
     statusEl.style.color = "#ff0000";
   });
 
-
-  function setMetaFromImageUrl(url, side) {
-    const m = url.match(/\/(\d{4})\/(\d{2})\/(\d{2})\.jpg$/);
-    if (!m) return;
-
-    const yyyy = m[1];
-    const mm = m[2];
-    const hh = m[3];
-
-    const dateText = `01.${mm}.${yyyy}`;
-    const timeText = `${hh}:00`;
-
-    if (side === 'left') {
-      metaDateLeftEl.textContent = dateText;
-      metaTimeLeftEl.textContent = timeText;
-    } else {
-      metaDateRightEl.textContent = dateText;
-      metaTimeRightEl.textContent = timeText;
-    }
-  }
-
-
-
   socket.on('tracking_data', (msg) => {
     try {
       const data = JSON.parse(msg);
       const id = data.id;
 
       camLastSeen[id] = Date.now();
+
+      // Slot-Zuordnung zuerst
+      if (leftCamId === null) leftCamId = id;
+      else if (rightCamId === null && id !== leftCamId) rightCamId = id;
+
       updateLayout();
 
       const side = (id === leftCamId) ? 'left' : (id === rightCamId ? 'right' : null);
 
-
-      // Automatische Slot-Zuordnung (erste cam = links, zweite cam = rechts)
-      if (leftCamId === null) leftCamId = id;
-      else if (rightCamId === null && id !== leftCamId) rightCamId = id;
 
 
       if (!trackers[id]) {
@@ -195,18 +183,30 @@ export function startTracking({ THREE, scene, listEl, statusEl,
       if (side === 'left') {
         if (img !== lastImageLeft) {
           seasonImageLeftEl.src = img;
-          setMetaFromImageUrl(img, 'left');
-          lastImageLeft = img;
+          updateMetaVisibility(img);
 
-          // SINGLE: left spiegelt auch rechts NICHT, weil rechts ausgeblendet ist
+          // nur Metadaten setzen, wenn kein Titelbild
+          if (img !== mapping.title) {
+            setMetaFromImageUrl(img, 'left');
+          }
+
+          lastImageLeft = img;
         }
       } else if (side === 'right') {
         if (img !== lastImageRight) {
           seasonImageRightEl.src = img;
-          setMetaFromImageUrl(img, 'right');
+
+          // im Split: Meta-Bar bleibt sichtbar, aber wenn rechts Titel zeigen würde:
+          updateMetaVisibility(img);
+
+          if (img !== mapping.title) {
+            setMetaFromImageUrl(img, 'right');
+          }
+
           lastImageRight = img;
         }
       }
+
 
 
 
@@ -231,8 +231,7 @@ export function startTracking({ THREE, scene, listEl, statusEl,
     }
   }, 1000);
 
-  return { socket, trackers };
-
   setInterval(updateLayout, 250);
+  return { socket, trackers };
 
 }
