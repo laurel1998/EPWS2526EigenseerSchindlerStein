@@ -3,20 +3,20 @@
 ## Ziel des MVP
 Das MVP demonstriert die **Kernidee des Projekts**:  
 Ein digitales Bildarchiv wird **räumlich und interaktiv erfahrbar**.  
-Die Besucher:innen können durch **Bewegung oder Position im Raum** Bildsequenzen verschiedener Jahreszeiten auslösen.  
+Die Besucher:innen können durch **Bewegung oder Position im Raum** Bilder aus  verschiedenen Jahren anzeigen lassen.  
 Das System reagiert **visuell und intuitiv**.
 
 ---
 
 ## Grundprinzip
-Bewegung auf markierten Bodenfeldern → Sensor erkennt Position → passende Bildsequenz (Jahreszeit) wird abgespielt
+Bewegung auf markierten Bodenfeldern → Sensor erkennt Position → passendes Bild wird angezeigt
 
 ---
 
 ## Kernfunktionen (MVP-Umfang)
 - **Positions- oder Bewegungserkennung** über einfache Sensorik  
-- **Zuordnung von Position zu Jahreszeit** (4 Bodenfelder → 4 Jahreszeiten)  
-- **Anzeige einer passenden Bildsequenz** aus dem KTDS-Archiv
+- **Zuordnung von Position zu Bild** mittels Interaktionskonzept
+- **Anzeige eines passenden Bildes** aus dem KTDS-Archiv
 
 ---
 

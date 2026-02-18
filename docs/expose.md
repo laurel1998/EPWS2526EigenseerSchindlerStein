@@ -10,7 +10,7 @@ Ziel ist es, aus diesem Datenmaterial ein interaktives, öffentlich zugängliche
 **Kernfrage:**  
 Wie kann eine technische Infrastruktur und gestalterische Interaktion entstehen, die ein digitales Archiv **räumlich, intuitiv und emotional erfahrbar** macht?
 
-Um den konkreten Problemraum besser erfassen zu können, wurde ein [Domänenmodell](../docs/Modelle/Domainmodell/Domaenenmodell.Version3.pdf) erstellt.
+Um den konkreten Problemraum besser erfassen zu können, wurde ein [Domänenmodell](../docs/Modelle/Domaenenmodell.Version3.pdf) erstellt.
 
 ---
 
@@ -28,12 +28,12 @@ Ziel ist kein reines Software-Tool, sondern ein **öffentlicher Eyecatcher**, de
 
 Die Installation des Systems kann flexibel sein, solange eine ausreichende Bodenfläche zur Verfügung steht. Außerdem muss eine Möglichkeit für den Anschluss von Monitoren, oder Projektionen an eine Wand gegeben sein. In Folge wird dargestellt, wie die Interaktion mit unserem System aussehen kann und wie dieses auf die Interaktion reagiert, um die Projektidee zu konkretisieren.
 
-1. Nutzer:in betritt den Raum und sieht eine markierte Bodenfläche vor sich. Diese ist in vier Bereiche unterteilt, welche die vier Jahreszeiten abbilden. Der Blick ist auf Bildschirme bzw. eine Projektion gerichtet, welche sich unmittelbar an der Bodenfläche befindet. Während sich niemand auf einem Feld befindet, wird eine Sequenz an zufälligen Bildern abgespielt, um Aufmerksamkeit auf die Installation zu ziehen. Zusätzlich kann dieser Effekt durch Audio und Lichteffekte verstärkt werden.
+1. Nutzer:in betritt den Raum und sieht eine markierte Bodenfläche vor sich. Der Blick ist auf Bildschirme bzw. eine Projektion gerichtet, welche sich unmittelbar an der Bodenfläche befindet. Dieser Effekt kann durch Audio und Lichteffekte verstärkt werden.
 2. Nutzer:in nimmt sich einen *Controller* in Form einer kleinen Kamera. Diese behält Bodensicht, um auf die Infrarotsensoren im Boden reagieren zu können.
-3. Nutzer:in bewegt sich auf dem Boden in ein Feld. Das System reagiert, indem es ein Bild der passenden Jahreszeit anzeigt. Befinden sich Personen außerdem auf anderen Feldern, verändert sich die Anzeige. Das ist realisierbar, indem sich die Anzeige auf dem Bildschirm in Bereiche aufteilt, jenachdem auf welchen Feldern die Nutzer:innen stehen (Winter und Sommer -> Splitscreen), oder die Bilder sich überlagern (Winter und Sommer gleichzeitig).
+3. Nutzer:in bewegt sich auf dem Boden. Das System reagiert, indem es das passende Bild anzeigt. Befinden sich Personen außerdem auf anderen Feldern, verändert sich die Anzeige. Das ist realisierbar, indem sich die Anzeige auf dem Bildschirm in Bereiche aufteilt, jenachdem auf welchen Feldern die Nutzer:innen stehen (Splitscreen).
 4. Nutzer:in verlässt die Installation und übergibt den Controller.
 
-Zur Veranschaulichung ist ein [Storyboard](../docs/Storyboard.pdf) erstellt worden.
+Zur Veranschaulichung ist ein [Storyboard](../docs/bilder/StoryboardV2.jpg) erstellt worden.
 
 
 Technische Risiken und Probleme können im Verlauf dieses Projekts auftreten und zu Änderungen im Ablauf und den Entscheidungen führen. Sie sind in dieser Datei dokumentiert: 
