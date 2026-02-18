@@ -70,13 +70,12 @@ canvas {
   display: none;
 }
 
-/* Meta-Bar: Standard Split */
 #meta-bar.meta-split {
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100vw;
-  height: 90px;
+  height: 120px;
   padding: 0 32px;
 
   display: grid;
@@ -87,31 +86,52 @@ canvas {
   color: #ffffff;
 
   font-family: monospace;
-  font-size: 28px;
   z-index: 1;
 }
 
-/* 1 Kamera: Meta-Bar Fullscreen (zentriert, nur links sichtbar) */
+/* Single Mode */
 #meta-bar.meta-split.single {
   grid-template-columns: 1fr;
-  justify-items: center;
 }
 
-/* einzelne Meta-Spalte */
-#meta-bar.meta-split .meta-col {
+/* Wenn nur 1 Kamera aktiv ist: rechte Meta-Spalte ausblenden */
+#meta-bar.meta-split.single .meta-col.right {
+  display: none !important;
+}
+
+#meta-bar.meta-split.single .meta-col.left {
+  justify-self: center;
+}
+/* Jede Hälfte */
+.meta-col {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  /* <-- WICHTIG */
   align-items: center;
-  gap: 18px;
+  /* <-- zentriert horizontal */
+  justify-content: center;
 }
 
-#meta-bar.meta-split .meta-divider {
+/* Datum + Uhrzeit */
+.meta-top {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  font-size: 28px;
+}
+
+/* Trennlinie */
+.meta-divider {
   width: 1px;
   height: 26px;
   background: rgba(255, 255, 255, 0.35);
 }
 
-/* rechte Meta-Spalte ausblenden, wenn single */
-#meta-bar.meta-split.single .meta-col.right {
-  display: none;
+/* Name unterhalb */
+.name {
+  margin-top: 6px;
+  font-size: 14px;
+  opacity: 0.6;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }

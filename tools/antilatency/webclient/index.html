@@ -1,5 +1,3 @@
-<!--nur Markup + Imports-->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,18 +20,24 @@
     <img id="season-image-left" class="season-image">
     <img id="season-image-right" class="season-image">
   </div>
-
+  
   <div id="meta-bar" class="meta-split">
     <div class="meta-col left">
-      <span id="meta-date-left">--/--/----</span>
-      <span class="meta-divider"></span>
-      <span id="meta-time-left">--:--</span>
+      <div class="meta-top">
+        <span id="meta-date-left">--/--/----</span>
+        <span class="meta-divider"></span>
+        <span id="meta-time-left">--:--</span>
+      </div>
+      <div class="name">KTDS-Labor</div>
     </div>
 
     <div class="meta-col right">
-      <span id="meta-date-right">--/--/----</span>
-      <span class="meta-divider"></span>
-      <span id="meta-time-right">--:--</span>
+      <div class="meta-top">
+        <span id="meta-date-right">--/--/----</span>
+        <span class="meta-divider"></span>
+        <span id="meta-time-right">--:--</span>
+      </div>
+      <div class="name">KTDS-Labor</div>
     </div>
   </div>
 
@@ -45,7 +49,7 @@
     <div id="tracker-list"></div>
   </div>
 
-  <!-- gesamtes Verhalten liegt jetzt in JS-Modulen -->
+
   <script type="module" src="./js/main.js"></script>
 </body>
 
