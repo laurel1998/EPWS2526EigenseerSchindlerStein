@@ -1,7 +1,7 @@
 # Datenfluss und Architekturüberblick
 
 Diese Datei dient zur Veranschaulichung und Erklärung der Datenflüsse im System.  
-Sie wird von einem Architekturmodell begleitet und dokumentiert wesentliche Architekturentscheidungen sowie deren Funktionsweise.
+Sie wird von einem [Architekturmodell](../docs/Modelle/Architekturmodell.Version3.pdf) begleitet und dokumentiert wesentliche Architekturentscheidungen sowie deren Funktionsweise.
 
 ---
 
