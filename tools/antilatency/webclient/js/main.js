@@ -10,14 +10,12 @@ const seasonImageRightEl = document.getElementById('season-image-right');
 const listEl = document.getElementById('tracker-list');
 const statusEl = document.getElementById('status');
 
-// Mapping laden (top-level await)
 const mapping = await loadMapping();
 
-// Three.js Szene aufsetzen + Renderloop starten
 const { THREE, scene, animate } = setupScene();
 animate();
 
-// Tracking starten
+
 startTracking({
   THREE,
   scene,

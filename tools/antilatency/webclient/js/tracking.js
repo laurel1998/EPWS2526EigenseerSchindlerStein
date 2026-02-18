@@ -1,4 +1,5 @@
-//nur Socket + Tracker + UI + Bildwechsel
+/* UI + Verarbeitung der Tracking-Daten
+############################################################################ */
 
 export function startTracking({ THREE, scene, listEl, statusEl,
   seasonImageLeftEl, seasonImageRightEl,
@@ -30,31 +31,27 @@ export function startTracking({ THREE, scene, listEl, statusEl,
     const isSplit = activeCams.length >= 2;
 
     if (!isSplit) {
-      // SINGLE MODE
       splitEl.classList.add('single');
       metaBarEl.classList.add('single');
 
-      // wenn nur eine cam aktiv ist, nutze sie als "left"
       const only = activeCams[0] ?? leftCamId ?? rightCamId;
       if (only) leftCamId = only;
       rightCamId = null;
     } else {
-      // SPLIT MODE
       splitEl.classList.remove('single');
       metaBarEl.classList.remove('single');
 
-      // feste Zuordnung herstellen, falls noch nicht gesetzt
       if (!leftCamId) leftCamId = activeCams[0];
       if (!rightCamId) rightCamId = activeCams.find(id => id !== leftCamId) ?? activeCams[1];
     }
   }
 
+  // Meta-Bar ausblenden, wenn Titelbild
   function updateMetaVisibility(img) {
-    // Meta-Bar ausblenden, wenn Titelbild
     if (img === mapping.title) {
       metaBarEl.style.display = 'none';
     } else {
-      metaBarEl.style.display = ''; // zurück auf CSS (grid)
+      metaBarEl.style.display = ''; 
     }
   }
 
@@ -112,8 +109,7 @@ export function startTracking({ THREE, scene, listEl, statusEl,
     return { mesh: group, color: color.getHexString() };
   }
 
-  const socket = io(); // connect to localhost:3000
-
+  const socket = io(); 
   socket.on('connect', () => {
     statusEl.innerText = "Connected";
     statusEl.style.color = "#00ff00";
@@ -131,7 +127,6 @@ export function startTracking({ THREE, scene, listEl, statusEl,
 
       camLastSeen[id] = Date.now();
 
-      // Slot-Zuordnung zuerst
       if (leftCamId === null) leftCamId = id;
       else if (rightCamId === null && id !== leftCamId) rightCamId = id;
 
@@ -199,8 +194,6 @@ export function startTracking({ THREE, scene, listEl, statusEl,
           seasonImageRightEl.src = img;
           seasonImageRightEl.classList.toggle('is-title', img === mapping.title);
 
-
-          // im Split: Meta-Bar bleibt sichtbar, aber wenn rechts Titel zeigen würde:
           updateMetaVisibility(img);
 
           if (img !== mapping.title) {

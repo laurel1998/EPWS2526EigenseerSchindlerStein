@@ -1,4 +1,5 @@
-//nur Rendering/Scene Setup
+/* nur Rendering/Scene Setup
+############################################################################ */
 
 import * as THREE from 'three';
 
@@ -17,14 +18,12 @@ export function setupScene() {
 
   const renderer = new THREE.WebGLRenderer({
     antialias: true,
-    alpha: true  // wichtig!
+    alpha: true 
   });
   renderer.setSize(window.innerWidth, window.innerHeight);
-  renderer.setClearColor(0x000000, 0); // komplett transparent
+  renderer.setClearColor(0x000000, 0); 
 
-
-
-  // Canvas und Bild aus Galerie laden (Reihenfolge beibehalten)
+  // Canvas und Bild aus Galerie laden
   document.body.appendChild(renderer.domElement);
   renderer.domElement.style.position = "fixed";
   renderer.domElement.style.inset = "0";
@@ -33,9 +32,6 @@ export function setupScene() {
 
 
   scene.background = new THREE.Color(0x202020);
-  //const grid = new THREE.GridHelper(10, 10, 0x555555, 0x333333);
-  //scene.add(grid);
-  //scene.add(new THREE.AxesHelper(0.5));
 
   const light = new THREE.DirectionalLight(0xffffff, 1);
   light.position.set(2, 5, 2);

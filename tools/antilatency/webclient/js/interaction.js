@@ -1,4 +1,5 @@
-//nur Raum→Zeit→Bild Logik
+/* Bilder-Position-Zuordnung
+############################################################################ */
 
 export function isInCenter(x, y) {
   return Math.abs(x) < 0.3 && Math.abs(y) < 0.3;
@@ -18,13 +19,13 @@ const TIME_SLOTS = [
 ];
 
 export function getHourFromRadius(x, y) {
-  
   const r = Math.sqrt(x * x + y * y);
 
-  if (r <= 0.6) return 8;
-  if (r <= 0.9) return 12;
-  if (r <= 1.2) return 16;
-  return 20;
+  for (const slot of TIME_SLOTS) {
+    if (r <= slot.max) return slot.hour;
+  }
+
+  return null;
 }
 
 const YEAR_LEVELS = [
@@ -67,10 +68,8 @@ export function getImageForPosition(mapping, x, y, z) {
   const year = getYearFromZ(z);
   const month = getMonthFromXY(x, y);
   const hour = getHourFromRadius(x, y);
-  
-  if (hour === null) {
-    return mapping.baseUrl + mapping.placeholder;
-  }
+
+
 
   const match = mapping.images.find(img =>
     img.year === year &&
