@@ -30,7 +30,7 @@ Die Installation des Systems kann flexibel sein, solange eine ausreichende Boden
 
 1. Nutzer:in betritt den Raum und sieht eine markierte Bodenfläche vor sich. Der Blick ist auf Bildschirme bzw. eine Projektion gerichtet, welche sich unmittelbar an der Bodenfläche befindet. Dieser Effekt kann durch Audio und Lichteffekte verstärkt werden.
 2. Nutzer:in nimmt sich einen *Controller* in Form einer kleinen Kamera. Diese behält Bodensicht, um auf die Infrarotsensoren im Boden reagieren zu können.
-3. Nutzer:in bewegt sich auf dem Boden. Das System reagiert, indem es das passende Bild anzeigt. Befinden sich Personen außerdem auf anderen Feldern, verändert sich die Anzeige. Das ist realisierbar, indem sich die Anzeige auf dem Bildschirm in Bereiche aufteilt, jenachdem auf welchen Feldern die Nutzer:innen stehen (Splitscreen).
+3. Nutzer:in bewegt sich auf dem Boden. Das System reagiert, indem es das passende Bild anzeigt. Befinden sich Personen außerdem auf anderen Bereichen, verändert sich die Anzeige. Das ist realisierbar, indem sich die Anzeige auf dem Bildschirm in Bereiche aufteilt, je nachdem auf welchen Feldern die Nutzer:innen stehen (Splitscreen).
 4. Nutzer:in verlässt die Installation und übergibt den Controller.
 
 Zur Veranschaulichung ist ein [Storyboard](../docs/bilder/StoryboardV2.jpg) erstellt worden.
@@ -62,9 +62,9 @@ Geplant sind mehrere Proof-of-Concepts, die schrittweise zu einem funktionalen P
 
 1. [**Interaktion**](../docs/adr/0003-interaktion.md) – Interaktion mithilfe einer Kamera erfassen oder ein System des moxdlab nutzen, welches mit Infrarot arbeitet
 2. [**Bildklassifikation**](../docs/adr/0002-bildklassifikation.md) – Ordnen der Bilder mit einer Kombination aus heuristischen Verfahren und visueller Bildanalyse
-3. **Datenschutz** - Überprüfung der Einhaltung der DSGVO
-4. **Raumwirkung** – Projektion, Licht- und Tonsteuerung im Zusammenspiel  
-5. **Systemintegration** – stabile, webbasierte Architektur (z. B. Node.js, WebGL, OpenCV)
+3. [**Datenschutz**](../docs/adr/0004-datenschutz.md) - Überprüfung der Einhaltung der DSGVO
+4. [**Raumwirkung**](../docs/adr/0010-anzeigesystem.md) – Projektion, eventuell Licht- und Tonsteuerung im Zusammenspiel  
+5. [**Systemintegration**](../docs/datenfluss.md) – stabile, webbasierte Architektur (mittels Node.js, MQTT, WebSockets)
 
 ---
 
