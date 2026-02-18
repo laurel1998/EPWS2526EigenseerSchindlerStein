@@ -9,6 +9,7 @@ Hier werden alle wichtigen Entscheidungen, Fortschritte und Artefakte zentral do
 ## Inhaltsverzeichnis
 1. [Über das Projekt](#über-das-projekt)
 2. [Repository-Struktur](#repository-struktur)
+3. [Code-Struktur](#code-struktur)
 
 ---
 
@@ -34,7 +35,7 @@ Alle Änderungen und Architekturentscheidungen werden nachvollziehbar dokumentie
 | [**`/docs/adr/`**](./docs/adr/) | *Architecture Decision Records (ADRs)* dokumentieren alle wichtigen Architekturentscheidungen mit Begründung |
 | [**`/docs/bilder/`**](./docs/bilder/) | Enthält verwendete Bilder für das Antilatency System |
 | [**`/docs/research-notes/`**](./docs/research-notes/) | Verzeichnis zur Dokumentation von Forschungsergebnissen |
-| [**`/docs/Storyboard.pdf`**](./docs/Storyboard.pdf) | Storyboard - Visuelle Darstelleung der Interaktion |
+| [**`/docs/Storyboard.pdf`**](./docs/StoryboardV2.jpg) | Storyboard - Visuelle Darstelleung der Interaktion |
 | [**`/docs/antilatency.md`**](./docs/antilatency.md) | Beschreibung des Aufbaus des Antilatency Systems |
 | [**`/docs/expose.md`**](./docs/expose.md) | Exposé |
 | [**`/docs/poc/`**](./docs/poc/) | Enthält alle Proof of Concept (PoC) |
@@ -46,6 +47,23 @@ Alle Änderungen und Architekturentscheidungen werden nachvollziehbar dokumentie
 | [**`CHANGELOG.md`**](./CHANGELOG.md) | Verzeichnis aller Änderungen im Projektverlauf |
 | [**`README.md`**](./README.md) | Diese Datei - für Überblick und Orientierung |
 | *(weitere Ordner folgen)* | ggf. Code, Artefakte, Daten oder Präsentationen |
+
+---
+
+## Code-Struktur
+
+| Pfad / Datei | Beschreibung |
+|---------------|--------------|
+| [**`/tools/`**](./tools/) | Enthält alles an für die Anwendung benötigten Code |
+| [**`/tools/image-selection/`**](./tools/image-selection/) | Enthält Code zur Bildklassifizierung |
+| [**`/tools/antilatency/`**](./tools/antilatency/) | Enthält firmware und webclient Code |
+| [**`/tools/antilatency/firmware/`**](./tools/antilatency/firmware/) | *firmware* enthält die Antilatency SDK für C++, Code der auf dem Pi läuft |
+| [**`/tools/antilatency/webclient/`**](./tools/antilatency/webclient/) | *webclient* enthält allen serverseitigen Code |
+| [**`/tools/antilatency/webclient/css/`**](./docs/research-notes/) | Styles und Design Dokumentation |
+| [**`/tools/antilatency/webclient/js/`**](./tools/antilatency/webclient/js/) | Alle Javascript Dateien |
+| [**`/tools/antilatency/webclient/server.js/`**](./tools/antilatency/webclient/server.js/) | Datei die den Server startet |
+| [**`/tools/antilatency/webclientindex.html/`**](./tools/antilatency/webclient/index.html/) | Browser Code, Layout der Zielwebseite |
+
 
 Zusätzlich in GitHub:
 - **Project Board (GitHub Projects)** - Überblick über aktuelle Aufgaben, Status und Fortschritt  
