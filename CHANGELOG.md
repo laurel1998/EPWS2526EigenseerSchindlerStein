@@ -5,7 +5,7 @@ Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 
 ## [1.2.6] - 18.02.2026
 ### Hinzugefügt
-- [Latenz](../docs/bilder/latenzcheck.png) überprüft
+- [Latenz](./docs/bilder/latenzcheck.png) überprüft
 
 
 
