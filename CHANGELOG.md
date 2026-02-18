@@ -8,17 +8,17 @@ Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 ## [1.2.6] - 18.02.2026
 ### Hinzugefügt
 - [Latenz](./docs/bilder/latenzcheck.png) überprüft
-- Code-Struktur section in der [Projekt Readme](./README.md)
-- [Domänenmodell Readme](../docs/Modelle/README.md)
+- Code-Struktur section in der [Projekt README](./README.md)
+- [Domänenmodell README](../docs/Modelle/README.md)
 
 ### Überarbeitet 
-- Code UX Anpassungen 
+- Code: UX Anpassungen 
 
 
 
 ## [1.2.5] - 16.02.2026
 ### Hinzugefügt
-- [Storyboard finale Version](../docs/StoryboardV2.jpg)
+- [Storyboard finale Version](../docs/bilder/StoryboardV2.jpg)
 
 ### Überarbeitet 
 - offene ADRs als entschieden markiert
