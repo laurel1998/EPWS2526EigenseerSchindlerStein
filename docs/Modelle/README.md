@@ -29,7 +29,7 @@ Das Domänenmodell Version 3 umfasst u. a.:
 
 ## Referenzen
 
-[Domänenmodell](./docs/Modelle/Domaenenmodell.Version3.pdf)
+[Domänenmodell](./Domaenenmodell.Version3.pdf)
 
 ---
 
