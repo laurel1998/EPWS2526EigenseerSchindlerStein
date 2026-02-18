@@ -86,4 +86,4 @@ Die Evaluation erfolgt iterativ und nutzerzentriert:
 **Erfolgskriterien:**
 - intuitive Bedienbarkeit  
 - stabile Performance  
-- immersive ästhetische Wirkung
+- immersive, ästhetische Wirkung
