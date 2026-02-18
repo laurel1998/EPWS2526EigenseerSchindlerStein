@@ -3,6 +3,12 @@
 Alle nennenswerten Änderungen an diesem Projekt werden in dieser Datei dokumentiert.  
 Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 
+## [1.2.6] - 18.02.2026
+### Hinzugefügt
+- [Latenz](../docs/bilder/latenzcheck.png) überprüft
+
+
+
 ## [1.2.5] - 16.02.2026
 ### Hinzugefügt
 - [Storyboard finale Version](../docs/StoryboardV2.jpg)
