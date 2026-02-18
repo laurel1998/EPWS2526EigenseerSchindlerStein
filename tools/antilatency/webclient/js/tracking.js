@@ -183,6 +183,8 @@ export function startTracking({ THREE, scene, listEl, statusEl,
       if (side === 'left') {
         if (img !== lastImageLeft) {
           seasonImageLeftEl.src = img;
+          seasonImageLeftEl.classList.toggle('is-title', img === mapping.title);
+
           updateMetaVisibility(img);
 
           // nur Metadaten setzen, wenn kein Titelbild
@@ -195,6 +197,8 @@ export function startTracking({ THREE, scene, listEl, statusEl,
       } else if (side === 'right') {
         if (img !== lastImageRight) {
           seasonImageRightEl.src = img;
+          seasonImageRightEl.classList.toggle('is-title', img === mapping.title);
+
 
           // im Split: Meta-Bar bleibt sichtbar, aber wenn rechts Titel zeigen würde:
           updateMetaVisibility(img);
