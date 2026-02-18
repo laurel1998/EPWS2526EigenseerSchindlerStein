@@ -27,13 +27,13 @@ Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 
 ## [1.2.4] - 13.02.2026
 ### Hinzugefügt
-- [Pi Setup](./docs/01_pi_setup.md) erstellt
-- [Trackingfläche Setup](./docs/02_tracking_area_setup.md) erstellt
-- [Webclient Setup](./docs/03_webclient_setup.md) erstellt
+- [Pi Setup](./docs/setup/01_pi_setup.md) erstellt
+- [Trackingfläche Setup](./docs/setup/02_tracking_area_setup.md) erstellt
+- [Webclient Setup](./docs/setup/03_webclient_setup.md) erstellt
 
   
 ### Überarbeitet 
-- [Installationsanleitung](./docs/installationsanleitung.md) überarbeitet
+- [Installationsanleitung](./docs/setup/installationsanleitung.md) überarbeitet
 - Code zur Interaktion überarbeitet für folgende Funktionen: Split-Screen bei zwei Personeninteraktion, Datum- & Uhrzeit-Anzeige
 
 
