@@ -8,12 +8,12 @@ Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 ## [1.2.6] - 18.02.2026
 ### Hinzugefügt
 - [Latenz](./docs/bilder/latenzcheck.png) überprüft
-- Code-Struktur section in der [Projekt README](./README.md)
+- Code-Struktur Section in der [Projekt README](./README.md)
 - [Domänenmodell README](./docs/Modelle/README.md)
 - [User-Journeys README](./docs/User-Journeys/README.md)
 
 ### Überarbeitet 
-- Code: UX Anpassungen 
+- Code: UX Anpassungen
 
 
 
