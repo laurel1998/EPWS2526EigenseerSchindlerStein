@@ -3,9 +3,7 @@
 Das Dokument enthält Angaben zur Struktur unserer Vorbereitung für das dritte Audit. Es beinhaltet alle angesprochenen Themen und stellt den roten Faden unserer Präsentation dar.  
 
 ## Interaktionskonzept – Version 2 (Raum → Zeit)
-- Entwicklung eines neuen Interaktionsmodells auf Basis von Raum → Zeit Mapping  
-- Besucher steuert Bilder über Position
-- Trackingfläche (3x3m) wird als Zeitraum interpretiert  
+Entwicklung eines neuen Interaktionskonzepts auf Basis von Raum & Zeit bei der Besucher die Bilder über ihre Position steuern
 
 - Zentrum = Titelbild  
 - Strahlenförmige Aufteilung = Monate  
@@ -19,7 +17,8 @@ Das Dokument enthält Angaben zur Struktur unserer Vorbereitung für das dritte 
 - ADR [Datenverarbeitung](../docs/adr/0005-datenverarbeitung.md)
 - ADR [Datenschutz](../docs/adr/0004-datenschutz.md)
 
-## Architektur(modell) überarbeitet
+## Architektur(modell)
+- Überarbeitet und angepasst an Übertragung mit MQTT
 
 ## Zusammenhang User Stories
 
