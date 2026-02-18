@@ -10,6 +10,7 @@ Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 - Code-Struktur Section in der [Projekt README](./README.md)
 - [Domänenmodell README](./docs/Modelle/README.md)
 - [User-Journeys README](./docs/User-Journeys/README.md)
+- Roter Faden für [Audit 4](./Audits/audit4.md)
 
 ### Überarbeitet 
 - Code: UX Anpassungen
