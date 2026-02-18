@@ -19,7 +19,7 @@ Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 
 ## [1.2.5] - 16.02.2026
 ### Hinzugefügt
-- [Storyboard finale Version](../docs/bilder/StoryboardV2.jpg)
+- [Storyboard finale Version](/docs/bilder/StoryboardV2.jpg)
 
 ### Überarbeitet 
 - offene ADRs als entschieden markiert
