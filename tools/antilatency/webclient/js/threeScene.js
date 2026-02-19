@@ -18,10 +18,10 @@ export function setupScene() {
 
   const renderer = new THREE.WebGLRenderer({
     antialias: true,
-    alpha: true 
+    alpha: true
   });
   renderer.setSize(window.innerWidth, window.innerHeight);
-  renderer.setClearColor(0x000000, 0); 
+  renderer.setClearColor(0x000000, 0);
 
   // Canvas und Bild aus Galerie laden
   document.body.appendChild(renderer.domElement);
@@ -45,8 +45,18 @@ export function setupScene() {
   }
   window.addEventListener('resize', onResize);
 
-  function animate() {
-    requestAnimationFrame(animate);
+  function animate(getLatestTimestamp) {
+    requestAnimationFrame(() => animate(getLatestTimestamp));
+
+    const timestamp = getLatestTimestamp ? getLatestTimestamp() : null;
+
+    if (timestamp) {
+      const latencY = document.getElementById("latency");
+      if (latencY) {
+        latencY.innerText =
+          "Latency: " + (Date.now() - timestamp).toFixed(1) + " ms";
+      }
+    }
     renderer.render(scene, camera);
   }
 

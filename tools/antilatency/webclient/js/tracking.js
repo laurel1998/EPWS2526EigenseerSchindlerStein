@@ -5,6 +5,7 @@ export function startTracking({ THREE, scene, listEl, statusEl,
   seasonImageLeftEl, seasonImageRightEl,
   mapping, getImageForPosition }) {
   const trackers = {};
+  let latestTimestamp = null;
   const splitEl = document.getElementById('split');
   const metaBarEl = document.getElementById('meta-bar');
 
@@ -214,6 +215,11 @@ export function startTracking({ THREE, scene, listEl, statusEl,
           lastImageRight = img;
         }
       }
+
+      if (data.timestamp) {
+        latestTimestamp = data.timestamp;
+      }
+
     } catch (e) {
       console.error("Parse Error", e);
     }
@@ -234,6 +240,13 @@ export function startTracking({ THREE, scene, listEl, statusEl,
   }, 1000);
 
   setInterval(updateLayout, 250);
-  return { socket, trackers };
+
+  function consumeLatestTimestamp() {
+    const ts = latestTimestamp;
+    latestTimestamp = null; 
+    return ts;
+  }
+
+  return { socket, trackers, getLatestTimestamp: consumeLatestTimestamp };
 
 }

@@ -13,6 +13,13 @@
 #include <thread>
 #include <chrono>
 
+long long getTimestampMs() {
+    using namespace std::chrono;
+    return duration_cast<milliseconds>(
+        system_clock::now().time_since_epoch()
+    ).count();
+}
+
 using json = nlohmann::json;
 
 std::map<Antilatency::DeviceNetwork::NodeHandle, std::string> nodeAltIds;
@@ -189,9 +196,7 @@ int main(int argc, char* argv[]) {
                     // Create JSON
                     json j;
                     j["id"] = nodeAltIds[node];
-                    j["timestamp"] = std::chrono::duration_cast<std::chrono::milliseconds>(
-                        std::chrono::system_clock::now().time_since_epoch()
-                    ).count();
+                    j["timestamp"] = getTimestampMs();
                     
                     j["pose"] = {
                         {"position", {{"x", state.pose.position.x}, {"y", state.pose.position.y}, {"z", state.pose.position.z}}},
