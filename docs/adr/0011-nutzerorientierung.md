@@ -89,7 +89,7 @@ Randbedingungen:
 ---
 
 ## Entscheidung
-Das Projektteam tendiert zu einer **Kombination aus Option 3 (Anleitung im Zentrum der Fläche)** und **Option 4 (explorative Nutzung)**.
+Das Projektteam tendiert zu einer **Kombination aus Option 3 (Anleitung im Zentrum der Fläche)** und **Option 4 (explorative Nutzung)**. Im Nachhinein wurde außerdem entschieden einen breiten Balken unter die Bilder zu platzieren, welcher die Uhrzeit und das Datum des Bildes anzeigt, um den Nutzer eine Möglichkeit zu bieten herauszufinden, wo er sich gerade befindet.
 
 Begründung:
 - Die zentrale Titelbild-Grafik bietet eine **minimale, visuelle Orientierung**, ohne das Erlebnis zu stark zu erklären
