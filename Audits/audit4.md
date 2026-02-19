@@ -22,16 +22,18 @@ Das Dokument enthält Angaben zur Struktur unserer Vorbereitung für das vierte 
 
 ## Live Demo
 - Vorführung anhand einer [User Journey](../docs/User-Journeys/User Journey Map 1.pdf)
-- [Titelbild](../docs/bilder/title.jpg) und Balken mit vegrößertem Datum als [Orientierungshilfe](../docs/adr/0011-nutzerorientierung.md) (?da steht zwar nichts über die balken in der datei aber dachte diese könnte man hier gut erwähnen?????????????????)
+- [Titelbild](../docs/bilder/title.jpg) und Balken mit vegrößertem Datum als [Orientierungshilfe](../docs/adr/0011-nutzerorientierung.md)
 - Ortsungebundenes System 
 
 ---
 
 ## [Codestruktur](../README.md)
 - Verantwortlichkeiten getrennt
-- Konzeptanpassungen ([Uhrzeigersinn](../tools/antilatency/webclient/js/interaction.js), Einbindung weiterer Jahre, [Mehrpersoneninteraktion](../docs/adr/0008-mehrpersonen-interaktion.md)) (?weitere ADRs erwähnen??????????)
+- Konzeptanpassungen ([Uhrzeigersinn](../tools/antilatency/webclient/js/interaction.js), Einbindung weiterer Jahre, [Mehrpersoneninteraktion](../docs/adr/0008-mehrpersonen-interaktion.md))
 
-Latenz???
+## [Latenz](https://github.com/laurel1998/EPWS2526EigenseerSchindlerStein/commit/1276577e38cd0f8c3879025607f5bb1a2b50a1df)
+- Messung der Latenzzeit (Zeit zwischen: Bewegung im Raum & Sichtbarer Reaktion im Browser)
+- Anzeige der Latenzzeit nur für [Ein-Personen-Interaktion](https://github.com/laurel1998/EPWS2526EigenseerSchindlerStein/commit/f28c7cddcbbd8cff15fb637f085411d81d5f2619)
 
 ## Fazit und Zukunftaussichten
 - Einordnung der Ergebnisse anhand der festgelegten [Iterationen](../docs/Modelle/Domaenenmodell.Version3.pdf)
@@ -58,7 +60,7 @@ Anna:
 Laura:
 -> Aufgeräumt (Responsibilites gesplittet)
 -> CODE: Konzeptänderung (mehr Jahre), Mehrpersoneninteraktion, Balken mit Datum & Zeit (im  Bezug auf ADR’s)
-
+-> Latenz
 
 -> Fazit - Bis wohin sind wir gekommen? hier Domänenmodell erwähnen
 
