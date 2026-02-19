@@ -13,10 +13,8 @@ const statusEl = document.getElementById('status');
 const mapping = await loadMapping();
 
 const { THREE, scene, animate } = setupScene();
-animate();
 
-
-startTracking({
+const tracking =startTracking({
   THREE,
   scene,
   listEl,
@@ -27,3 +25,4 @@ startTracking({
   getImageForPosition
 });
 
+animate(tracking.getLatestTimestamp);
