@@ -25,7 +25,7 @@ export function startTracking({ THREE, scene, listEl, statusEl,
 
   function updateLayout() {
     const now = Date.now();
-    // inaktive cams aus camLastSeen entfernen (sonst bleibt Split "hängen")
+    // inaktive cams aus camLastSeen entfernen
     for (const [id, t] of Object.entries(camLastSeen)) {
       if (now - t > 1500) delete camLastSeen[id];
     }
@@ -39,7 +39,6 @@ export function startTracking({ THREE, scene, listEl, statusEl,
     if (!isSplit) {
       splitEl.classList.add('single');
       metaBarEl.classList.add('single');
-      // wenn single: rechte spalte sicher nicht inactive lassen
       const rightCol = document.querySelector('.meta-col.right');
       if (rightCol) rightCol.classList.remove('inactive');
 
@@ -62,16 +61,13 @@ export function startTracking({ THREE, scene, listEl, statusEl,
     const rightCol = document.querySelector('.meta-col.right');
 
     if (isSingle) {
-      // Single: Titelbild => gesamte Bar ausblenden
       metaBarEl.style.display = (img === mapping.title) ? 'none' : '';
 
-      // cleanup
       leftCol?.classList.remove('inactive');
       rightCol?.classList.remove('inactive');
       return;
     }
 
-    // Split: Meta-Bar immer sichtbar
     metaBarEl.style.display = '';
 
     if (side === 'left') leftCol?.classList.toggle('inactive', img === mapping.title);
