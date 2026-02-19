@@ -4,6 +4,14 @@ Alle nennenswerten Änderungen an diesem Projekt werden in dieser Datei dokument
 Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 
 
+## [2.0.0] - 19.02.2026
+### Hinzugefügt 
+- [Latenz](https://github.com/laurel1998/EPWS2526EigenseerSchindlerStein/commit/1276577e38cd0f8c3879025607f5bb1a2b50a1df)messung als zusätzliches Feature
+
+## Überarbeitet
+- Mehrpersoneninteraktion und Splitscreen-Ansicht
+- Roter Faden für [Audit 4](./Audits/audit4.md)
+
 
 ## [1.2.6] - 18.02.2026
 ### Hinzugefügt
