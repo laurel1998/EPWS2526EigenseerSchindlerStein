@@ -1,7 +1,7 @@
 # Schritt 3 – Webclient & Anwendungslogik (Node.js + Browser)
 
 Dieser Abschnitt beschreibt, wie der Webclient (Browser) und die serverseitige Bridge (Node.js) gestartet und betrieben werden.
-Außerdem erklärt es, welche Code-Dateien welche Systemfunktion implementieren.
+Außerdem erklärt es, welche Code-Dateien, welche Systemfunktion implementieren.
 
 Voraussetzung: Schritt 1 (Pi-Setup) und Schritt 2 (Tracking-Fläche) sind abgeschlossen.
 
