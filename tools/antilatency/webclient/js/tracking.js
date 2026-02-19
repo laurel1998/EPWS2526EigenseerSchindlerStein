@@ -25,6 +25,11 @@ export function startTracking({ THREE, scene, listEl, statusEl,
 
   function updateLayout() {
     const now = Date.now();
+    // inaktive cams aus camLastSeen entfernen (sonst bleibt Split "hängen")
+    for (const [id, t] of Object.entries(camLastSeen)) {
+      if (now - t > 1500) delete camLastSeen[id];
+    }
+
     const activeCams = Object.entries(camLastSeen)
       .filter(([, t]) => now - t < 1500)
       .map(([id]) => id);
@@ -34,6 +39,10 @@ export function startTracking({ THREE, scene, listEl, statusEl,
     if (!isSplit) {
       splitEl.classList.add('single');
       metaBarEl.classList.add('single');
+      // wenn single: rechte spalte sicher nicht inactive lassen
+      const rightCol = document.querySelector('.meta-col.right');
+      if (rightCol) rightCol.classList.remove('inactive');
+
 
       const only = activeCams[0] ?? leftCamId ?? rightCamId;
       if (only) leftCamId = only;
@@ -49,28 +58,26 @@ export function startTracking({ THREE, scene, listEl, statusEl,
 
   function updateMetaVisibility(img, side) {
     const isSingle = splitEl.classList.contains('single');
-
     const leftCol = document.querySelector('.meta-col.left');
     const rightCol = document.querySelector('.meta-col.right');
 
     if (isSingle) {
+      // Single: Titelbild => gesamte Bar ausblenden
       metaBarEl.style.display = (img === mapping.title) ? 'none' : '';
 
-      leftCol.classList.remove('inactive');
-      rightCol.classList.remove('inactive');
+      // cleanup
+      leftCol?.classList.remove('inactive');
+      rightCol?.classList.remove('inactive');
       return;
     }
 
+    // Split: Meta-Bar immer sichtbar
     metaBarEl.style.display = '';
 
-    if (side === 'left') {
-      leftCol.classList.toggle('inactive', img === mapping.title);
-    }
-
-    if (side === 'right') {
-      rightCol.classList.toggle('inactive', img === mapping.title);
-    }
+    if (side === 'left') leftCol?.classList.toggle('inactive', img === mapping.title);
+    if (side === 'right') rightCol?.classList.toggle('inactive', img === mapping.title);
   }
+
 
   function setMetaFromImageUrl(url, side) {
     const m = url.match(/\/(\d{4})\/(\d{2})\/(\d{2})\.jpg$/);
@@ -190,31 +197,35 @@ export function startTracking({ THREE, scene, listEl, statusEl,
       if (!img || !side) return;
 
       if (side === 'left') {
+        // updateMetaVisibility IMMER, auch wenn Bild gleich bleibt
+        updateMetaVisibility(img, 'left');
+
         if (img !== lastImageLeft) {
           seasonImageLeftEl.src = img;
           seasonImageLeftEl.classList.toggle('is-title', img === mapping.title);
 
-          updateMetaVisibility(img, 'left');
-
-          // nur Metadaten setzen, wenn kein Titelbild
           if (img !== mapping.title) {
             setMetaFromImageUrl(img, 'left');
           }
+
           lastImageLeft = img;
         }
-      } else if (side === 'right') {
+      }
+      else if (side === 'right') {
+        updateMetaVisibility(img, 'right');
+
         if (img !== lastImageRight) {
           seasonImageRightEl.src = img;
           seasonImageRightEl.classList.toggle('is-title', img === mapping.title);
 
-          updateMetaVisibility(img, 'right');
-
           if (img !== mapping.title) {
             setMetaFromImageUrl(img, 'right');
           }
+
           lastImageRight = img;
         }
       }
+
 
       if (data.timestamp) {
         latestTimestamp = data.timestamp;
@@ -243,7 +254,7 @@ export function startTracking({ THREE, scene, listEl, statusEl,
 
   function consumeLatestTimestamp() {
     const ts = latestTimestamp;
-    latestTimestamp = null; 
+    latestTimestamp = null;
     return ts;
   }
 
