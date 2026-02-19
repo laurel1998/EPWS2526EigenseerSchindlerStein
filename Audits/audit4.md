@@ -24,12 +24,13 @@ Das Dokument enthält Angaben zur Struktur unserer Vorbereitung für das vierte 
 ## Live Demo
 - Vorführung anhand einer [User Journey](../docs/User-Journeys/User%20Journey%20Map%201.pdf)
 - [Titelbild](../docs/bilder/title.jpg) und Balken mit vegrößertem Datum als [Orientierungshilfe](../docs/adr/0011-nutzerorientierung.md)
+- [Mehrpersoneninteraktion](../docs/adr/0008-mehrpersonen-interaktion.md)
 
 ---
 
 ## [Codestruktur](../README.md)
 - Verantwortlichkeiten getrennt
-- Konzeptanpassungen ([Uhrzeigersinn](../tools/antilatency/webclient/js/interaction.js), Einbindung weiterer Jahre, [Mehrpersoneninteraktion](../docs/adr/0008-mehrpersonen-interaktion.md))
+- Konzeptanpassungen ([Uhrzeigersinn](../tools/antilatency/webclient/js/interaction.js), Einbindung weiterer Jahre)
 
 ## [Latenz](https://github.com/laurel1998/EPWS2526EigenseerSchindlerStein/commit/1276577e38cd0f8c3879025607f5bb1a2b50a1df)
 - Messung der Latenzzeit (Zeit zwischen: Bewegung im Raum & Sichtbarer Reaktion im Browser)
