@@ -8,8 +8,9 @@ Das Dokument enthält Angaben zur Struktur unserer Vorbereitung für das vierte 
 - [Interaktionskonzept](../docs/adr/0007-interaktionskonzept.md)
 
 ## Setup
-- Hinweise für die Reproduzierbarkeit einzelner Systemkomponenten (?kann man das sagen?????????????) ([PI](../docs/setup/01_pi_setup.md), [Tracking-Area](../docs/setup/02_tracking_area_setup.md), [Webclient](../docs/setup/03_webclient_setup.md))
+- Hinweise für die Reproduzierbarkeit einzelner Systemkomponenten ([PI](../docs/setup/01_pi_setup.md), [Tracking-Area](../docs/setup/02_tracking_area_setup.md), [Webclient](../docs/setup/03_webclient_setup.md))
 - [Installationsanleitung](../docs/setup/installationsanleitung.md) der Ausstellung
+- Ortsungebundenes System 
 
 ## [Storyboard](../docs/bilder/StoryboardV2.jpg)
 - Visualisierung des Interaktionskonzepts bei einem oder mehreren Besuchern
@@ -23,7 +24,6 @@ Das Dokument enthält Angaben zur Struktur unserer Vorbereitung für das vierte 
 ## Live Demo
 - Vorführung anhand einer [User Journey](../docs/User-Journeys/User%20Journey%20Map%201.pdf)
 - [Titelbild](../docs/bilder/title.jpg) und Balken mit vegrößertem Datum als [Orientierungshilfe](../docs/adr/0011-nutzerorientierung.md)
-- Ortsungebundenes System 
 
 ---
 
