@@ -50,7 +50,7 @@ Eine analoge und kostengünstige Möglichkeit für Zonenerkennung. Gut geeignet 
 ---
 
 ## Zusammenfassung
-Für *Season Shift* eignen sich generell alle Optionen für die Erfassung von Positionen im Raum. Da die Hochschule das Antilatency System bereits zur Verfügung stellt, bietet dies eine gute Grundlage. Ansatz 2 bietet gute Lösungen für die Verwendung von Python als Programmiersprache, lässt sich aber auch mit C oder Java realisieren.
+Für *Season Shift* eignen sich generell alle Optionen für die Erfassung von Positionen im Raum. Da die Hochschule das Antilatency System bereits zur Verfügung stellt, bietet dies eine gute Grundlage. Ansatz 2 bietet gute Lösungen für die Verwendung von Python als Programmiersprache, lässt sich aber auch mit C oder Java realisieren. 
 
 ---
 

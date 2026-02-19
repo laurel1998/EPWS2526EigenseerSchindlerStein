@@ -6,7 +6,7 @@
 ---
 
 ## Kontext
-Für die interaktive Installation *Season Shift* muss erkannt werden, wo sich Besucher:innen im Raum befinden, um ihre Bewegung in die Steuerung der Bild- und Tonwiedergabe einzubinden.  
+Für die interaktive Installation *Season Shift* muss erkannt werden, wo sich Besucher:innen im Raum befinden, um ihre Bewegung in die Steuerung der Bildwiedergabe einzubinden.  
 Ziel ist es, eine präzise und stabile Erfassung der Position und Bewegung zu ermöglichen, die in Echtzeit an das System übermittelt werden kann.  
 Die Lösung soll dabei möglichst robust, wartungsarm und für öffentliche Präsentationen geeignet sein.
 
@@ -17,54 +17,63 @@ Die Lösung soll dabei möglichst robust, wartungsarm und für öffentliche Prä
 ## Optionen
 
 ### 1. Antilatency Tracking System
-- **Funktion:**  
+**Funktion:**  
   Nutzung der an der Hochschule vorhandenen *Antilatency*-Technologie.  
   Das System besteht aus Infrarot-Markern im Boden („Tracking Area“) und kleinen, nach unten gerichteten Kameras („AltTracker“), die diese Marker erkennen.  
   So wird die Position der Nutzer:innen in Echtzeit bestimmt.
-- **Vorteile:**  
+
+**Vorteile:**  
   - Sehr präzise 3D-Positionsbestimmung in Echtzeit  
   - Hohe Stabilität und geringe Latenz  
   - SDKs für Unity, C++, C#, API für Datenaustausch  
   - Bereits an der Hochschule verfügbar
-- **Nachteile:**  
+
+**Nachteile:**  
   - Hardware muss korrekt kalibriert und gepflegt werden (einmalig) 
   - Nur innerhalb der Tracking-Fläche nutzbar  
   - Höherer Installationsaufwand im Raum
-- **Bewertung:**  
+
+**Bewertung:**  
   Aufgrund der vorhandenen Infrastruktur, der hohen Genauigkeit und der Echtzeitfähigkeit ist Antilatency die bevorzugte Lösung für das Raumtracking.
 
 ---
 
 ### 2. Kamera-/Bildbasierte Bewegungserkennung
-- **Funktion:**  
+**Funktion:**  
   Erkennung von Bewegung oder Anwesenheit durch Overhead- oder Frontal-Kameras mit Bibliotheken wie OpenCV, BoofCV oder MediaPipe.  
   Bewegungen werden über Differenzbilder, Konturen oder Pose-Erkennung identifiziert.
-- **Vorteile:**  
+
+**Vorteile:**  
   - Kostengünstig, einfache Einrichtung  
   - Keine tragbaren Sensoren erforderlich  
   - Gut für kleine Setups oder ergänzende Tests
-- **Nachteile:**  
+
+**Nachteile:**  
   - Begrenzte Präzision und Zuverlässigkeit  
   - Störanfällig durch Lichtverhältnisse und Schatten  
   - Nur 2D-Informationen über Bewegungsfläche
-- **Bewertung:**  
+
+**Bewertung:**  
   Eine einfache, aber ungenaue Alternative. Kann als experimentelle Variante oder ergänzende Interaktionsform (z. B. Gestenerkennung) eingesetzt werden.
 
 ---
 
 ### 3. Druck- oder Näherungssensoren im Boden
-- **Funktion:**  
+**Funktion:**  
   Nutzung von Sensorstreifen oder Bodenmatten, die Gewicht oder Annäherung registrieren.  
   Erkennung erfolgt durch Mikrocontroller (z. B. Arduino) mit Signalübertragung an die Steuerungssoftware.
-- **Vorteile:**  
+
+**Vorteile:**  
   - Sehr robuste Erkennung klarer Zustände („Zone betreten“)  
   - Unabhängig von Lichtverhältnissen  
   - Einfache Integration physischer Interaktionen
-- **Nachteile:**  
+
+**Nachteile:**  
   - Kein kontinuierliches Tracking  
   - Eingeschränkte Bewegungsfreiheit  
   - Technisch aufwändiger Einbau und Wartung
-- **Bewertung:**  
+
+**Bewertung:**  
   Gut geeignet für Zonen-basierte Interaktionen, jedoch nicht für fließende Bewegungen oder raumweite Erkennung.
 
 ---
@@ -86,6 +95,6 @@ Alternative Verfahren wie Kameratracking oder Drucksensoren werden als ergänzen
 
 ## Probleme/Erkenntnisse
 - Ausrichtung der Kabel ist wichtig!! -> Aufbau der Bodenfläche muss sehr exakt sein
-- Version Probleme mit Software und Demo App
+- Versions Probleme mit Software(Unity) und Demo App -> **Lösung**: Headless
 - es darf kein Alt Tracker im RadioHost sein, da alle Kameras die Trackingfläche "suchen" und somit Fehler in der Positionsberechnung auftreten können
 

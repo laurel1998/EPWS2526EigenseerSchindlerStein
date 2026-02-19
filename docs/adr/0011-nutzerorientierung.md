@@ -106,7 +106,4 @@ Begründung:
 - Definition klarer, selbsterklärender Symbole für Zeitdimensionen (Monat, Uhrzeit, Jahr)
 - Gestaltung muss mit dem visuellen Gesamtkonzept der Installation harmonieren
 
----
-
-## Probleme
 

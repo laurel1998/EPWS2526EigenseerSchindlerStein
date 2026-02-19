@@ -1,4 +1,5 @@
 # ADR-0008: Bilddarstellung bei Mehrpersonen-Interaktion
+
 **Status:** entschieden  
 **Datum:** 2026-02-13  
 
@@ -8,13 +9,13 @@
 Besucher:innen bewegen sich auf einer Trackingfläche und erkunden Bilder des KTDS-Labors über ihre Position im Raum.
 Die Interaktionslogik ([ADR-0007](./0007-Interaktionskonzept.md)) ordnet jeder Position eindeutig einen Zeitpunkt (Jahr, Monat, Tag, Uhrzeit) und damit genau ein Bild zu.
 
-Offen ist aktuell, wie diese Bilder auf einem oder mehreren Bildschirmen dargestellt werden, insbesondere im Hinblick auf:
+Offen ist aktuell, wie diese Bilder auf einem oder mehreren Bildschirmen dargestellt werden sollen, insbesondere im Hinblick auf:
 
 - Verständlichkeit während der Bewegung
 - Gleichzeitige Nutzung durch mehrere Personen
 - räumliche Kopplung zwischen Körperbewegung und visueller Rückmeldung
 
-Die Bilddarstellung soll das Erkunden unterstützen, ohne zu verwirren.
+Die Bilddarstellung bei Mehrpersoneninteraktion soll das Erkunden unterstützen, ohne zu verwirren.
 
 ---
 
@@ -38,14 +39,13 @@ Die Bilddarstellung soll das Erkunden unterstützen, ohne zu verwirren.
 ---
 
 ### Version 2 – Split-Screen nach Personen
-- Der Bildschirm wird in mehrere Bereiche (z. B. links/rechts) aufgeteilt
+- Der Bildschirm wird in zwei Bereiche (z. B. links/rechts) aufgeteilt
 - Jede getrackte Person bekommt einen eigenen Bildbereich
 - Jeder Bereich zeigt das Bild entsprechend der individuellen Position
-- Optionale Farbcodierung (Person -> Screenbereich) -> farbigen Rahmen um den Bildbereich auf dem Screen
-- Markierung des Controllers in der selben Farbe des Rahmens
+- Optionale Farbcodierung (Person -> Screenbereich) -> farbigen Rahmen, um den Bildbereich auf dem Screen und Markierung des Controllers in der selben Farbe des Rahmens
 
 **Vorteile**
-- Gleichzeitige Mehrpersonen-Interaktion möglich
+- Gleichzeitige Mehrpersonen-Interaktion möglich (max. 2 Personen)
 - Klare Zuordnung: jede Person sieht „ihr“ Bild
 - Vergleich unterschiedlicher Zeitpunkte wird direkt sichtbar
 
@@ -56,7 +56,7 @@ Die Bilddarstellung soll das Erkunden unterstützen, ohne zu verwirren.
 ---
 
 ### Version 3 – Dynamische Fokussierung (Aufmerksamkeitsbasierte Darstellung)
-- Der Bildschirm zeigt ein zentrales Fokusbild sowie ein oder mehrere Nebenbilder
+- Der Bildschirm zeigt ein zentrales Fokusbild, sowie ein oder mehrere Nebenbilder
 - Das Fokusbild wird automatisch der Person zugeordnet, die aktuell die höchste „Aufmerksamkeit“ erzeugt
 - Aufmerksamkeit kann bestimmt werden durch:
   - Verweildauer an einer Position
@@ -85,7 +85,7 @@ Die Bilddarstellung soll das Erkunden unterstützen, ohne zu verwirren.
 
 ## Entscheidung
 Bisher wurde die Mehrpersoneninteraktion mit einem Split Screen (Option 2) implementiert. Die Fläche bietet ausreichend Platz für 2 Nutzer:innen.
-Sobald ein zweiter Nutzer die Fläche betritt, splittet sich der Screen in zwei Teile, sodass jeder Nutzer sein eigenes Bild mit Angabe zu Uhrzeit und Datum sieht. Diese sind noch nicht farbcodiert.
+Sobald ein zweiter Nutzer die Fläche betritt, splittet sich der Screen in zwei Teile, sodass jeder Nutzer sein eigenes Bild mit Angaben zur Uhrzeit und Datum sieht. Diese sind noch nicht farbcodiert, da sich dafür entschieden wurde, den Nutzer:innen die Möglichkeit zu bieten, selber herauszufinden, welche Seite des Split-Screens ihnen gehört.
 
 ---
 
@@ -98,9 +98,9 @@ Sobald ein zweiter Nutzer die Fläche betritt, splittet sich der Screen in zwei 
 - Mehrpersonenfähigkeit muss früh mitgedacht werden
 
 ### To-dos
-- Testen der dynamischen Fokussierung mit 2–4 Personen
+- Testen der dynamischen Fokussierung mit 2 Personen
 - Definition und Feinjustierung der Aufmerksamkeitskriterien
 - Testen des Split-Screen für Mehrpersonen-Interaktion
-- Testen was der aktuelle Code macht, wenn sich mind. 2 Personen auf der Fläche befinden
+- Testen was der aktuelle Code macht, wenn sich mind. 2 Personen auf der Fläche befinden -> **Ergebnis:** Anzeige des zuletzt erkannten Bildes (unübersichtlich)
 - evtll. weitere Optionen überlegen für Bilddarstellung
  
