@@ -30,5 +30,5 @@ Die KI muss aufzeigen, dass keine Gesichter bzw. Personen zu erkennen sind.
 Es werden beispielhaft Bilder aus dem Archiv ausgesucht, wo zu erkennen ist, dass sich eine Person auf dem Bild befindet. Anschließend werden die Bilder im Tool hochgeladen und das Tool [analysiert](../bilder/FaceonLiveSCAN.png), ob ein Gesicht zu erkennen ist. Wenn kein Gesicht erkennbar ist, kommt eine Fehlermeldung: [,,No results"](../bilder/ResultsSCAN.png).
 
 ## Ergebnisse
-Alle ausgesuchten Bilder erhielten das Ergebnis ,,No results". Somit wurde festgestellt, dass die Auflösung der Bilder zu gering ist, um die Gesichter der Personen zu erkennen. Die Bilder dürfen daher im Projekt verwendet werden, ohne dass DSGVO-Bestimmungen verletzt werden und der Datenschutz gewährleistet bleibt. 
+Alle ausgesuchten Bilder erhielten das Ergebnis ,,No results". Somit wurde festgestellt, dass die Auflösung der Bilder zu gering ist, um die Gesichter der Personen zu erkennen. Die Bilder dürfen daher im Projekt verwendet werden, ohne, dass DSGVO-Bestimmungen verletzt werden, sodass der Datenschutz gewährleistet bleibt. 
 

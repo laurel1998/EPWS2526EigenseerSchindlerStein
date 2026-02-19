@@ -14,13 +14,13 @@
 Es sollen Tracking-Daten (x,y,(vllt. z)) aus dem Antilatency System erkannt werden, sobald sich eine Person mit der Kamera auf der ausgelegten Bodenfläche befindet bzw. bewegt.
 
 ## Scope
-Für die Positionserkennung wird ein Host benötigt, welcher die erfassten Positionsdaten weiterleiten kann. Diese müssen so dargestellt werden, dass sie im Brwoser verwendet werden können.
+Für die Positionserkennung wird ein Host benötigt, welcher die erfassten Positionsdaten weiterleiten kann. Diese müssen so dargestellt werden, dass sie im Browser verwendet werden können.
 
 ## Methodik
 Positionserkennung anhand eines C++-Programms auf einem RaspberryPi und das Konvertiern der Daten für die Verwendung dieser im Browser.
 
 ## Erfolgskriterien
-Genaue Erkennung der Position, um dies Positions-Daten weiter verarbeiten zu können.
+Genaue Erkennung der Position, um diese Positions-Daten weiter verarbeiten zu können.
 
 ## Ressourcen
 - Tracking-Fläche
@@ -28,7 +28,6 @@ Genaue Erkennung der Position, um dies Positions-Daten weiter verarbeiten zu kö
 - Radiosocket
 - Antilatency Service
 - RaspberryPi
-
 
 ## POC Flow
 1. Nutzer:innen bewegen sich im Raum mit einem Antilatency-Tracker

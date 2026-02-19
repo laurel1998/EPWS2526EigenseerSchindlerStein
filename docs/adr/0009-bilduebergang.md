@@ -1,11 +1,12 @@
 # ADR-0009: Bildübergänge zwischen zwei Positionen
+
 **Status:** entschieden  
 **Datum:** 2026-01-25  
 
 ---
 
 ## Kontext
-Im bestehenden Interaktionskonzept ([ADR-0007](./0007-Interaktionskonzept.md)) ist jeder Position auf der Trackingfläche eindeutig ein Zeitpunkt und damit genau ein Bild zugeordnet.
+Im bestehenden Interaktionskonzept ([ADR-0007](./0007-Interaktionskonzept.md)) ist jeder Position auf der Trackingfläche, eindeutig ein Zeitpunkt, und damit genau ein Bild, zugeordnet.
 Durch die kontinuierliche Bewegung der Besucher:innen kommt es jedoch zu häufigen Bildwechseln, diese finden an Übergängen zwischen Zeitpunkten (z. B. Stunden- oder Monatsgrenzen) statt.
 
 Ein abruptes Umschalten der Bilder würde:
@@ -69,7 +70,7 @@ Ziel dieser ADR ist es, Mechanismen für Bildübergänge festzulegen, die:
 - Sehr klare Kopplung: Körperbewegung → Bildbewegung
 
 **Nachteile**
-- Bei sehr schnellen Wechseln kann es „nervös“ wirken
+- Bei sehr schnellem Wechsel kann es „nervös“ wirken
 - Zusätzliche Animationslogik (Richtung/Vektor) nötig
 
 ---
@@ -102,7 +103,7 @@ Ziel dieser ADR ist es, Mechanismen für Bildübergänge festzulegen, die:
 **Vorteile**
 - Sofortiges Bild + deutliches Feedback „es hat gewechselt“
 - Kein zweites Bild sichtbar, keine Übergangs-Mehrdeutigkeit
-- Funktioniert sehr gut auch bei schnellen Wechseln
+- Funktioniert sehr gut auch bei schnellem Wechsel
 
 **Nachteile**
 - Zu starke Effekte wirken schnell „UI-lastig“
@@ -112,7 +113,7 @@ Ziel dieser ADR ist es, Mechanismen für Bildübergänge festzulegen, die:
 
 ## Entscheidung
 Da der Bildwechsel sehr schnell erfolgt und Nutzer:innen die Möglichkeit gegeben werden soll sich aktiv zu Bewegen, erfolgt der Bildwechsel ohne Übergang.
-Zur besseren Orientierung befindet sich ein overlay über jedem Bild, welches Datum und Uhrzeit erkenntlich macht. (Nah an Version 4)
+Zur besseren Orientierung befindet sich ein Overlay über jedem Bild, welches Datum und Uhrzeit erkenntlich macht. (Nah an Version 4)
 
 ---
 
@@ -125,20 +126,5 @@ Zur besseren Orientierung befindet sich ein overlay über jedem Bild, welches Da
 - Visuelles Feintuning (Dauer, Intensität) wird zentral für die Qualität
 
 ### To-dos
-- Test mit langsamen vs. schnellen Bewegungen
-- Definition von Schwellenwerten für Interpolarisation
-- Festlegen einer einheitlichen Übergangsdauer (z. B. 120–200 ms) als Design-Standard
-
-
-
-
-## Folgen und To-dos
-### Folgen
-- Übergänge sind primär gestalterisch (Animation/Overlay), nicht logikgetrieben
-- Performance-Anforderungen verschieben sich Richtung Rendering/Animation
-
-
-### To-dos
 - Testen mit schnellen vs. langsamen Bewegungen (Wahrnehmbarkeit ohne Nervosität)
-
 - UX-Test: Können Besucher:innen Wechsel sicher wahrnehmen, ohne dass das Bild „flackert“?

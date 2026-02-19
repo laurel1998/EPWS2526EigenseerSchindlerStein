@@ -7,7 +7,7 @@
 
 ## Kontext
 Für die interaktive Installation muss entschieden werden, **wie die Visualisierung der Bildabfolgen und Interaktionen ausgegeben wird**.  
-Die Anzeige ist ein zentraler Bestandteil des Erlebnisses und beeinflusst Wahrnehmung, Immersion, technische Umsetzung sowie die Eignung für den öffentlichen Einsatz (z. B. Messen, Nacht der Technik, Foyer).
+Die Anzeige ist ein zentraler Bestandteil des Erlebnisses und beeinflusst Wahrnehmung, Immersion, technische Umsetzung, sowie die Eignung für den öffentlichen Einsatz (z. B. Messen, Nacht der Technik, Foyer).
 
 Randbedingungen:
 - Installationstauglichkeit (robust, wiederholbar, transportierbar)
@@ -42,7 +42,7 @@ Randbedingungen:
 ---
 
 ## Entscheidung
-Das Projektteam tendiert zu einer **Kombination aus Projektion (Beamer) als Hauptausgabe** und **einem oder mehreren Bildschirmen als ergänzende Anzeige**.
+Das Projektteam tendiert zu einer **Kombination aus Projektion (Beamer) als Hauptausgabe** und optional **einem oder mehreren Bildschirmen als ergänzende Anzeige**.
 
 Begründung:
 - Projektionen erzeugen einen **starken immersiven Effekt** und eignen sich als Eyecatcher im öffentlichen Raum.
@@ -58,14 +58,11 @@ Begründung:
 - Definition von Darstellungsmodi:
   - Einzelnutzung (Vollbild)
   - Optionale Vorbereitung für Mehrnutzer (Splitscreen / Overlays)
-- Evtl. technische Tests mir Raum und Licht
+- Evtl. technische Tests mit Raum und Licht
 
 ---
 
 ## Probleme
 - **Lichtverhältnisse bei Projektionen**  
   → Lösung: Tests in realistischen Umgebungen, ggf. Kombination mit Displays  
-- **Skalierung der Webvisualisierung auf verschiedene Auflösungen**  
-  → Lösung: responsive Layouts und flexible Skalierung im Frontend  
-- **Mehrnutzerfähigkeit noch nicht implementiert**  
-  → Lösung: Anzeige-Architektur von Beginn an so gestalten, dass mehrere Perspektiven später ergänzt werden können
+- **Skalierung der Webvisualisierung auf verschiedene Auflösungen** 

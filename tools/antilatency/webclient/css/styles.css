@@ -148,3 +148,7 @@ canvas {
   font-family: monospace;
   font-size: 18px;
 }
+
+.meta-col.inactive{
+  visibility: hidden;
+}

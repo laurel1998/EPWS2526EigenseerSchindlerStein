@@ -61,7 +61,7 @@ Die genaue Installation erfolgt plattformspezifisch und ist abhängig vom verwen
 
 - Zugriff auf das Git-Repository sicherstellen  
 - Projekt auf den Raspberry Pi kopieren oder klonen  
-- Projektstruktur prüfen (insbesondere der `firmware`-Ordner)  
+- Projektstruktur prüfen (insbesondere den `firmware`-Ordner)  
 - Sicherstellen, dass die Tracking-Software für ARM (Raspberry Pi) gebaut werden kann
 
 ---

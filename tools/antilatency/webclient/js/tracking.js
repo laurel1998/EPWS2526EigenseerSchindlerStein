@@ -47,17 +47,33 @@ export function startTracking({ THREE, scene, listEl, statusEl,
     }
   }
 
-  // Meta-Bar ausblenden, wenn Titelbild
-  function updateMetaVisibility(img) {
-    if (img === mapping.title) {
-      metaBarEl.style.display = 'none';
-    } else {
-      metaBarEl.style.display = '';
+  function updateMetaVisibility(img, side) {
+    const isSingle = splitEl.classList.contains('single');
+
+    const leftCol = document.querySelector('.meta-col.left');
+    const rightCol = document.querySelector('.meta-col.right');
+
+    if (isSingle) {
+      // Single: Titelbild => gesamte Bar ausblenden
+      metaBarEl.style.display = (img === mapping.title) ? 'none' : '';
+
+      // sicherstellen, dass nichts als inactive markiert bleibt
+      leftCol.classList.remove('inactive');
+      rightCol.classList.remove('inactive');
+      return;
+    }
+
+    // Split: Meta-Bar immer sichtbar
+    metaBarEl.style.display = '';
+
+    if (side === 'left') {
+      leftCol.classList.toggle('inactive', img === mapping.title);
+    }
+
+    if (side === 'right') {
+      rightCol.classList.toggle('inactive', img === mapping.title);
     }
   }
-
-
-
 
   function setMetaFromImageUrl(url, side) {
     const m = url.match(/\/(\d{4})\/(\d{2})\/(\d{2})\.jpg$/);
@@ -181,7 +197,7 @@ export function startTracking({ THREE, scene, listEl, statusEl,
           seasonImageLeftEl.src = img;
           seasonImageLeftEl.classList.toggle('is-title', img === mapping.title);
 
-          updateMetaVisibility(img);
+          updateMetaVisibility(img, 'left');
 
           // nur Metadaten setzen, wenn kein Titelbild
           if (img !== mapping.title) {
@@ -195,7 +211,7 @@ export function startTracking({ THREE, scene, listEl, statusEl,
           seasonImageRightEl.src = img;
           seasonImageRightEl.classList.toggle('is-title', img === mapping.title);
 
-          updateMetaVisibility(img);
+          updateMetaVisibility(img, 'right');
 
           if (img !== mapping.title) {
             setMetaFromImageUrl(img, 'right');

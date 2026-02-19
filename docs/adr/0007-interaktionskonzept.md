@@ -31,7 +31,7 @@ Dabei lag der Fokus zuerst darauf ein funktionierendes Erlebnis zu erstellen und
 - [Interaktionsidee](../bilder/InteraktionskonzeptV2.pdf): Besucher:innen laufen durch Zeit 
 - Die Position steuert ein eindeutiges Bild nach folgenden Regeln:
 
-(1) Zentrum (mittleres Tile) -> zeigt den Titel der Ausstellung
+(1) Zentrum (mittlere Puzzle Bodenmatte) -> zeigt das Titelbild der Ausstellung
 
 (2) Winkel -> zeigt Monate des Jahres
 - Die Fläche wird strahlenförmig in 12 Sektoren geteilt
@@ -40,9 +40,10 @@ Dabei lag der Fokus zuerst darauf ein funktionierendes Erlebnis zu erstellen und
 
 (3) Radius -> zeigt Uhrzeit über Distanz vom Zentrum
 - Mit größerer Distanz nach außen wechseln verschiedene Uhrzeit-Slots
-- 8 Uhr bis 23 Uhr 
+- 8, 12, 16 & 20 Uhr 
 
 (4) Höhe (z-Achse) -> zeigt Jahr 
+- 2010, 2012, 2014, 2016, 2018, 2020, 2022, 2024
 
 **Vorteile**
 - Raum wird direkt mit der Zeit verknüpft
@@ -54,7 +55,7 @@ Dabei lag der Fokus zuerst darauf ein funktionierendes Erlebnis zu erstellen und
 ---
 
 ## Entscheidung
-Wir entscheiden uns nach der Bestätigung des Proof of Concept für die Erweiterung der Interaktionslogik. Aktuell ist Version 2 die Grundlage für die Interaktionslogik.
+Es wurde sich, nach der Bestätigung des [Proof of Concept](../poc/0003-poc-interaktion.md), für die Erweiterung der Interaktionslogik entschieden. Aktuell ist Version 2 die Grundlage für die Interaktionslogik.
 
 Begründung:
 - Das neue Konzept übersetzt das Archiv in Rauminteraktion: Besucher:innen erkunden nicht nur Jahreszeiten, sondern Zeitpunkte über den Verlauf mehrerer Jahre
@@ -66,9 +67,9 @@ Begründung:
 ### Folgen
 - Zuordnung wechselt von „Jahreszeit → Bildliste“ zu „Zeitpunkt → genau ein Bild“
 - Bilder des Labors müssen neu klassifiziert werden
-- Bilder müssen in einer eindeutigen Struktur abgelegt werden (siehe mapping.json)
+- Bilder müssen in einer eindeutigen Struktur abgelegt werden (siehe [mapping.json](../../assets/mapping.json))
 
 ### To-dos
-- Visualisierungskonzept (Wo sollen die Bilder gezeigt werden?)
-- Mehrpersonenlogik (Split-Screen?)
+- Visualisierungskonzept (Wo sollen die Bilder gezeigt werden?) -> auf einem Bildschirm
+- Mehrpersonenlogik (Split-Screen?) -> **Lösung:** Es wurde ein Split-Screen eingebaut, sobald sich zwei Personen auf der Fläche befinden
 - Controller Gestaltung (Zauberstab? Tablet?)

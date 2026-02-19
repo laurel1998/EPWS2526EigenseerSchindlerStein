@@ -1,7 +1,7 @@
 # ADR-0001: Projektthema und Ziel
 
-**Status:** Accepted  
-**Datum:** 20.10.2025
+**Status:** entschieden  
+**Datum:** 2025-10-20
 
 ---
 
@@ -10,13 +10,13 @@ Zu Beginn des Projekts musste ein thematischer und fachlicher Fokus festgelegt w
 
 ## Optionen
 Welche Optionen standen zur Wahl?  
-1. Gedächtnisspiel - Spuren von Zeit und Klima
-2. Wetterraum - Interaktion von Objekten und Klima
-3. Season Shift – Bewegung als Auslöser von Veränderung
+1. **Gedächtnisspiel** - Spuren von Zeit und Klima
+2. **Wetterraum** - Interaktion von Objekten und Klima
+3. **Season Shift** – Bewegung als Auslöser von Veränderung
 
 ## Entscheidung
 Das Projektteam hat sich für das Thema **Season Shift** entschieden.  
-Ziel ist es, eine interaktive Ausstellung auf der Grundlage eines großen Bildarchivs zu entwickeln. Dabei soll das System auf die Bewegungen der Besucher:innen reagieren.
+Ziel ist es, eine interaktive Ausstellung auf Grundlage eines großen Bildarchivs zu entwickeln. Dabei soll das System auf die Bewegungen der Besucher:innen reagieren.
 
 ## Folgen und To-dos
 - Die Projektplanung und technische Umsetzung orientieren sich an den definierten Zielen.  

@@ -22,20 +22,21 @@ Bilder aus dem April können winterlich aussehen, durch Wetterschwankungen.
 Filterung der Bilder anhand ihrer Dateinamen. Es wird das Bild rausgefiltert, welches am nächsten zu 12Uhr an einem Tag aufgenommen wurde. Beispielhaft wird das Jahr 2021 ausgwählt, um die Methodik zu prüfen. Ein Parser durchsucht alle Tagesordner und prüft, ob der Monat den vordefinierten Jahreszeiten entspricht und legt diese an einem definierten Zielordner ab. 
 
 -> **Logikänderungen folgend aus neuem Interaktionskonzept**:
-  Die Logik der image-selection ist im groben gleich geblieben. Das Filtern der Bilder erfolgt weiterhin anhand des Dateinnamen. Nun wird jedoch nach Jahren, Monaten und Uhrzeiten, jeweils   des ersten Tags im Monat, gefiltert. Der Paser durchsucht alle Tagesordner und prüft, ob das Jahr, der Monat, der Tag und die Uhrzeit den entsprechenden definierten Variablen entsprechen. Anschließend werden die Bilder in folgende Datenstruktur abgelegt: Jahr -> Monat -> Uhrzeit. Es wird nicht noch extra ein Tagesorner zwischengespeichert, da immer der erste Tag des Monats gefiltert wird. 
+  Die Logik der image-selection ist im groben gleich geblieben. Das Filtern der Bilder erfolgt weiterhin anhand des Dateinnamen. Nun wird jedoch nach Jahren, Monaten und Uhrzeiten, jeweils  des ersten Tages im Monat, gefiltert. Der Paser durchsucht alle Tagesordner und prüft, ob das Jahr, der Monat, der Tag und die Uhrzeit den entsprechenden definierten Variablen entsprechen. Anschließend werden die Bilder in folgende Datenstruktur abgelegt: Jahr -> Monat -> Uhrzeit. Es wird nicht noch extra ein Tagesorner zwischengespeichert, da immer der erste Tag des Monats gefiltert wird. 
 
 ## Erfolgskriterien
 Zielordner erstellt und befüllt mit den richtig gefilterten Bildern in den Jahresordnern.
 
 ## Ressourcen
 - Festplatte mit gesamter Bildsammlung
-- IDE 
+- IDE (hier IntelliJ)
 
 ## Zeitplan
-Für das POC wurde nur ein Beispieljahr verwendet, um die Funktionsweise des Codes zu prüfen. Für den späteren Verlauf muss der Code ein wenig umgeschrieben werden, um Bilder aus weiteren Jahres nach Jahreszeiten zu sortieren und diese im Projekt nutzen. 
+Für das POC wurde nur ein Beispieljahr verwendet, um die Funktionsweise des Codes zu prüfen. Für den späteren Verlauf wurde der Code ein wenig umgeschrieben, um Bilder für das neue Interaktionskonzept zu sortieren und diese im Projekt zu nutzen. 
 
 ## POC Flow
-Der Code für den POC: [Image-Selection](../../tools/image-selection)
+Der Code für die neue Interaktionslogik: [Image-Selection](../../tools/image-selection)
+Der Code für den POC: [Image-Selection alt](../../_Archiv/ImageSelectionV1.kt)
 
 ## Ergebnisse
 Der POC hat sich als erfolgreich erwiesen und kann für die weitere Bildklassifikation verwendet werden.

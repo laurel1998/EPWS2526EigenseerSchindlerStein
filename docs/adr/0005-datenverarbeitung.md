@@ -11,7 +11,7 @@ Ursprünglich wurde eine Umsetzung mit **Unity** in Betracht gezogen. Im weitere
 
 - Nutzung eines **Raspberry Pi** als zentraler Host
 - Direkter Zugriff auf die **native Antilatency SDK (C++)**
-- Eine **webbasierten, flexiblen Visualisierung**
+- Eine **webbasierte, flexible Visualisierung**
 
 ---
 
@@ -37,14 +37,14 @@ Gründe für diese Entscheidung:
 - WebSockets ermöglichen eine **verzögerungsarme Echtzeitvisualisierung** im Browser
 - Webbasierte Visualisierung ist **plattformunabhängig**, leicht anpassbar und gut erweiterbar
 - Geringere Abhängigkeit von einer einzelnen Engine (Unity)
-- Codebasis bereitgestellt in Zusammenarbeit mit dem moxdlab und bisherigem Arbeitsfortschritt im Bezug auf Antilatency
+- Codebasis bereitgestellt in Zusammenarbeit mit dem [moxdlab](https://moxd.io/) und bisherigem Arbeitsfortschritt im Bezug auf Antilatency
 
 Unity wurde bewusst nicht weiterverfolgt, da es für die geplante Architektur unnötige Komplexität und Abhängigkeiten eingeführt hätte.
 
 ---
 
 ## Folgen und To-dos
-- Verknüpfung von Datenvisualisierung im Zusammenhang mit dem Bildarchiv des KDTS-Labors
+- Verknüpfung von Datenvisualisierung im Zusammenhang mit dem Bildarchiv des KTDS-Labors
 - Anpassen der index.html
 
 ---
