@@ -46,17 +46,6 @@ export function startTracking({ THREE, scene, listEl, statusEl,
     }
   }
 
-  // Meta-Bar ausblenden, wenn Titelbild
-  function clearMeta(side) {
-    if (side === 'left') {
-      metaDateLeftEl.textContent = '--/--/----';
-      metaTimeLeftEl.textContent = '--:--';
-    } else if (side === 'right') {
-      metaDateRightEl.textContent = '--/--/----';
-      metaTimeRightEl.textContent = '--:--';
-    }
-  }
-
   function updateMetaVisibility(img, side) {
     const isSingle = splitEl.classList.contains('single');
 
@@ -64,16 +53,13 @@ export function startTracking({ THREE, scene, listEl, statusEl,
     const rightCol = document.querySelector('.meta-col.right');
 
     if (isSingle) {
-      // Single: Titelbild => gesamte Bar ausblenden
       metaBarEl.style.display = (img === mapping.title) ? 'none' : '';
 
-      // sicherstellen, dass nichts als inactive markiert bleibt
       leftCol.classList.remove('inactive');
       rightCol.classList.remove('inactive');
       return;
     }
 
-    // Split: Meta-Bar immer sichtbar
     metaBarEl.style.display = '';
 
     if (side === 'left') {
@@ -213,7 +199,6 @@ export function startTracking({ THREE, scene, listEl, statusEl,
           if (img !== mapping.title) {
             setMetaFromImageUrl(img, 'left');
           }
-
           lastImageLeft = img;
         }
       } else if (side === 'right') {
@@ -226,16 +211,9 @@ export function startTracking({ THREE, scene, listEl, statusEl,
           if (img !== mapping.title) {
             setMetaFromImageUrl(img, 'right');
           }
-
           lastImageRight = img;
         }
       }
-
-
-
-
-
-
     } catch (e) {
       console.error("Parse Error", e);
     }
