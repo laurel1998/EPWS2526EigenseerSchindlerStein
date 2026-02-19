@@ -134,3 +134,8 @@ canvas {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+
+
+.meta-col.inactive{
+  visibility: hidden;
+}
