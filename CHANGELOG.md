@@ -11,6 +11,8 @@ Architekturentscheidungen sind über [ADR-Dateien](./docs/adr/) dokumentiert.
 - [Domänenmodell README](./docs/Modelle/README.md)
 - [User-Journeys README](./docs/User-Journeys/README.md)
 - Roter Faden für [Audit 4](./Audits/audit4.md)
+- [Plakat](./docs/bilder/EP-WevDev_Plakat_Eigenseer_Schinlder_Stein.pdf) für die Abschlusspräsentation 
+- [Titelbild](./docs/bilder/title.jpg) für die Flächenmitte und außerhalb der Fläche
 
 ### Überarbeitet 
 - Code: UX Anpassungen

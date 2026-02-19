@@ -34,7 +34,7 @@ Alle Änderungen und Architekturentscheidungen werden nachvollziehbar dokumentie
 | [**`/docs/User-Journeys/`**](./docs/User-Journeys/) | Enthält 3 User-Journeys |
 | [**`/docs/adr/`**](./docs/adr/) | *Architecture Decision Records (ADRs)* dokumentieren alle wichtigen Architekturentscheidungen mit Begründung |
 | [**`/docs/bilder/`**](./docs/bilder/) | Enthält verwendete Bilder des Projekts |
-| [**`/docs/bilder/StoryboardV2.jpg`**](./docs/StoryboardV2.jpg) | Storyboard - Visuelle Darstelleung der Interaktion |
+| [**`/docs/bilder/StoryboardV2.jpg`**](./docs/bilder/StoryboardV2.jpg) | Storyboard - Visuelle Darstelleung der Interaktion |
 | [**`/docs/research-notes/`**](./docs/research-notes/) | Verzeichnis zur Dokumentation von Forschungsergebnissen |
 | [**`/docs/antilatency.md`**](./docs/antilatency.md) | Beschreibung des Aufbaus des Antilatency Systems |
 | [**`/docs/expose.md`**](./docs/expose.md) | Exposé |
@@ -46,7 +46,6 @@ Alle Änderungen und Architekturentscheidungen werden nachvollziehbar dokumentie
 | [**`/tools/`**](./tools/) | Code zur Bildklassifikation |
 | [**`CHANGELOG.md`**](./CHANGELOG.md) | Verzeichnis aller Änderungen im Projektverlauf |
 | [**`README.md`**](./README.md) | Diese Datei - für Überblick und Orientierung |
-| *(weitere Ordner folgen)* | ggf. Code, Artefakte, Daten oder Präsentationen |
 
 ---
 
@@ -59,7 +58,7 @@ Alle Änderungen und Architekturentscheidungen werden nachvollziehbar dokumentie
 | [**`/tools/antilatency/`**](./tools/antilatency/) | Enthält firmware und webclient Code |
 | [**`/tools/antilatency/firmware/`**](./tools/antilatency/firmware/) | *firmware* enthält die Antilatency SDK für C++, Code der auf dem Pi läuft |
 | [**`/tools/antilatency/webclient/`**](./tools/antilatency/webclient/) | *webclient* enthält allen serverseitigen Code |
-| [**`/tools/antilatency/webclient/css/`**](./docs/research-notes/) | Styles und Design Dokumentation |
+| [**`/tools/antilatency/webclient/css/`**](./tools/antilatency/webclient/css/) | Styles und Design Dokumentation |
 | [**`/tools/antilatency/webclient/js/`**](./tools/antilatency/webclient/js/) | Alle Javascript Dateien |
 | [**`/tools/antilatency/webclient/server.js/`**](./tools/antilatency/webclient/server.js/) | Datei die den Server startet |
 | [**`/tools/antilatency/webclientindex.html/`**](./tools/antilatency/webclient/index.html/) | Browser Code, Layout der Zielwebseite |
