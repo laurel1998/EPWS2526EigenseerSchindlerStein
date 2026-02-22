@@ -30,7 +30,7 @@ Die User Stories, die mit MUST gekennzeichnet sind, werden als höchste Priorit�
   
 **Veranstalter:innen**
 - **MUST**    U10 Als Veranstalter:in brauche ich eine gut dokumentierte Betriebsroutine, damit Aufbau, Nutzung und Rücksetzen vor Ort reibungslos funktionieren.
-- **SHOULD**  U14 Als Veranstalter:in möchte ich bei Netz- oder Technikproblemen sinnvolle Fallback-Zustände sehen, damit die Attraktivität erhalten bleibt.
+- **EXCLUDED**  U14 Als Veranstalter:in möchte ich bei Netz- oder Technikproblemen sinnvolle Fallback-Zustände sehen, damit die Attraktivität erhalten bleibt.
 - **EXCLUDED**  U21 Als Veranstalter:in möchte ich einen Modus, der bei Netzproblemen weiterläuft, damit der Show-Effekt erhalten bleibt.
 - **SHOULD**  U22 Als Veranstalter:in möchte ich einen integrierten Setup-Check, damit ich vor Ort schnell prüfen kann, ob alles passt.
 - **EXCLUDED**  U24 Als Veranstalter:in möchte ich eine eingebaute Hilfe & Neustartfunktion, damit ich Probleme ohne Technikteam lösen kann.
